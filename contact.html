@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Wrought by Faelendra</title>
+  <meta name="description" content="Contact Wrought by Faelendra for custom orders, events, and inquiries." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <b>WROUGHT BY FAELENDRA</b>
+        <small>Purveyor of Curious Arts</small>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="orders.html">Custom Orders</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-title">
+      <h1 style="margin:0;">Contact</h1>
+      <span class="muted">Tell me what you’re dreaming up</span>
+    </div>
+
+    <section class="grid2">
+      <div class="card pad">
+        <div class="label">Send a note</div>
+
+        <form id="f" style="padding-top:12px;">
+          <label class="label" for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" autocomplete="name" />
+
+          <div style="height:10px"></div>
+
+          <label class="label" for="email">Email</label>
+          <input id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+
+          <div style="height:10px"></div>
+
+          <label class="label" for="msg">Message</label>
+          <textarea id="msg" name="msg" placeholder="What would you like made? Size? Purpose? Vibe?"></textarea>
+
+          <div style="height:12px"></div>
+
+          <button class="btn primary" type="submit">Open Email to Send</button>
+          <p class="muted" style="margin:10px 0 0;">
+            This opens your email app with the message filled in (no website backend needed).
+          </p>
+        </form>
+      </div>
+
+      <div class="card pad">
+        <div class="label">Details</div>
+        <p style="margin-top:10px;">
+          <b>Business name:</b> Wrought by Faelendra<br/>
+          <b>Email:</b> <a href="mailto:Wrought.by.faelendra@gmail.com">Wrought.by.faelendra@gmail.com</a>
+        </p>
+
+        <div class="label" style="margin-top:10px;">Social</div>
+        <div class="social" aria-label="Social links">
+          <a href="https://www.instagram.com/wrought.by.faelendra/" target="_blank" rel="noopener">Instagram: @WROUGHT.BY.FAELENDRA</a>
+          <a href="https://www.pinterest.com/wrought.by.faelendra/" target="_blank" rel="noopener">Pinterest: @WROUGHT.BY.FAELENDRA</a>
+        </div>
+
+        <div class="card pad" style="margin-top:14px; position:relative;">
+          <div class="orn" style="inset:18px"></div>
+          <p style="margin:0;">
+            <b>Established quietly. Enter kindly.</b><br/>
+            No curses included. Probably.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fine">
+        <div>© <span id="y"></span> Wrought by Faelendra</div>
+        <div class="muted">Kind messages only. The work is listening.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const TO_EMAIL = "Wrought.by.faelendra@gmail.com";
+
+    document.getElementById("f").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg = document.getElementById("msg").value.trim();
+
+      const subject = encodeURIComponent("Custom Order Inquiry — Wrought by Faelendra");
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}\n\n— Established quietly. Enter kindly.`
+      );
+
+      window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
