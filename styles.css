@@ -1,7 +1,26 @@
-margin:0;
+/* Wrought by Faelendra — restored + background enabled */
+
+:root{
+  --ink:#1b1513;
+  --paper:#f7f1e6;
+  --paper2:#efe4d2;
+  --plum:#5b2a50;
+  --moss:#3f5a44;
+  --brass:#b08a3a;
+  --line: rgba(27,21,19,.18);
+  --shadow: 0 18px 50px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   color:var(--ink);
 
+  /* BACKGROUND IMAGE + PARCHMENT OVERLAY */
   background-image:
     linear-gradient(
       rgba(247,241,230,0.82),
@@ -13,3 +32,54 @@ margin:0;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+a{color:inherit}
+
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+header{
+  position:sticky; top:0; z-index:10;
+  background: rgba(247,241,230,.86);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px 24px;
+  max-width:1100px;margin:0 auto;
+}
+
+.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand b{letter-spacing:.08em}
+.brand small{opacity:.8;font-style:italic}
+
+.links{display:flex;gap:14px;flex-wrap:wrap}
+.links a{
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:12px;
+}
+.links a:hover{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.35)
+}
+
+.card{
+  background:rgba(255,255,255,.55);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.pad{padding:18px}
+
+h1,h2,h3{color:var(--plum)}
+
+.muted{opacity:.78}
+
+footer{
+  padding:22px 0 40px;
+  opacity:.9;
+}
