@@ -23,15 +23,14 @@ body{
   /* BACKGROUND IMAGE + PARCHMENT OVERLAY */
   background-image:
     linear-gradient(
-      rgba(247,241,230,0.82),
-      rgba(239,228,210,0.82)
+      rgba(247,241,230,0.62),
+      rgba(239,228,210,0.62)
     ),
     url("/background.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 a{color:inherit}
