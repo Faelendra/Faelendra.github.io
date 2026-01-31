@@ -28,10 +28,10 @@ body{
     ),
     url("/background.jpg");
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+background-repeat: no-repeat;
+background-size: contain;
+background-position: top center;
+background-attachment: scroll;
 
 /* HOME: let the sign/art be the opening statement */
 body.home .wrap{
@@ -108,4 +108,10 @@ h1,h2,h3{color:var(--plum)}
 footer{
   padding:22px 0 40px;
   opacity:.9;
+}
+@media (min-width: 900px){
+  body{
+    background-size: cover;
+    background-position: center top;
+  }
 }
