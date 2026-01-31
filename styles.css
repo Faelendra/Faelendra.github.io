@@ -22,11 +22,11 @@ body{
 
   /* BACKGROUND IMAGE + PARCHMENT OVERLAY */
   background-image:
-    linear-gradient(
-      rgba(247,241,230,0.62),
-      rgba(239,228,210,0.62)
-    ),
-    url("/background.jpg");
+  linear-gradient(
+    rgba(247,241,230,0.35),
+    rgba(239,228,210,0.35)
+  ),
+  url("/background.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -66,13 +66,12 @@ header{
 }
 
 .card{
-  background:rgba(255,255,255,.55);
+  background: rgba(255,255,255,0.88);
   border:1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(2px);
 }
-
-.pad{padding:18px}
 
 h1,h2,h3{color:var(--plum)}
 
