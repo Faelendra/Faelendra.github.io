@@ -35,7 +35,7 @@ body{
 
 /* HOME: let the sign/art be the opening statement */
 body.home .wrap{
-  padding-top: 600px;
+  padding-top: 520px;
 }
 }
 }
@@ -45,12 +45,12 @@ a{color:inherit}
 .wrap{
   max-width:1100px;
   margin:0 auto;
-  padding:600px;
+  padding:520px;
 }
 
 /* HOME ONLY: push content down so the background speaks first */
 body.home .wrap{
-  padding-top: 600px;
+  padding-top: 520px;
 }
 
 header{
