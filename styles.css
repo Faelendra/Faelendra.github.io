@@ -34,8 +34,9 @@ body{
 }
 
 /* HOME: let the sign/art be the opening statement */
-body.home{
-  background-position: top center;
+body.home .wrap{
+  padding-top: calc(220px + 120px);
+}
 }
 
 a{color:inherit}
