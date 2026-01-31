@@ -79,21 +79,25 @@ header{
 
 /* HERO SIGNBOARD */
 .hero{
-  width:100%;
-  height:70vh;
-  max-height:600px;
-  margin-bottom:40px;
+  width: 100%;
+  height: 75vh;
+  max-height: 650px;
+  margin-bottom: 60px;
 
   background-image:
     linear-gradient(
-      rgba(247,241,230,0.25),
-      rgba(239,228,210,0.25)
+      rgba(40,22,30,0.35),
+      rgba(40,22,30,0.15)
     ),
     url("/background.jpg");
 
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 /* MAIN CONTENT WRAP */
