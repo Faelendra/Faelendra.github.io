@@ -20,18 +20,7 @@ body{
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   color:var(--ink);
 
-  /* BACKGROUND IMAGE + PARCHMENT OVERLAY (dramatic) */
-  background-image:
-    linear-gradient(
-      rgba(247,241,230,0.35),
-      rgba(239,228,210,0.35)
-    ),
-    url("/background.jpg");
-
-background-repeat: no-repeat;
-background-size: contain;
-background-position: top center;
-background-attachment: scroll;
+  
 
 /* HOME: let the sign/art be the opening statement */
 body.home .wrap{
@@ -114,4 +103,22 @@ footer{
     background-size: cover;
     background-position: center top;
   }
+}
+.hero{
+  width: 100%;
+  min-height: 70vh;
+
+  background-image:
+    linear-gradient(
+      rgba(247,241,230,0.25),
+      rgba(239,228,210,0.25)
+    ),
+    url("/background.jpg");
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+
+  display: flex;
+  align-items: flex-end;
 }
