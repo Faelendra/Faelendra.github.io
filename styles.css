@@ -57,7 +57,10 @@ header{
 .brand{display:flex;flex-direction:column;line-height:1.05}
 .brand b{letter-spacing:.08em}
 .brand small{opacity:.8;font-style:italic}
-
+.brand .brandname{
+  letter-spacing:.08em;
+  font-size: 22px;
+}
 .links{display:flex;gap:14px;flex-wrap:wrap}
 .links a{
   text-decoration:none;
