@@ -98,8 +98,25 @@ header{
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  text-align: center;
+}
+.hero-greeting{
+  max-width: 720px;
+  padding: 20px;
 }
 
+.hero-greeting h1{
+  color: #5b2a50;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.15;
+  margin: 12px 0 0;
+}
+
+.hero-eyebrow{
+  font-style: italic;
+  opacity: .85;
+  margin: 0;
+}
 /* MAIN CONTENT WRAP */
 .wrap{
   max-width:1100px;
