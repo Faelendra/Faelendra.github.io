@@ -1,4 +1,4 @@
-/* Wrought by Faelendra — dramatic background + grounded layout */
+/* Wrought by Faelendra — final hero-based layout */
 
 :root{
   --ink:#1b1513;
@@ -12,33 +12,24 @@
   --radius: 18px;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
 
 body{
   margin:0;
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   color:var(--ink);
-
-
-/* HOME: let the sign/art be the opening statement */
-
+  background: var(--paper);
 }
 
-a{color:inherit}
-
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-}
-
-/* HOME ONLY: push content down so the background speaks first */
-}
+a{ color:inherit; }
 
 header{
   position: sticky;
   top: 0;
   z-index: 10;
+  background: rgba(247,241,230,.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -48,59 +39,50 @@ header{
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 
-.brand{display:flex;flex-direction:column;line-height:1.05}
-.brand b{letter-spacing:.08em}
-.brand small{opacity:.8;font-style:italic}
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+}
+
+.brand b{ letter-spacing:.08em; }
+
+.brand small{
+  opacity:.8;
+  font-style:italic;
+}
+
 .brand .brandname{
   letter-spacing:.08em;
-  font-size: 22px;
+  font-size:22px;
 }
 
-.links{display:flex;gap:14px;flex-wrap:wrap}
+.links{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
 .links a{
   text-decoration:none;
   padding:8px 10px;
   border-radius:12px;
 }
+
 .links a:hover{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.35)
+  background:rgba(255,255,255,.35);
 }
 
-/* Cards: readable, grounded, still lets background show around them */
-.card{
-  background: rgba(255,255,255,0.88);
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(2px);
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1,h2,h3{color:var(--plum)}
-
-.muted{opacity:.78}
-
-footer{
-  padding:22px 0 40px;
-  opacity:.9;
-}
-@media (min-width: 900px){
-  body{
-    background-size: cover;
-    background-position: center top;
-  }
-}
+/* HERO SIGNBOARD */
 .hero{
-  width: 100%;
-  height: 70vh;            /* controls how tall the sign is */
-  max-height: 600px;       /* prevents it from getting ridiculous */
-  margin-bottom: 40px;     /* space before content starts */
+  width:100%;
+  height:70vh;
+  max-height:600px;
+  margin-bottom:40px;
 
   background-image:
     linear-gradient(
@@ -109,9 +91,42 @@ footer{
     ),
     url("/background.jpg");
 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center top;
+}
 
-  display: block;
+/* MAIN CONTENT WRAP */
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* CONTENT CARDS */
+.card{
+  background: rgba(255,255,255,0.88);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(2px);
+  max-width:760px;
+  margin:0 auto 32px;
+}
+
+h1,h2,h3{ color:var(--plum); }
+
+.muted{ opacity:.78; }
+
+footer{
+  padding:22px 24px 40px;
+  opacity:.9;
+}
+
+/* DESKTOP POLISH */
+@media (min-width: 900px){
+  .hero{
+    background-size: cover;
+    background-position: center top;
+  }
 }
