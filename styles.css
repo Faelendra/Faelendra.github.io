@@ -50,7 +50,7 @@ a{color:inherit}
 
 /* HOME ONLY: push content down so the background speaks first */
 body.home .wrap{
-  padding-top: 220px;
+  padding-top: 520px;
 }
 
 header{
