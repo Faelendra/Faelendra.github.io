@@ -99,7 +99,9 @@ footer{
 }
 .hero{
   width: 100%;
-  min-height: 70vh;
+  height: 70vh;            /* controls how tall the sign is */
+  max-height: 600px;       /* prevents it from getting ridiculous */
+  margin-bottom: 40px;     /* space before content starts */
 
   background-image:
     linear-gradient(
@@ -110,8 +112,7 @@ footer{
 
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top center;
+  background-position: center top;
 
-  display: flex;
-  align-items: flex-end;
+  display: block;
 }
