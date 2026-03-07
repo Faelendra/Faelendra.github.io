@@ -187,9 +187,9 @@ a{
 }
 
 .closing-line{
-  font-size:2rem !important;
-  color:#5b2a50 !important;
-  font-weight:700;
+  font-size:1.6rem !important;
+  margin-top:18px !important;
+  margin-bottom:8px !important;
 }
 
 .small-line{
