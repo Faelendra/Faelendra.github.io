@@ -148,7 +148,6 @@ a{
 }
 
 @media (max-width: 760px){
-
   .site-header-inner{
     align-items:flex-start;
   }
@@ -187,5 +186,4 @@ a{
   .orn-divider{
     width:150px;
   }
-
 }
