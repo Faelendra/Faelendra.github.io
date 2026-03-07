@@ -1,5 +1,5 @@
 :root{
-  --ink:#2f221b;
+  --ink:#120c08;
   --ink-soft:#4f3a30;
   --paper:#efe2c8;
   --paper-warm:#f4ead7;
@@ -13,14 +13,14 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family:"Cormorant Garamond", Georgia, serif;
   color:var(--ink);
   background:
     linear-gradient(rgba(244,234,215,.92), rgba(239,226,200,.94)),
     url("/background.jpg");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
-  background-position: top center;
+  background-repeat:repeat-y;
+  background-size:100% auto;
+  background-position:top center;
 }
 
 a{
@@ -34,7 +34,7 @@ a{
   position:sticky;
   top:0;
   z-index:20;
-  backdrop-filter: blur(6px);
+  backdrop-filter:blur(6px);
 }
 
 .site-header-inner{
@@ -89,9 +89,8 @@ a{
 .story-panel{
   max-width:920px;
   margin:0 auto;
-  min-height:1200px;
   background-image:
-    linear-gradient(rgba(30,18,12,.18), rgba(30,18,12,.18)),
+    linear-gradient(rgba(30,18,12,.10), rgba(30,18,12,.10)),
     url("/background.jpg");
   background-repeat:no-repeat;
   background-size:cover;
@@ -100,30 +99,32 @@ a{
   box-shadow:var(--shadow);
   position:relative;
   overflow:hidden;
+  padding-bottom:120px;
 }
 
 .panel-text{
-  max-width:86%;
-  padding:420px 18px 110px;
+  max-width:620px;
+  margin:0 auto;
+  padding:320px 28px 120px;
   text-align:center;
 }
 
 .panel-text p{
-  margin:0 0 24px;
+  margin:0 0 22px;
   font-size:1.55rem;
-  line-height:1.75;
+  line-height:1.55;
   color:#120c08;
   font-weight:700;
   letter-spacing:.01em;
   text-shadow:
     0 1px 0 rgba(255,255,255,.35),
-    0 2px 4px rgba(0,0,0,.25);
-};
+    0 2px 4px rgba(0,0,0,.18);
+}
 
 .orn-divider{
   width:210px;
   height:1px;
-  margin:18px auto 22px;
+  margin:10px auto 12px;
   background:rgba(95,67,49,.35);
   position:relative;
 }
@@ -141,21 +142,23 @@ a{
 }
 
 .closing-line{
-  margin-top:36px !important;
+  margin-top:40px !important;
+  margin-bottom:10px !important;
   font-style:italic;
-  font-size:1.7rem !important;
+  font-size:1.9rem !important;
   color:#5b2a50 !important;
   font-weight:700;
   letter-spacing:.03em;
 }
 
 .small-line{
-  font-size:1.25rem !important;
-  color:#1a120e;
+  font-size:1.35rem !important;
+  color:#120c08 !important;
+  font-weight:700;
 }
 
 @media (max-width: 760px){
-  
+
   .site-header-inner{
     align-items:flex-start;
   }
@@ -173,10 +176,10 @@ a{
   }
 
   .story-panel{
-    min-height:1500px;
     border-radius:22px;
-    background-size: cover;
-    background-position: center top;
+    background-size:cover;
+    background-position:center top;
+    padding-bottom:120px;
   }
 
   .panel-text{
