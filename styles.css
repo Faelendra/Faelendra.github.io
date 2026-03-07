@@ -107,9 +107,6 @@ a{
   margin:0 auto;
   padding:500px 28px 150px;
   text-align:center;
-  background:rgba(244,234,215,.28);
-  border-radius:18px;
-  backdrop-filter: blur(1px);
 }
 
 .panel-text p{
