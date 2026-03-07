@@ -140,10 +140,11 @@ a{
 }
 
 .closing-line{
-  margin-top:26px !important;
+  margin-top:30px !important;
   font-style:italic;
-  font-size:1.24rem !important;
-  color:var(--plum) !important;
+  font-size:1.4rem !important;
+  color:#5b2a50 !important;
+  font-weight:600;
 }
 
 .small-line{
