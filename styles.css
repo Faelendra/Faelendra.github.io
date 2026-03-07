@@ -155,12 +155,13 @@ a{
 }
 
 @media (max-width: 760px){
+  
   .site-header-inner{
     align-items:flex-start;
   }
 
   .brand-large{
-    font-size:2em;
+    font-size:1.7rem;
   }
 
   .site-nav{
@@ -172,33 +173,46 @@ a{
   }
 
   .story-panel{
-  min-height:1180px;
-  border-radius:22px;
-  background-size: 100% auto;
-  background-position: center top;
+    min-height:1500px;
+    border-radius:22px;
+    background-size: cover;
+    background-position: center top;
   }
 
-.panel-text p{
-  font-size:1.4rem;
-  line-height:1.45;
-  margin:10px 0;
-  color:#120c08;
-  font-weight:700;
-}
+  .panel-text{
+    max-width:88%;
+    margin:0 auto;
+    padding:260px 18px 120px;
+    text-align:center;
+  }
 
-.closing-line{
-  font-size:1.6rem !important;
-  margin-top:18px !important;
-  margin-bottom:8px !important;
-}
+  .panel-text p{
+    margin:10px 0;
+    font-size:1.28rem;
+    line-height:1.45;
+    color:#120c08;
+    font-weight:700;
+    text-shadow:
+      0 1px 0 rgba(255,255,255,.35),
+      0 2px 4px rgba(0,0,0,.18);
+  }
 
-.small-line{
-  font-size:1.3rem !important;
-  color:#120c08 !important;
-  font-weight:700;
-}
-}
+  .closing-line{
+    margin-top:22px !important;
+    margin-bottom:10px !important;
+    font-size:1.55rem !important;
+    color:#5b2a50 !important;
+    font-weight:700;
+  }
 
-.orn-divider{
-  margin:8px auto 10px;
+  .small-line{
+    font-size:1.25rem !important;
+    color:#120c08 !important;
+    font-weight:700;
+  }
+
+  .orn-divider{
+    width:150px;
+    margin:10px auto 12px;
+  }
 }
