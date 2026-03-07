@@ -1,4 +1,4 @@
-/* Wrought by Faelendra — final hero-based layout */
+/* Wrought by Faelendra — flowing parchment layout */
 
 :root{
   --ink:#1b1513;
@@ -12,26 +12,44 @@
   --radius: 18px;
 }
 
-*{ box-sizing:border-box; }
-
-html{ scroll-behavior:smooth; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   color:var(--ink);
-  background: var(--paper);
+
+  background-image:
+    linear-gradient(
+      rgba(247,241,230,0.72),
+      rgba(239,228,210,0.72)
+    ),
+    url("/background.jpg");
+
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
+  background-color: var(--paper);
 }
 
-a{ color:inherit; }
+a{color:inherit}
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/* HEADER */
 
 header{
   position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(247,241,230,.9);
+  top:0;
+  z-index:10;
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:rgba(247,241,230,.85);
 }
 
 .nav{
@@ -48,16 +66,13 @@ header{
   line-height:1.05;
 }
 
-.brand b{ letter-spacing:.08em; }
+.brand b{
+  letter-spacing:.08em;
+}
 
 .brand small{
   opacity:.8;
   font-style:italic;
-}
-
-.brand .brandname{
-  letter-spacing:.08em;
-  font-size:22px;
 }
 
 .links{
@@ -74,238 +89,83 @@ header{
 
 .links a:hover{
   border:1px solid var(--line);
-  background:rgba(255,255,255,.35);
-}
-
-/* HERO SIGNBOARD */
-.hero{
-  width: 100%;
-  height: 75vh;
-  max-height: 650px;
-  margin-bottom: 60px;
-
-  background-image:
-    linear-gradient(
-      rgba(40,22,30,0.35),
-      rgba(40,22,30,0.15)
-    ),
-    url("/background.jpg");
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-}
-.hero-greeting{
-  max-width: 720px;
-  padding: 20px;
-}
-
-.hero-greeting h1{
-  color: #5b2a50;
-  font-size: clamp(28px, 5vw, 44px);
-  line-height: 1.15;
-  margin: 12px 0 0;
-}
-
-.hero-eyebrow{
-  font-style: italic;
-  opacity: .85;
-  margin: 0;
-}
-/* MAIN CONTENT WRAP */
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:24px;
-}
-
-/* CONTENT CARDS */
-.card{
-  background: rgba(255,255,255,0.88);
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(2px);
-  max-width:760px;
-  margin:0 auto 32px;
-}
-
-h1,h2,h3{ color:var(--plum); }
-
-.muted{ opacity:.78; }
-
-footer{
-  padding:22px 24px 40px;
-  opacity:.9;
-}
-
-/* DESKTOP POLISH */
-@media (min-width: 900px){
-  .hero{
-    background-size: cover;
-    background-position: center top;
-  }
-}
-/* Wrought by Faelendra — final grounded layout */
-
-:root{
-  --ink:#1b1513;
-  --paper:#f7f1e6;
-  --paper2:#efe4d2;
-  --plum:#5b2a50;
-  --moss:#3f5a44;
-  --brass:#b08a3a;
-  --line: rgba(27,21,19,.18);
-  --shadow: 0 18px 50px rgba(0,0,0,.12);
-  --radius: 18px;
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  font-family: ui-serif, Georgia, "Times New Roman", serif;
-/* Wrought by Faelendra — final grounded layout */
-
-:root{
-  --ink:#1b1513;
-  --paper:#f7f1e6;
-  --paper2:#efe4d2;
-  --plum:#5b2a50;
-  --moss:#3f5a44;
-  --brass:#b08a3a;
-  --line: rgba(27,21,19,.18);
-  --shadow: 0 18px 50px rgba(0,0,0,.12);
-  --radius: 18px;
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  font-family: ui-serif, Georgia, "Times New Roman", serif;
-  color:var(--ink);
-  background: linear-gradient(#f7f1e6, #efe4d2);
-}
-
-a{color:inherit}
-
-/* ================= HEADER ================= */
-
-header{
-  position: relative;   /* 🔴 no sticky */
-  z-index: 10;
-  background: rgba(247,241,230,.96);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav{
-  max-width:1100px;
-  margin:0 auto;
-  padding:18px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap: wrap;
-}
-
-.brand{display:flex;flex-direction:column;line-height:1.05}
-.brand b{letter-spacing:.08em}
-.brand small{opacity:.8;font-style:italic}
-.brand .brandname{
-  letter-spacing:.08em;
-  font-size:22px;
-}
-
-.links{display:flex;gap:14px;flex-wrap:wrap}
-.links a{
-  text-decoration:none;
-  padding:8px 10px;
-  border-radius:12px;
-}
-.links a:hover{
-  border:1px solid var(--line);
   background:rgba(255,255,255,.35)
 }
 
-/* ================= HERO ================= */
-  
-  .hero{
-  width: 100%;
-  min-height: 75vh;
-  max-height: 700px;
-  margin-bottom: 60px;
+/* HERO */
 
-  background-image:
-    linear-gradient(
-      rgba(40,20,30,0.45),
-      rgba(90,40,80,0.35)
-    ),
-    url("/background.jpg");
+.hero{
+  width:100%;
+  min-height:75vh;
+  max-height:700px;
 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
 
   padding:60px 20px;
+  margin-bottom:40px;
 }
 
 .hero-greeting{
   max-width:720px;
-  color:#2a1a14;
 }
 
 .hero-eyebrow{
   font-style:italic;
-  opacity:.9;
-  margin-bottom:14px;
-}
-
-.hero h1{
-  color:var(--plum);
-  font-size:clamp(1.8rem, 4vw, 2.6rem);
-  line-height:1.2;
+  opacity:.85;
   margin:0;
 }
 
-/* ================= CONTENT ================= */
-
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:60px 24px;
+.hero-greeting h1{
+  color:var(--plum);
+  font-size:clamp(30px,5vw,44px);
+  line-height:1.15;
+  margin:12px 0 0;
 }
+
+/* CARDS */
 
 .card{
-  background: rgba(255,255,255,0.92);
-  border:1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+  border:1px solid rgba(27,21,19,.10);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  backdrop-filter: blur(2px);
+
   max-width:760px;
-  margin:0 auto 40px;
+  margin:40px auto;
+  padding:28px;
 }
 
-h1,h2,h3{color:var(--plum)}
-.muted{opacity:.78}
+/* HEADINGS */
+
+h1,h2,h3{
+  color:var(--plum);
+}
+
+.muted{
+  opacity:.78;
+}
+
+/* FOOTER */
 
 footer{
-  padding:22px 0 40px;
+  padding:30px 0 50px;
   opacity:.9;
+  text-align:center;
 }
+
+/* MOBILE ADJUSTMENTS */
+
+@media (max-width:700px){
+
+  .hero{
+    min-height:60vh;
+  }
+
+  .card{
+    margin:24px auto;
+    padding:22px;
+  }
