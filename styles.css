@@ -183,8 +183,10 @@ a{
   }
 
   .panel-text p{
-    font-size:1rem;
-    line-height:1.5;
+    font-size:1.65rem;
+  line-height:1.75;
+  color:#120c08;
+  font-weight:700;
   }
 
   .closing-line{
