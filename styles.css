@@ -154,7 +154,8 @@ a{
 }
 
 .small-line{
-  font-size:1rem !important;
+  font-size:1.25rem !important;
+  color:#1a120e;
 }
 
 @media (max-width: 760px){
