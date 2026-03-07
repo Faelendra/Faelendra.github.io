@@ -173,8 +173,10 @@ a{
   }
 
   .story-panel{
-    min-height:980px;
-    border-radius:22px;
+  min-height:1180px;
+  border-radius:22px;
+  background-size: 100% auto;
+  background-position: center top;
   }
 
  .panel-text p{
