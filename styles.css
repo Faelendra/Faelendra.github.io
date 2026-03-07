@@ -188,7 +188,12 @@ a{
   }
 
   .closing-line{
-    font-size:1.12rem !important;
+  margin-top:40px !important;
+  font-style:italic;
+  font-size:1.9rem !important;
+  color:#5b2a50 !important;
+  font-weight:700;
+  letter-spacing:.03em;
   }
 
   .orn-divider{
