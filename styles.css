@@ -178,8 +178,9 @@ a{
   }
 
  .panel-text p{
-  font-size:1.75rem;
-  line-height:1.78;
+  font-size:1.8rem;
+  line-height:1.25;
+  margin:12px 0;
   color:#120c08;
   font-weight:700;
 }
