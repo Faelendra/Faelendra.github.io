@@ -103,10 +103,13 @@ a{
 }
 
 .panel-text{
-  max-width:560px;
+  max-width:620px;
   margin:0 auto;
-  padding:300px 34px 150px;
+  padding:500px 28px 150px;
   text-align:center;
+  background:rgba(244,234,215,.28);
+  border-radius:18px;
+  backdrop-filter: blur(1px);
 }
 
 .panel-text p{
