@@ -177,26 +177,24 @@ a{
     border-radius:22px;
   }
 
-  .panel-text{
-    max-width:92%;
-    padding:460px 22px 110px;
-  }
-
   .panel-text p{
-    font-size:1.65rem;
+  font-size:1.65rem;
   line-height:1.75;
   color:#120c08;
   font-weight:700;
-  }
+}
 
-  .closing-line{
-  margin-top:40px !important;
-  font-style:italic;
-  font-size:1.9rem !important;
+.closing-line{
+  font-size:2rem !important;
   color:#5b2a50 !important;
   font-weight:700;
-  letter-spacing:.03em;
-  }
+}
+
+.small-line{
+  font-size:1.55rem !important;
+  color:#120c08 !important;
+  font-weight:700;
+}
 
   .orn-divider{
     width:150px;
