@@ -178,10 +178,10 @@ a{
   background-position: center top;
   }
 
- .panel-text p{
-  font-size:1.8rem;
-  line-height:1;
-  margin:12px 0;
+.panel-text p{
+  font-size:1.4rem;
+  line-height:1.45;
+  margin:10px 0;
   color:#120c08;
   font-weight:700;
 }
