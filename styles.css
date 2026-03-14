@@ -106,30 +106,30 @@ a{
 .panel-text{
   position: absolute;
   left: 50%;
-  top: 480px;
+  top: 590px;
   transform: translateX(-50%);
-  width: min(760px, 82%);
+  width: min(620px, 78%);
   text-align: center;
 }
 
 .panel-text p{
-  margin: 0 0 26px;
-  font-size: 2.6rem;
-  line-height: 1.28;
+  margin: 0 0 18px;
+  font-size: 1.65rem;
+  line-height: 1.22;
   color: #120c08;
   font-weight: 700;
   letter-spacing: .01em;
   text-shadow:
-    0 1px 0 rgba(255,255,255,.28),
-    0 2px 4px rgba(0,0,0,.14);
+    0 1px 0 rgba(255,255,255,.20),
+    0 2px 3px rgba(0,0,0,.10);
 }
 
 .orn-divider{
-  width:190px;
-  height:1px;
-  margin:10px auto 14px;
-  background:rgba(95,67,49,.35);
-  position:relative;
+  width: 120px;
+  height: 1px;
+  margin: 6px auto 10px;
+  background: rgba(95,67,49,.28);
+  position: relative;
 }
 
 .orn-divider::after{
@@ -145,17 +145,17 @@ a{
 }
 
 .closing-line{
-  margin-top:30px !important;
-  margin-bottom:10px !important;
-  font-style:italic;
-  font-size:2rem !important;
-  color:#5b2a50 !important;
-  font-weight:700;
-  letter-spacing:.02em;
+  margin-top: 18px !important;
+  margin-bottom: 6px !important;
+  font-style: italic;
+  font-size: 1.15rem !important;
+  color: #5b2a50 !important;
+  font-weight: 700;
+  letter-spacing: .01em;
 }
 
 .small-line{
-  font-size: 2.15rem !important;
+  font-size: 1rem !important;
   color: #120c08 !important;
   font-weight: 700;
 }
