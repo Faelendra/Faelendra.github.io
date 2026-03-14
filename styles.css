@@ -95,18 +95,18 @@ a{
     linear-gradient(rgba(30,18,12,.06), rgba(30,18,12,.06)),
     url("/background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-position: center top;
   border-radius: 28px;
   box-shadow: var(--shadow);
   overflow: hidden;
-  min-height: 1600px;
+  min-height: 2200px;
 }
 
 .panel-text{
   position: absolute;
   left: 50%;
-  top: 590px;
+  top: 720px;
   transform: translateX(-50%);
   width: min(620px, 78%);
   text-align: center;
