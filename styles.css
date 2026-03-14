@@ -88,25 +88,28 @@ a{
 }
 
 .story-panel{
-  max-width:920px;
-  margin:0 auto;
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
   background-image:
-    linear-gradient(rgba(30,18,12,.08), rgba(30,18,12,.08)),
+    linear-gradient(rgba(30,18,12,.06), rgba(30,18,12,.06)),
     url("/background.jpg");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position:center top;
-  border-radius:28px;
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  padding-bottom:120px;
+  background-position: center top;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  min-height: 1600px;
 }
 
 .panel-text{
-  max-width:640px;
-  margin:0 auto;
-  padding: 1120px 42px 150px;
-  text-align:center;
+  position: absolute;
+  left: 50%;
+  top: 520px;
+  transform: translateX(-50%);
+  width: min(760px, 82%);
+  text-align: center;
 }
 
 .panel-text p{
