@@ -78,6 +78,7 @@ a{
 
 .site-nav a{
   padding:6px 2px;
+  font-size:1.05rem;
 }
 
 .page-shell{
@@ -90,44 +91,40 @@ a{
   max-width:920px;
   margin:0 auto;
   background-image:
-    linear-gradient(rgba(30,18,12,.10), rgba(30,18,12,.10)),
+    linear-gradient(rgba(30,18,12,.08), rgba(30,18,12,.08)),
     url("/background.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center top;
   border-radius:28px;
   box-shadow:var(--shadow);
-  position:relative;
   overflow:hidden;
   padding-bottom:120px;
 }
 
 .panel-text{
-  max-width:620px;
+  max-width:640px;
   margin:0 auto;
-  padding:0 28px 120px;
+  padding:520px 34px 140px;
   text-align:center;
-
-  position:relative;
-  top:420px;
 }
 
 .panel-text p{
-  margin:0 0 22px;
-  font-size:1.55rem;
-  line-height:1.55;
+  margin:0 0 20px;
+  font-size:1.5rem;
+  line-height:1.5;
   color:#120c08;
   font-weight:700;
   letter-spacing:.01em;
   text-shadow:
-    0 1px 0 rgba(255,255,255,.35),
-    0 2px 4px rgba(0,0,0,.18);
+    0 1px 0 rgba(255,255,255,.30),
+    0 2px 4px rgba(0,0,0,.16);
 }
 
 .orn-divider{
-  width:210px;
+  width:190px;
   height:1px;
-  margin:10px auto 12px;
+  margin:10px auto 14px;
   background:rgba(95,67,49,.35);
   position:relative;
 }
@@ -139,29 +136,28 @@ a{
   top:50%;
   transform:translate(-50%,-58%);
   color:#8f6c47;
-  background:rgba(244,234,215,.65);
+  background:rgba(244,234,215,.70);
   padding:0 8px;
   font-size:.8rem;
 }
 
 .closing-line{
-  margin-top:40px !important;
+  margin-top:30px !important;
   margin-bottom:10px !important;
   font-style:italic;
-  font-size:1.9rem !important;
+  font-size:2rem !important;
   color:#5b2a50 !important;
   font-weight:700;
-  letter-spacing:.03em;
+  letter-spacing:.02em;
 }
 
 .small-line{
-  font-size:1.35rem !important;
+  font-size:1.45rem !important;
   color:#120c08 !important;
   font-weight:700;
 }
 
 @media (max-width: 760px){
-
   .site-header-inner{
     align-items:flex-start;
   }
@@ -182,25 +178,25 @@ a{
     border-radius:22px;
     background-size:cover;
     background-position:center top;
-    padding-bottom:120px;
+    padding-bottom:110px;
   }
 
   .panel-text{
     max-width:88%;
     margin:0 auto;
-    padding:460px 18px 120px;
+    padding:430px 18px 120px;
     text-align:center;
   }
 
   .panel-text p{
     margin:10px 0;
     font-size:1.28rem;
-    line-height:1.45;
+    line-height:1.42;
     color:#120c08;
     font-weight:700;
     text-shadow:
-      0 1px 0 rgba(255,255,255,.35),
-      0 2px 4px rgba(0,0,0,.18);
+      0 1px 0 rgba(255,255,255,.30),
+      0 2px 4px rgba(0,0,0,.16);
   }
 
   .closing-line{
@@ -212,13 +208,13 @@ a{
   }
 
   .small-line{
-    font-size:1.25rem !important;
+    font-size:1.2rem !important;
     color:#120c08 !important;
     font-weight:700;
   }
 
   .orn-divider{
     width:150px;
-    margin:10px auto 12px;
+    margin:8px auto 10px;
   }
 }
