@@ -82,15 +82,15 @@ a{
 }
 
 .page-shell{
-  width:min(96vw, 1400px);
+  width:100%;
   margin:0 auto;
-  padding:30px 12px 60px;
+  padding:20px 0 50px;
 }
 
 .story-panel{
   position:relative;
-  width:min(92vw, 1100px);
-  margin:24px auto 0;
+  width:min(98vw, 1500px);
+  margin:10px auto 0;
   border-radius:28px;
   box-shadow:var(--shadow);
   overflow:hidden;
