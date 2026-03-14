@@ -110,15 +110,15 @@ a{
 }
 
 .panel-text p{
-  margin:0 0 20px;
-  font-size:1.5rem;
-  line-height:1.5;
-  color:#120c08;
-  font-weight:700;
-  letter-spacing:.01em;
+  margin: 0 0 26px;
+  font-size: 2.6rem;
+  line-height: 1.28;
+  color: #120c08;
+  font-weight: 700;
+  letter-spacing: .01em;
   text-shadow:
-    0 1px 0 rgba(255,255,255,.30),
-    0 2px 4px rgba(0,0,0,.16);
+    0 1px 0 rgba(255,255,255,.28),
+    0 2px 4px rgba(0,0,0,.14);
 }
 
 .orn-divider{
@@ -152,9 +152,9 @@ a{
 }
 
 .small-line{
-  font-size:1.45rem !important;
-  color:#120c08 !important;
-  font-weight:700;
+  font-size: 2.15rem !important;
+  color: #120c08 !important;
+  font-weight: 700;
 }
 
 @media (max-width: 760px){
@@ -199,13 +199,15 @@ a{
       0 2px 4px rgba(0,0,0,.16);
   }
 
-  .closing-line{
-    margin-top:22px !important;
-    margin-bottom:10px !important;
-    font-size:1.55rem !important;
-    color:#5b2a50 !important;
-    font-weight:700;
-  }
+.closing-line{
+  margin-top: 38px !important;
+  margin-bottom: 14px !important;
+  font-style: italic;
+  font-size: 3rem !important;
+  color: #5b2a50 !important;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
 
   .small-line{
     font-size:1.2rem !important;
