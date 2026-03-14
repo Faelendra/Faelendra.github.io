@@ -93,12 +93,14 @@ a{
   margin: 0 auto;
   border-radius: 28px;
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: visible;
 }
 .story-image{
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  border-radius: 28px;
 }
 .panel-text{
   position: absolute;
