@@ -251,7 +251,7 @@ a{
   box-shadow:0 24px 60px rgba(30,18,12,.24);
 
   background:
-    linear-gradient(rgba(236,221,191,.94), rgba(228,210,180,.955)),
+    linear-gradient(rgba(236,221,191,.965), rgba(228,210,180,.975)),
     url("/background.jpg");
   background-repeat:no-repeat;
   background-size:cover;
