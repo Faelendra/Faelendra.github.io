@@ -106,7 +106,7 @@ a{
 .panel-text{
   position:absolute;
   left:50%;
-  top:660px;
+  top:760px;
   transform:translateX(-50%);
   width:min(760px, 60%);
   text-align:center;
