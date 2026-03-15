@@ -145,19 +145,25 @@ a{
 }
 
 .closing-line{
-  margin-top:26px !important;
-  margin-bottom:8px !important;
-  font-style:italic;
-  font-size:1.45rem !important;
-  color:#5b2a50 !important;
-  font-weight:600;
-  letter-spacing:.01em;
+  margin-top: 26px !important;
+  margin-bottom: 8px !important;
+  font-style: italic;
+  font-size: 2rem !important;
+  color: #5b2a50 !important;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.35),
+    0 2px 4px rgba(0,0,0,.18);
 }
 
 .small-line{
-  font-size:1.12rem !important;
-  color:#1a110c !important;
-  font-weight:600;
+  font-size: 1.35rem !important;
+  color: #120c08 !important;
+  font-weight: 700;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.30),
+    0 2px 4px rgba(0,0,0,.14);
 }
 
 @media (max-width: 900px){
