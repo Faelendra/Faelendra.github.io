@@ -106,7 +106,7 @@ a{
 .panel-text{
   position:absolute;
   left:50%;
-  top:500px;
+  top:530px;
   transform:translateX(-50%);
   width:min(760px, 60%);
   text-align:center;
@@ -145,27 +145,31 @@ a{
 }
 
 .closing-line{
-  margin-top: 26px !important;
-  margin-bottom: 8px !important;
-  font-style: italic;
-  font-size: 2rem !important;
-  color: #5b2a50 !important;
-  font-weight: 700;
-  letter-spacing: .01em;
+  margin-top:30px !important;
+  margin-bottom:10px !important;
+  font-style:italic;
+  font-size:2.2rem !important;
+  color:#5b2a50 !important;
+  font-weight:700;
+  letter-spacing:.01em;
   text-shadow:
-    0 1px 0 rgba(255,255,255,.35),
+    0 1px 0 rgba(255,255,255,.38),
     0 2px 4px rgba(0,0,0,.18);
 }
 
 .small-line{
-  font-size: 1.35rem !important;
-  color: #120c08 !important;
-  font-weight: 700;
+  font-size:1.45rem !important;
+  color:#120c08 !important;
+  font-weight:700;
   text-shadow:
     0 1px 0 rgba(255,255,255,.30),
     0 2px 4px rgba(0,0,0,.14);
 }
-
+.panel-text .closing-line,
+.panel-text .small-line{
+  position:relative;
+  top:18px;
+}
 @media (max-width: 900px){
   .site-header-inner{
     align-items:flex-start;
