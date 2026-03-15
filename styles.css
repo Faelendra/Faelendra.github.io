@@ -251,7 +251,7 @@ a{
   box-shadow:var(--shadow);
 
   background:
-    linear-gradient(rgba(244,234,215,.92), rgba(239,226,200,.94)),
+    linear-gradient(rgba(244,234,215,.95), rgba(239,226,200,.96)),
     url("/background.jpg");
   background-repeat:no-repeat;
   background-size:cover;
@@ -275,25 +275,25 @@ a{
 }
 
 .about-title{
-  margin:0 0 20px;
-  font-size:4rem;
+  margin:0 0 22px;
+  font-size:4.5rem;
   line-height:1;
   color:#5f2f4f;
   font-weight:700;
   letter-spacing:.01em;
   text-shadow:
-    0 1px 0 rgba(255,248,235,.50),
+    0 1px 0 rgba(255,248,235,.55),
     0 2px 6px rgba(62,38,20,.10);
 }
 
 .about-lead{
-  margin:0 0 22px;
-  font-size:2rem;
-  line-height:1.24;
+  margin:0 0 24px;
+  font-size:2.15rem;
+  line-height:1.22;
   color:#2a1a12;
   font-weight:600;
   text-shadow:
-    0 1px 0 rgba(255,248,235,.40),
+    0 1px 0 rgba(255,248,235,.42),
     0 2px 5px rgba(62,38,20,.08);
 }
 
