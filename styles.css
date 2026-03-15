@@ -395,11 +395,11 @@ a{
     margin-bottom:16px;
   }
 .about-subline{
-  margin:0 0 26px;
-  font-size:1.2rem;
-  letter-spacing:.12em;
+  margin:0 0 28px;
+  font-size:1.18rem;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  color:#6f5648;
+  color:#6c5346;
   font-weight:700;
 }
   .about-lead{
