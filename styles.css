@@ -1127,5 +1127,172 @@ body.gallery-page {
     flex-wrap: wrap;
     justify-content: center;
   }
+}/* =========================
+   FAELENDRA GALLERY RESET
+========================= */
+
+body.gallery-page {
+  background: linear-gradient(to bottom, #221817 0%, #2a1d1f 45%, #1a1212 100%) !important;
+  color: #f1e6d8 !important;
+}
+
+/* Header */
+.gallery-page .site-header {
+  background: rgba(34, 24, 28, 0.92) !important;
+  border-bottom: 1px solid rgba(177, 140, 92, 0.28) !important;
+}
+
+.gallery-page .nav-wrap {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.gallery-page .brand {
+  color: #f3e7d8 !important;
+  text-decoration: none !important;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.04em;
+}
+
+.gallery-page .main-nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.gallery-page .main-nav a {
+  color: #d8c2ab !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.92rem;
+}
+
+.gallery-page .main-nav a.active,
+.gallery-page .main-nav a:hover {
+  color: #d7a96b !important;
+}
+
+/* Hero */
+.gallery-page .gallery-hero {
+  min-height: 48vh;
+  padding: 8rem 1.5rem 5.5rem;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(126, 81, 109, 0.35), transparent 28%),
+    radial-gradient(circle at 15% 70%, rgba(92, 58, 40, 0.24), transparent 30%),
+    linear-gradient(135deg, rgba(43, 28, 29, 0.96) 0%, rgba(33, 20, 23, 0.94) 55%, rgba(21, 12, 14, 0.98) 100%) !important;
+  border-bottom: 1px solid rgba(177, 140, 92, 0.18) !important;
+}
+
+.gallery-page .gallery-kicker {
+  color: #c89a5d !important;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-page .gallery-hero h1 {
+  color: #f6eadc !important;
+  font-size: clamp(3.2rem, 7vw, 5.4rem) !important;
+  line-height: 1.02;
+  font-weight: 500;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.38);
+}
+
+.gallery-page .gallery-intro {
+  color: #ead9c7 !important;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.9;
+  font-size: 1.08rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+/* Main gallery body */
+.gallery-page .gallery-shell {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 3.5rem 0 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-page .gallery-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(62, 45, 41, 0.70), rgba(45, 31, 29, 0.74)) !important;
+  border: 1px solid rgba(177, 140, 92, 0.16);
+  border-radius: 28px;
+  z-index: -1;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 14px 40px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-page .gallery-notes p {
+  color: #deccb8 !important;
+  line-height: 1.9;
+}
+
+.gallery-page .gallery-tags span {
+  color: #d7ae78 !important;
+  background: rgba(79, 55, 52, 0.55) !important;
+  border: 1px solid rgba(177, 140, 92, 0.28) !important;
+  border-radius: 999px;
+  padding: 0.65rem 1.15rem;
+}
+
+/* Cards */
+.gallery-page .gallery-card {
+  background:
+    linear-gradient(145deg, rgba(70, 48, 43, 0.96), rgba(34, 24, 24, 0.98)) !important;
+  border: 1px solid rgba(177, 140, 92, 0.16) !important;
+  border-radius: 24px;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 245, 235, 0.03) !important;
+}
+
+.gallery-page .gallery-card:hover {
+  border-color: rgba(200, 154, 93, 0.34) !important;
+  box-shadow:
+    0 22px 42px rgba(0, 0, 0, 0.26),
+    0 0 26px rgba(126, 81, 109, 0.10) !important;
+}
+
+.gallery-page .gallery-card h3 {
+  color: #f4e8d8 !important;
+  font-size: 1.3rem;
+}
+
+.gallery-page .gallery-card p {
+  color: #dbc6af !important;
+  line-height: 1.85;
+}
+
+/* Footer */
+.gallery-page .site-footer {
+  color: #cdb294 !important;
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .gallery-page .nav-wrap {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .gallery-page .main-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 }
