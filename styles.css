@@ -685,5 +685,36 @@ a{
   pointer-events: none;
   z-index: -1;
   border-radius: 24px;
+}/* Gallery clean corrected layout */
+.gallery-hero h1 {
+  color: #f3eadf !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-shell {
+  position: relative;
+  z-index: 2;
+  padding-top: 3rem;
+}
+
+.gallery-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(14, 11, 10, 0.58), rgba(14, 11, 10, 0.58));
+  border-radius: 28px;
+  z-index: -1;
+}
+
+.gallery-card {
+  min-height: 220px;
+}
+
+.gallery-card.tall {
+  min-height: 320px;
+}
+
+.gallery-card figcaption {
+  padding: 2rem 1.5rem;
 }
 }
