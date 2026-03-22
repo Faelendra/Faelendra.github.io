@@ -576,27 +576,25 @@ body.gallery-page {
 /* ===== FEATURED CARD TRUE CENTER FIX ===== */
 
 .gallery-card.wide figcaption {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-
-  padding: 2rem 2rem 2.2rem !important;
-  min-height: 140px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 2rem 2.2rem;
+  min-height: 140px;
 }
 
 .gallery-card.wide h3 {
-  width: 100% !important;
-  text-align: center !important;
-  margin: 0 0 0.7rem !important;
-  font-size: 1.45rem !important;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 0.7rem;
 }
 
 .gallery-card.wide p {
-  width: 100% !important;
-  max-width: 560px !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-  line-height: 1.6 !important;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  margin: 0 auto;
+}
 }
