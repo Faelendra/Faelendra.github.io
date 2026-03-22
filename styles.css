@@ -653,5 +653,37 @@ a{
 
 .gallery-image span {
   display: none;
+}/* Gallery final cleanup */
+.gallery-hero h1 {
+  color: #f3eadf !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-notes p {
+  color: #d8c9b7 !important;
+}
+
+.gallery-tags span {
+  color: #cdb089 !important;
+  background: rgba(20, 15, 13, 0.28) !important;
+}
+
+.gallery-image {
+  display: none !important;
+}
+
+.gallery-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(14, 11, 10, 0.62), rgba(14, 11, 10, 0.62));
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 24px;
 }
 }
