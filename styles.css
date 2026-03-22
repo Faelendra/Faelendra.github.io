@@ -501,6 +501,10 @@ a{
   width: min(1180px, 92%);
   margin: 0 auto;
   padding: 4rem 0 5rem;
+  /* Soften the washed-out middle area */
+.gallery-shell::before {
+  background: linear-gradient(rgba(26, 20, 17, 0.34), rgba(26, 20, 17, 0.34)) !important;
+}
 }
 
 .gallery-notes {
