@@ -473,7 +473,9 @@ a{
   font-size: 0.82rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #b89b6d;
+  color: #b8915f;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
 }
 
 .gallery-hero h1 {
