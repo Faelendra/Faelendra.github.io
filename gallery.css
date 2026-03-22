@@ -597,4 +597,29 @@ body.gallery-page {
   text-align: center;
   margin: 0 auto;
 }
+}/* Featured wide card true centering */
+.featured-card figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 2.2rem;
+  min-height: 140px;
+}
+
+.featured-card .featured-copy {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+.featured-card .featured-copy h3 {
+  margin: 0 0 0.7rem;
+  text-align: center;
+  font-size: 1.45rem;
+}
+
+.featured-card .featured-copy p {
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
 }
