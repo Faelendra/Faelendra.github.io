@@ -510,9 +510,10 @@ a{
 }
 
 .gallery-notes p {
-  color: #cdbfae;
+  color: #e2d4c3;
   line-height: 1.8;
   font-size: 1rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .gallery-tags {
