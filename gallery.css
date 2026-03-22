@@ -573,26 +573,30 @@ body.gallery-page {
   .gallery-card.wide h3 {
   font-size: 1.5rem;
 }
- /* Force featured card content to true center */
+/* ===== FEATURED CARD TRUE CENTER FIX ===== */
+
 .gallery-card.wide figcaption {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
-  min-height: 130px;
+
+  padding: 2rem 2rem 2.2rem !important;
+  min-height: 140px !important;
 }
 
 .gallery-card.wide h3 {
+  width: 100% !important;
   text-align: center !important;
-  font-size: 1.5rem;
-  margin: 0 0 0.65rem !important;
+  margin: 0 0 0.7rem !important;
+  font-size: 1.45rem !important;
 }
 
 .gallery-card.wide p {
+  width: 100% !important;
+  max-width: 560px !important;
   text-align: center !important;
-  max-width: 520px;
-  margin: 0 !important;
-}
-  
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
 }
