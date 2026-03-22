@@ -561,5 +561,17 @@ body.gallery-page {
   .gallery-art,
   .gallery-card.wide .gallery-art {
     height: 150px;
-  }
+  }/* Center featured wide card text */
+.gallery-card.wide figcaption {
+  text-align: center;
+}
+
+.gallery-card.wide p {
+  max-width: 520px;
+  margin: 0.4rem auto 0;
+}
+  .gallery-card.wide h3 {
+  font-size: 1.5rem;
+}
+  
 }
