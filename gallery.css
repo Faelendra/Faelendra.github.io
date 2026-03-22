@@ -470,4 +470,96 @@ body.gallery-page {
   .gallery-art {
     height: 150px;
   }
+}/* =========================
+   PHASE 5 LAYOUT POLISH
+========================= */
+
+.gallery-shell {
+  width: min(1320px, 96%);
+}
+
+.gallery-shell::before {
+  border-radius: 30px;
+}
+
+.gallery-grid {
+  gap: 2rem;
+}
+
+.gallery-card {
+  min-height: 240px;
+}
+
+.gallery-card.tall {
+  min-height: 320px;
+}
+
+.gallery-card figcaption {
+  padding: 1.9rem 1.55rem;
+}
+
+.gallery-art {
+  height: 170px;
+}
+
+.gallery-card.wide {
+  grid-column: 3 / span 8;
+  margin-top: -0.4rem;
+}
+
+.gallery-card.wide .gallery-art {
+  height: 185px;
+}
+
+.gallery-card.wide h3 {
+  font-size: 1.45rem;
+}
+
+.gallery-card.wide p {
+  font-size: 1.02rem;
+}
+
+@media (max-width: 900px) {
+  .gallery-shell {
+    width: min(1180px, 94%);
+  }
+
+  .gallery-card,
+  .gallery-card.wide,
+  .gallery-card.tall {
+    grid-column: span 6;
+    min-height: 250px;
+  }
+
+  .gallery-card.wide {
+    grid-column: span 6;
+    margin-top: 0;
+  }
+
+  .gallery-art,
+  .gallery-card.wide .gallery-art {
+    height: 160px;
+  }
+}
+
+@media (max-width: 720px) {
+  .gallery-shell {
+    width: min(100%, 94%);
+  }
+
+  .gallery-card,
+  .gallery-card.wide,
+  .gallery-card.tall {
+    grid-column: span 12;
+    min-height: auto;
+  }
+
+  .gallery-card.wide {
+    grid-column: span 12;
+  }
+
+  .gallery-art,
+  .gallery-card.wide .gallery-art {
+    height: 150px;
+  }
 }
