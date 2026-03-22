@@ -217,7 +217,85 @@ body.gallery-page {
 .gallery-card.wide {
   grid-column: 4 / span 6;
 }
+/* Decorative placeholder art blocks */
+.gallery-art {
+  height: 150px;
+  border-bottom: 1px solid rgba(190, 149, 94, 0.12);
+  border-radius: 24px 24px 0 0;
+  position: relative;
+  overflow: hidden;
+}
 
+.gallery-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.04), transparent 20%),
+    radial-gradient(circle at 78% 72%, rgba(255, 255, 255, 0.03), transparent 22%);
+  pointer-events: none;
+}
+
+.gallery-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  background:
+    linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.04) 35%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Individual Faelendra placeholder moods */
+.wood-art {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(82, 52, 37, 0.18) 0px,
+      rgba(82, 52, 37, 0.18) 7px,
+      rgba(50, 31, 23, 0.08) 7px,
+      rgba(50, 31, 23, 0.08) 14px
+    ),
+    radial-gradient(circle at 72% 28%, rgba(214, 168, 98, 0.12), transparent 22%),
+    linear-gradient(145deg, rgba(88, 56, 40, 0.95), rgba(36, 24, 18, 0.98));
+}
+
+.earth-art {
+  background:
+    radial-gradient(circle at 30% 40%, rgba(181, 138, 98, 0.14), transparent 22%),
+    radial-gradient(circle at 70% 65%, rgba(102, 74, 52, 0.16), transparent 25%),
+    linear-gradient(145deg, rgba(92, 66, 50, 0.95), rgba(37, 25, 20, 0.98));
+}
+
+.paint-art {
+  background:
+    radial-gradient(circle at 25% 30%, rgba(132, 78, 120, 0.20), transparent 22%),
+    radial-gradient(circle at 68% 64%, rgba(216, 170, 102, 0.12), transparent 24%),
+    linear-gradient(145deg, rgba(72, 44, 62, 0.95), rgba(28, 18, 26, 0.98));
+}
+
+.collection-art {
+  background:
+    radial-gradient(circle at 22% 28%, rgba(196, 150, 90, 0.12), transparent 20%),
+    radial-gradient(circle at 50% 56%, rgba(130, 82, 110, 0.10), transparent 22%),
+    radial-gradient(circle at 76% 38%, rgba(180, 140, 92, 0.10), transparent 20%),
+    linear-gradient(145deg, rgba(60, 41, 37, 0.95), rgba(26, 18, 18, 0.98));
+}
+
+.hearth-art {
+  background:
+    radial-gradient(circle at 50% 62%, rgba(255, 166, 82, 0.18), transparent 22%),
+    radial-gradient(circle at 28% 34%, rgba(120, 78, 52, 0.16), transparent 24%),
+    linear-gradient(145deg, rgba(70, 44, 32, 0.95), rgba(33, 22, 18, 0.98));
+}
+
+.wandering-art {
+  background:
+    radial-gradient(circle at 35% 32%, rgba(170, 122, 170, 0.16), transparent 22%),
+    radial-gradient(circle at 72% 66%, rgba(212, 166, 98, 0.12), transparent 24%),
+    linear-gradient(145deg, rgba(56, 35, 47, 0.95), rgba(27, 18, 25, 0.98));
+}
 .gallery-card.tall {
   min-height: 285px;
 }
@@ -229,7 +307,8 @@ body.gallery-page {
   overflow: hidden;
 }
 
-.gallery-card.tall .gallery-art {
+.gallery-card.tall 
+.gallery-art {
   height: 210px;
 }
 
@@ -292,4 +371,103 @@ body.gallery-page {
 .hearth-art {
   background:
     radial-gradient(circle at 50% 62%, rgba(255, 166, 82, 0.18), transparent 22%),
-    radial-gradient(circle at 28% 34
+    radial-gradient(circle at 28% 34%, rgba(120, 78, 52, 0.16), transparent 24%),
+    linear-gradient(145deg, rgba(70, 44, 32, 0.95), rgba(33, 22, 18, 0.98));
+}
+
+.wandering-art {
+  background:
+    radial-gradient(circle at 35% 32%, rgba(170, 122, 170, 0.16), transparent 22%),
+    radial-gradient(circle at 72% 66%, rgba(212, 166, 98, 0.12), transparent 24%),
+    linear-gradient(145deg, rgba(56, 35, 47, 0.95), rgba(27, 18, 25, 0.98));
+}
+
+.gallery-card.tall {
+  min-height: 285px;
+}
+
+.gallery-card.wide {
+  grid-column: 4 / span 6;
+}
+
+.gallery-card figcaption {
+  padding: 1.7rem 1.5rem;
+}
+
+.gallery-card h3 {
+  margin: 0 0 0.75rem;
+  color: #f5e8d8;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.gallery-card p {
+  margin: 0;
+  color: #dcc7b0;
+  line-height: 1.85;
+  font-size: 0.98rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: #ccb293;
+  padding: 1.5rem 1rem 2.5rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gallery-card,
+  .gallery-card.wide,
+  .gallery-card.tall {
+    grid-column: span 6;
+    min-height: 240px;
+  }
+
+  .gallery-card.wide {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-wrap {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .main-nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery-hero {
+    min-height: 42vh;
+    padding-top: 7rem;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .gallery-intro {
+    font-size: 1rem;
+  }
+
+  .gallery-card,
+  .gallery-card.wide,
+  .gallery-card.tall {
+    grid-column: span 12;
+    min-height: auto;
+  }
+
+  .gallery-card.wide {
+    grid-column: span 12;
+  }
+
+  .gallery-art {
+    height: 150px;
+  }
+}
