@@ -194,7 +194,7 @@ body.gallery-page {
 
 .gallery-card {
   grid-column: span 4;
-  min-height: 220px;
+  min-height: 200px;
   border-radius: 24px;
   background: linear-gradient(145deg, rgba(64, 42, 38, 0.96), rgba(30, 20, 21, 0.98));
   border: 1px solid rgba(190, 149, 94, 0.18);
@@ -218,11 +218,12 @@ body.gallery-page {
 }
 
 .gallery-card.tall {
-  min-height: 320px;
+  min-height: 285px;
 }
 
 .gallery-card figcaption {
-  padding: 2rem 1.6rem;
+  padding: 1.7rem 1.5rem;
+}
 }
 
 .gallery-card h3 {
