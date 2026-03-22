@@ -431,9 +431,11 @@ a{
 
 .gallery-page {
   background:
-    radial-gradient(circle at top, rgba(120, 95, 120, 0.12), transparent 38%),
+    linear-gradient(rgba(12, 10, 9, 0.78), rgba(12, 10, 9, 0.88)),
+    radial-gradient(circle at top, rgba(120, 95, 120, 0.10), transparent 38%),
     linear-gradient(to bottom, #11100f 0%, #171411 50%, #0e0c0b 100%);
   color: #e8dfd2;
+}
 }
 
 .gallery-hero {
