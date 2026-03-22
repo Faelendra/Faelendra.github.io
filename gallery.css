@@ -711,14 +711,26 @@ body.gallery-page {
 .gallery-tags::after {
   content: "✦";
   display: block;
-  margin: 1.2rem auto 0;
+  width: 100%;
+  margin: 1.2rem 0 0;
   text-align: center;
   color: rgba(201, 154, 93, 0.65);
   font-size: 0.9rem;
   letter-spacing: 0.4em;
 }
+}.gallery-tags {
+  justify-content: center;
+  align-items: center;
+}
 
 /* Give the featured card just a touch more importance */
+.gallery-notes {
+  margin-bottom: 2rem;
+}
+
+.gallery-tags {
+  margin-bottom: 3.2rem;
+}
 .featured-card {
   box-shadow:
     0 24px 48px rgba(0, 0, 0, 0.28),
