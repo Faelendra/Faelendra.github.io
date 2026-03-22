@@ -573,5 +573,20 @@ body.gallery-page {
   .gallery-card.wide h3 {
   font-size: 1.5rem;
 }
+  /* Force featured card text centering */
+.gallery-card.wide figcaption {
+  text-align: center !important;
+}
+
+.gallery-card.wide h3 {
+  text-align: center !important;
+  font-size: 1.5rem;
+}
+
+.gallery-card.wide p {
+  text-align: center !important;
+  max-width: 520px;
+  margin: 0.5rem auto 0 !important;
+}
   
 }
