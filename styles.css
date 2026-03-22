@@ -716,5 +716,26 @@ a{
 
 .gallery-card figcaption {
   padding: 2rem 1.5rem;
+}/* Gallery hero brighten + soften */
+.gallery-hero {
+  background:
+    radial-gradient(circle at 50% 22%, rgba(116, 78, 122, 0.22), transparent 30%),
+    radial-gradient(circle at 20% 80%, rgba(120, 84, 58, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(28, 20, 18, 0.88) 0%, rgba(34, 24, 21, 0.82) 35%, rgba(18, 12, 11, 0.88) 100%) !important;
+}
+
+.gallery-hero h1 {
+  color: #f6ebdd !important;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.42);
+}
+
+.gallery-kicker {
+  color: #c99f63 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-intro {
+  color: #f3e4d2 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 }
