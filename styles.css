@@ -445,9 +445,11 @@ a{
   text-align: center;
   padding: 7rem 1.5rem 5rem;
   background:
-    linear-gradient(rgba(10, 9, 8, 0.45), rgba(10, 9, 8, 0.75)),
-    url("images/gallery-hero.jpg") center/cover no-repeat;
+    radial-gradient(circle at 50% 20%, rgba(120, 86, 125, 0.18), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(102, 74, 54, 0.16), transparent 30%),
+    linear-gradient(135deg, #171311 0%, #221a16 35%, #191311 70%, #0f0c0b 100%);
   border-bottom: 1px solid rgba(201, 168, 116, 0.22);
+}
 }
 
 .gallery-hero-overlay {
