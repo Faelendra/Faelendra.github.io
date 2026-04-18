@@ -391,3 +391,39 @@ body.contact-page {
     padding: 1.2rem;
   }
 }
+/* =========================================
+   CONTACT PHASE 2 POLISH
+========================================= */
+
+/* More breathing room between intro note and cards */
+.contact-grid {
+  margin-top: 0.8rem;
+}
+
+/* Reduce decorative art height so the left card feels more balanced */
+.contact-art {
+  height: 150px;
+}
+
+/* Make the info card feel less top-heavy */
+.info-card .contact-copy {
+  padding-top: 1.5rem;
+}
+
+/* Slightly elevate the form card visually */
+.form-card {
+  box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 245, 235, 0.04),
+    inset 0 0 24px rgba(126, 81, 109, 0.06);
+}
+
+/* Subtle luxury hover */
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 154, 93, 0.28);
+  box-shadow:
+    0 24px 44px rgba(0, 0, 0, 0.26),
+    0 0 24px rgba(126, 81, 109, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
