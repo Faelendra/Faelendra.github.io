@@ -46,23 +46,24 @@ body.gallery-page {
 }
 
 .brand-small {
-  font-size: 0.95rem;
-  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
   font-weight: 700;
   color: #efe2d2;
 }
 
 .brand-large {
-  font-size: 2rem;
-  letter-spacing: 0.06em;
+  font-size: 1.78rem;
+  letter-spacing: 0.04em;
   font-weight: 700;
   color: #f7eadb;
 }
 
 .brand-tag {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-style: italic;
   color: #c99a5b;
+}
 }
 
 .main-nav {
