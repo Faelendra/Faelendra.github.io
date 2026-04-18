@@ -452,39 +452,65 @@ body.contact-page {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 /* =========================================
-   CONTACT PHASE 3 ART OVERRIDE
+   CONTACT PHASE 3B ART OVERRIDE
 ========================================= */
 
 .contact-page .letter-art {
+  position: relative;
   background:
-    radial-gradient(circle at 72% 34%, rgba(215, 162, 86, 0.18), transparent 16%),
-    radial-gradient(circle at 18% 30%, rgba(255, 236, 204, 0.04), transparent 14%),
-    radial-gradient(circle at 34% 62%, rgba(118, 73, 52, 0.12), transparent 20%),
-    radial-gradient(circle at 80% 78%, rgba(110, 62, 94, 0.08), transparent 18%),
-    radial-gradient(circle at 74% 40%, rgba(143, 48, 48, 0.20), transparent 8%),
-    radial-gradient(circle at 74% 40%, rgba(214, 166, 96, 0.08), transparent 18%),
+    /* wax seal glow */
+    radial-gradient(circle at 72% 40%, rgba(130, 34, 34, 0.28), transparent 7%),
+    radial-gradient(circle at 72% 40%, rgba(214, 166, 96, 0.12), transparent 18%),
+
+    /* candle-warm highlights */
+    radial-gradient(circle at 16% 28%, rgba(220, 175, 104, 0.16), transparent 14%),
+    radial-gradient(circle at 72% 38%, rgba(220, 175, 104, 0.18), transparent 16%),
+
+    /* faint plum magic */
+    radial-gradient(circle at 86% 78%, rgba(120, 70, 102, 0.10), transparent 18%),
+
+    /* parchment lines */
     repeating-linear-gradient(
       0deg,
-      rgba(171, 131, 90, 0.08) 0px,
-      rgba(171, 131, 90, 0.08) 1px,
+      rgba(182, 144, 100, 0.08) 0px,
+      rgba(182, 144, 100, 0.08) 1px,
       rgba(0, 0, 0, 0) 1px,
-      rgba(0, 0, 0, 0) 18px
+      rgba(0, 0, 0, 0) 16px
     ),
+
+    /* fold + vignette */
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.02) 0%,
-      rgba(255, 255, 255, 0.01) 35%,
-      rgba(0, 0, 0, 0.08) 52%,
-      rgba(255, 255, 255, 0.01) 68%,
-      rgba(255, 255, 255, 0.02) 100%
+      rgba(255, 245, 230, 0.03) 0%,
+      rgba(255, 245, 230, 0.01) 28%,
+      rgba(0, 0, 0, 0.10) 52%,
+      rgba(255, 245, 230, 0.01) 72%,
+      rgba(255, 245, 230, 0.02) 100%
     ),
+
     linear-gradient(
       145deg,
-      rgba(108, 78, 54, 0.96) 0%,
-      rgba(72, 49, 35, 0.94) 46%,
-      rgba(36, 24, 18, 0.98) 100%
+      rgba(116, 84, 58, 0.98) 0%,
+      rgba(79, 53, 36, 0.96) 42%,
+      rgba(38, 24, 18, 0.98) 100%
     ) !important;
 }
-.contact-page .letter-art {
-  background: linear-gradient(145deg, #7a4b2f, #2c1b15) !important;
+.contact-page .letter-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(230, 210, 185, 0.03) 0px,
+      rgba(230, 210, 185, 0.03) 1px,
+      rgba(0, 0, 0, 0) 1px,
+      rgba(0, 0, 0, 0) 14px
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    );
+  pointer-events: none;
 }
