@@ -485,3 +485,6 @@ body.contact-page {
       rgba(36, 24, 18, 0.98) 100%
     ) !important;
 }
+.contact-page .letter-art {
+  background: linear-gradient(145deg, #7a4b2f, #2c1b15) !important;
+}
