@@ -239,19 +239,43 @@ body.contact-page {
     linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.04) 35%, transparent 70%);
   pointer-events: none;
 }
-
 .letter-art {
   background:
-    radial-gradient(circle at 68% 38%, rgba(214, 168, 98, 0.16), transparent 18%),
-    radial-gradient(circle at 30% 60%, rgba(130, 82, 110, 0.10), transparent 24%),
+    radial-gradient(circle at 72% 34%, rgba(215, 162, 86, 0.18), transparent 16%),
+    radial-gradient(circle at 18% 30%, rgba(255, 236, 204, 0.04), transparent 14%),
+    radial-gradient(circle at 34% 62%, rgba(118, 73, 52, 0.12), transparent 20%),
+    radial-gradient(circle at 80% 78%, rgba(110, 62, 94, 0.08), transparent 18%),
+
+    /* wax seal glow */
+    radial-gradient(circle at 74% 40%, rgba(143, 48, 48, 0.20), transparent 8%),
+    radial-gradient(circle at 74% 40%, rgba(214, 166, 96, 0.08), transparent 18%),
+
+    /* faint parchment lines */
     repeating-linear-gradient(
       0deg,
-      rgba(117, 84, 55, 0.10) 0px,
-      rgba(117, 84, 55, 0.10) 2px,
-      rgba(0, 0, 0, 0) 2px,
-      rgba(0, 0, 0, 0) 20px
+      rgba(171, 131, 90, 0.08) 0px,
+      rgba(171, 131, 90, 0.08) 1px,
+      rgba(0, 0, 0, 0) 1px,
+      rgba(0, 0, 0, 0) 18px
     ),
-    linear-gradient(145deg, rgba(96, 68, 48, 0.95), rgba(36, 24, 18, 0.98));
+
+    /* soft fold shadow */
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.01) 35%,
+      rgba(0, 0, 0, 0.08) 52%,
+      rgba(255, 255, 255, 0.01) 68%,
+      rgba(255, 255, 255, 0.02) 100%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(108, 78, 54, 0.96) 0%,
+      rgba(72, 49, 35, 0.94) 46%,
+      rgba(36, 24, 18, 0.98) 100%
+    );
+}
 }
 
 /* Contact methods */
