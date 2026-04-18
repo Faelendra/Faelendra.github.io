@@ -182,7 +182,11 @@ a{
   .site-header-inner{
     align-items:flex-start;
   }
-
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
   .brand-large{
     font-size:1.7rem;
   }
@@ -773,37 +777,43 @@ a{
 
 .main-nav {
   display: flex;
-  gap: 1.4rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 }
 
 .main-nav a {
-  position: relative;
-  color: #d7c2a3;
+  color: #5f554a;
   text-decoration: none;
   font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
+}
 }
 
-.main-nav a:hover {
-  color: #f0dfc4;
+.main-nav a:hover,
+.main-nav a.active {
+  color: #8b6a3f;
 }
 
 .main-nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.35rem;
+  bottom: -0.3rem;
   width: 0;
   height: 1px;
-  background: rgba(201, 168, 116, 0.9);
-  transition: width 0.3s ease;
+  background: rgba(139, 106, 63, 0.8);
+  transition: width 0.25s ease;
 }
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
   width: 100%;
+}
 }
 
 .main-nav a.active {
