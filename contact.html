@@ -1,113 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <b>WROUGHT BY</b>
-<b class="brandname">FAELENDRA</b>
-  <meta name="description" content="Contact Wrought by Faelendra for custom orders, events, and inquiries." />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Wrought by Faelendra</title>
+  <link rel="stylesheet" href="contact.css" />
 </head>
-<body>
+<body class="contact-page">
 
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <b>WROUGHT BY FAELENDRA</b>
-        <small>Purveyor of Curious Arts</small>
-      </div>
-      <nav class="links" aria-label="Primary">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="brand">Wrought by Faelendra</a>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
-        <a href="orders.html">Custom Orders</a>
-        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="section-title">
-      <h1 style="margin:0;">Contact</h1>
-      <span class="muted">Tell me what you’re dreaming up</span>
-    </div>
-
-    <section class="grid2">
-      <div class="card pad">
-        <div class="label">Send a note</div>
-
-        <form id="f" style="padding-top:12px;">
-          <label class="label" for="name">Name</label>
-          <input id="name" name="name" placeholder="Your name" autocomplete="name" />
-
-          <div style="height:10px"></div>
-
-          <label class="label" for="email">Email</label>
-          <input id="email" name="email" placeholder="you@example.com" autocomplete="email" />
-
-          <div style="height:10px"></div>
-
-          <label class="label" for="msg">Message</label>
-          <textarea id="msg" name="msg" placeholder="What would you like made? Size? Purpose? Vibe?"></textarea>
-
-          <div style="height:12px"></div>
-
-          <button class="btn primary" type="submit">Open Email to Send</button>
-          <p class="muted" style="margin:10px 0 0;">
-            This opens your email app with the message filled in (no website backend needed).
-          </p>
-        </form>
-      </div>
-
-      <div class="card pad">
-        <div class="label">Details</div>
-        <p style="margin-top:10px;">
-          <b>Business name:</b> Wrought by Faelendra<br/>
-          <b>Email:</b> <a href="mailto:Wrought.by.faelendra@gmail.com">Wrought.by.faelendra@gmail.com</a>
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero-overlay"></div>
+      <div class="contact-hero-content">
+        <p class="contact-kicker">Inquiries & Correspondence</p>
+        <h1>Contact Faelendra</h1>
+        <p class="contact-intro">
+          For questions, commissions, curious notions, or other civilized forms of reaching out,
+          you may send word here.
         </p>
-
-        <div class="label" style="margin-top:10px;">Social</div>
-        <div class="social" aria-label="Social links">
-          <a href="https://www.instagram.com/wrought.by.faelendra/" target="_blank" rel="noopener">Instagram: @WROUGHT.BY.FAELENDRA</a>
-          <a href="https://www.pinterest.com/wrought.by.faelendra/" target="_blank" rel="noopener">Pinterest: @WROUGHT.BY.FAELENDRA</a>
-        </div>
-
-        <div class="card pad" style="margin-top:14px; position:relative;">
-          <div class="orn" style="inset:18px"></div>
-          <p style="margin:0;">
-            <b>Established quietly. Enter kindly.</b><br/>
-            No curses included. Probably.
-          </p>
-        </div>
       </div>
     </section>
 
-    <footer>
-      <div class="fine">
-        <div>© <span id="y"></span> Wrought by Faelendra</div>
-        <div class="muted">Kind messages only. The work is listening.</div>
+    <section class="contact-shell">
+      <div class="contact-panel">
+
+        <div class="contact-notes">
+          <p>
+            Handmade things are often busy becoming themselves, so replies may take a little time —
+            but they do arrive, kindly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card info-card">
+            <div class="contact-art letter-art"></div>
+            <div class="contact-copy">
+              <h2>Send a Note</h2>
+              <p>
+                Whether you are inquiring about available work, custom pieces, fairs, or curious arts in general,
+                this is the right place to begin.
+              </p>
+
+              <div class="contact-methods">
+                <p><strong>Email:</strong> yourname@example.com</p>
+                <p><strong>Location:</strong> Southern California</p>
+                <p><strong>Reply Pace:</strong> Quietly, but sincerely</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card form-card">
+            <div class="contact-copy">
+              <h2>Write Here</h2>
+
+              <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Commission, question, curious note..." />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+
+                <button type="submit">Send Kindly</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-closing">
+          <p>Established quietly. Enter kindly. No curses included. Probably.</p>
+        </div>
+
       </div>
-    </footer>
+    </section>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+  <footer class="site-footer">
+    <p>Wrought by Faelendra — Purveyor of Curious Arts</p>
+  </footer>
 
-    const TO_EMAIL = "Wrought.by.faelendra@gmail.com";
-
-    document.getElementById("f").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
-
-      const subject = encodeURIComponent("Custom Order Inquiry — Wrought by Faelendra");
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}\n\n— Established quietly. Enter kindly.`
-      );
-
-      window.location.href = `mailto:${TO_EMAIL}?subject=${subject}&body=${body}`;
-    });
-  </script>
 </body>
 </html>
