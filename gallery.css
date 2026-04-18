@@ -48,29 +48,29 @@ body.gallery-page {
   justify-content: flex-end;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #c2924f;
+}
+
 .main-nav a {
   color: #dbc5ad;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.88rem;
+  line-height: 1;
+  white-space: nowrap;
   position: relative;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #d4a163;
-}
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.35rem;
-  width: 0;
-  height: 1px;
-  background: #d4a163;
-  transition: width 0.3s ease;
 }
 
 .main-nav a:hover::after,
