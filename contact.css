@@ -11,34 +11,59 @@ body {
 body.contact-page {
   background: linear-gradient(to bottom, #231716 0%, #2f1f21 42%, #1a1112 100%);
   color: #f2e6d8;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 }
 
-/* Header */
+/* =========================
+   MASTER HYBRID HEADER
+   Same structure as Home / About / Gallery
+========================= */
+
 .site-header {
+  background:
+    radial-gradient(circle at 50% 10%, rgba(126, 81, 109, 0.18), transparent 35%),
+    linear-gradient(180deg, #241518 0%, #1a0f12 100%);
+  border-bottom: 1px solid rgba(190, 149, 94, 0.22);
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(31, 21, 24, 0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(190, 149, 94, 0.22);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.02) inset;
 }
 
-.nav-wrap {
-  width: min(1180px, 92%);
+.site-header-inner {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 18px 22px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 
-.brand {
-  color: #f3e7d8;
-  text-decoration: none;
-  font-size: 1.15rem;
+.brand-lockup {
+  line-height: 1.02;
+}
+
+.brand-small {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #efe2d2;
+}
+
+.brand-large {
+  font-size: 1.78rem;
   letter-spacing: 0.04em;
-  font-weight: 600;
+  font-weight: 700;
+  color: #f7eadb;
+}
+
+.brand-tag {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #c99a5b;
 }
 
 .main-nav {
@@ -48,20 +73,22 @@ body.contact-page {
   gap: 1rem;
   flex-wrap: wrap;
 }
-}
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+
+.main-nav a {
+  padding: 6px 2px;
+  font-size: 0.95rem;
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
+  color: #e3d3bf;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: #c2924f;
-}
+  color: #c99a5b;
 }
 
 .main-nav a::after {
@@ -71,8 +98,8 @@ body.contact-page {
   bottom: -0.35rem;
   width: 0;
   height: 1px;
-  background: #d4a163;
-  transition: width 0.3s ease;
+  background: rgba(201, 154, 91, 0.9);
+  transition: width 0.25s ease;
 }
 
 .main-nav a:hover::after,
@@ -80,7 +107,10 @@ body.contact-page {
   width: 100%;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
+
 .contact-hero {
   position: relative;
   min-height: 38vh;
@@ -135,7 +165,10 @@ body.contact-page {
   font-size: 1.08rem;
 }
 
-/* Shell */
+/* =========================
+   SHELL
+========================= */
+
 .contact-shell {
   width: min(1280px, 94%);
   margin: -1rem auto 0;
@@ -144,7 +177,7 @@ body.contact-page {
 
 .contact-panel {
   position: relative;
-  padding: 2rem;
+  padding: 2.8rem 2rem 2.2rem;
   border-radius: 30px;
   background: linear-gradient(rgba(79, 56, 50, 0.60), rgba(56, 38, 36, 0.66));
   border: 1px solid rgba(190, 149, 94, 0.16);
@@ -173,7 +206,10 @@ body.contact-page {
   align-items: stretch;
 }
 
-/* Cards */
+/* =========================
+   CARDS
+========================= */
+
 .contact-card {
   border-radius: 26px;
   background: linear-gradient(145deg, rgba(64, 42, 38, 0.96), rgba(30, 20, 21, 0.98));
@@ -195,8 +231,17 @@ body.contact-page {
   pointer-events: none;
 }
 
+.contact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 154, 93, 0.28);
+  box-shadow:
+    0 24px 44px rgba(0, 0, 0, 0.26),
+    0 0 24px rgba(126, 81, 109, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
 .contact-copy {
-  padding: 1.8rem 1.6rem 2rem;
+  padding: 1.55rem 1.55rem 1.65rem;
   position: relative;
   z-index: 2;
 }
@@ -204,7 +249,7 @@ body.contact-page {
 .contact-copy h2 {
   margin: 0 0 0.85rem;
   color: #f5e8d8;
-  font-size: 1.7rem;
+  font-size: clamp(2rem, 2.6vw, 2.6rem);
   font-weight: 500;
 }
 
@@ -215,9 +260,12 @@ body.contact-page {
   font-size: 1rem;
 }
 
-/* Decorative art */
+/* =========================
+   DECORATIVE ART
+========================= */
+
 .contact-art {
-  height: 180px;
+  height: 150px;
   border-bottom: 1px solid rgba(190, 149, 94, 0.12);
   position: relative;
   overflow: hidden;
@@ -243,46 +291,42 @@ body.contact-page {
     linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.04) 35%, transparent 70%);
   pointer-events: none;
 }
+
 .letter-art {
+  position: relative;
   background:
-    radial-gradient(circle at 72% 34%, rgba(215, 162, 86, 0.18), transparent 16%),
-    radial-gradient(circle at 18% 30%, rgba(255, 236, 204, 0.04), transparent 14%),
-    radial-gradient(circle at 34% 62%, rgba(118, 73, 52, 0.12), transparent 20%),
-    radial-gradient(circle at 80% 78%, rgba(110, 62, 94, 0.08), transparent 18%),
-
-    /* wax seal glow */
-    radial-gradient(circle at 74% 40%, rgba(143, 48, 48, 0.20), transparent 8%),
-    radial-gradient(circle at 74% 40%, rgba(214, 166, 96, 0.08), transparent 18%),
-
-    /* faint parchment lines */
+    radial-gradient(circle at 72% 40%, rgba(130, 34, 34, 0.28), transparent 7%),
+    radial-gradient(circle at 72% 40%, rgba(214, 166, 96, 0.12), transparent 18%),
+    radial-gradient(circle at 16% 28%, rgba(220, 175, 104, 0.16), transparent 14%),
+    radial-gradient(circle at 72% 38%, rgba(220, 175, 104, 0.18), transparent 16%),
+    radial-gradient(circle at 86% 78%, rgba(120, 70, 102, 0.10), transparent 18%),
     repeating-linear-gradient(
       0deg,
-      rgba(171, 131, 90, 0.08) 0px,
-      rgba(171, 131, 90, 0.08) 1px,
+      rgba(182, 144, 100, 0.08) 0px,
+      rgba(182, 144, 100, 0.08) 1px,
       rgba(0, 0, 0, 0) 1px,
-      rgba(0, 0, 0, 0) 18px
+      rgba(0, 0, 0, 0) 16px
     ),
-
-    /* soft fold shadow */
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.02) 0%,
-      rgba(255, 255, 255, 0.01) 35%,
-      rgba(0, 0, 0, 0.08) 52%,
-      rgba(255, 255, 255, 0.01) 68%,
-      rgba(255, 255, 255, 0.02) 100%
+      rgba(255, 245, 230, 0.03) 0%,
+      rgba(255, 245, 230, 0.01) 28%,
+      rgba(0, 0, 0, 0.10) 52%,
+      rgba(255, 245, 230, 0.01) 72%,
+      rgba(255, 245, 230, 0.02) 100%
     ),
-
     linear-gradient(
       145deg,
-      rgba(108, 78, 54, 0.96) 0%,
-      rgba(72, 49, 35, 0.94) 46%,
-      rgba(36, 24, 18, 0.98) 100%
+      rgba(116, 84, 58, 0.98) 0%,
+      rgba(79, 53, 36, 0.96) 42%,
+      rgba(38, 24, 18, 0.98) 100%
     );
 }
-}
 
-/* Contact methods */
+/* =========================
+   CONTACT METHODS
+========================= */
+
 .contact-methods {
   margin-top: 1.4rem;
   padding-top: 1.1rem;
@@ -298,7 +342,10 @@ body.contact-page {
   font-weight: 600;
 }
 
-/* Form */
+/* =========================
+   FORM
+========================= */
+
 .contact-form {
   display: grid;
   gap: 0.8rem;
@@ -320,7 +367,7 @@ body.contact-page {
   padding: 0.95rem 1rem;
   font: inherit;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .contact-form input::placeholder,
@@ -330,9 +377,9 @@ body.contact-page {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: rgba(212, 161, 99, 0.42);
-  box-shadow: 0 0 0 3px rgba(126, 81, 109, 0.12);
-  background: rgba(30, 20, 21, 0.95);
+  border-color: rgba(194, 146, 79, 0.55);
+  box-shadow: 0 0 0 1px rgba(194, 146, 79, 0.18);
+  background: rgba(27, 10, 14, 0.95);
 }
 
 .contact-form textarea {
@@ -341,7 +388,9 @@ body.contact-page {
 }
 
 .contact-form button {
-  margin-top: 0.6rem;
+  margin-top: 1.15rem;
+  min-width: 140px;
+  justify-content: center;
   width: fit-content;
   padding: 0.9rem 1.3rem;
   border-radius: 999px;
@@ -362,7 +411,10 @@ body.contact-page {
     0 0 20px rgba(126, 81, 109, 0.10);
 }
 
-/* Closing */
+/* =========================
+   CLOSING
+========================= */
+
 .contact-closing {
   margin-top: 2rem;
   text-align: center;
@@ -374,32 +426,65 @@ body.contact-page {
   letter-spacing: 0.04em;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
+
 .site-footer {
   text-align: center;
   color: #ccb293;
   padding: 1.5rem 1rem 2.5rem;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
+  margin-top: 2.75rem;
+  padding-top: 1.25rem;
 }
 
-/* Mobile */
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 900px) {
+  .site-header-inner {
+    align-items: flex-start;
+  }
+
+  .brand-large {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    gap: 0.75rem;
+  }
+
+  .main-nav a {
+    font-size: 0.84rem;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
+    padding: 2.3rem 1.35rem 1.8rem;
+  }
+
+  .contact-copy {
+    padding: 1.3rem;
   }
 }
 
 @media (max-width: 720px) {
-  .nav-wrap {
+  .site-header-inner {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.8rem;
   }
 
   .main-nav {
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .contact-hero {
@@ -418,208 +503,4 @@ body.contact-page {
   .contact-panel {
     padding: 1.2rem;
   }
-}
-/* =========================================
-   CONTACT PHASE 2 POLISH
-========================================= */
-
-/* More breathing room between intro note and cards */
-.contact-grid {
-  margin-top: 0.8rem;
-}
-
-/* Reduce decorative art height so the left card feels more balanced */
-.contact-art {
-  height: 150px;
-}
-
-/* Make the info card feel less top-heavy */
-.info-card .contact-copy {
-  padding-top: 1.5rem;
-}
-
-/* Slightly elevate the form card visually */
-.form-card {
-  box-shadow:
-    0 22px 40px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 245, 235, 0.04),
-    inset 0 0 24px rgba(126, 81, 109, 0.06);
-}
-
-/* Subtle luxury hover */
-.contact-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(201, 154, 93, 0.28);
-  box-shadow:
-    0 24px 44px rgba(0, 0, 0, 0.26),
-    0 0 24px rgba(126, 81, 109, 0.10);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-/* =========================================
-   CONTACT PHASE 3B ART OVERRIDE
-========================================= */
-
-.contact-page .letter-art {
-  position: relative;
-  background:
-    /* wax seal glow */
-    radial-gradient(circle at 72% 40%, rgba(130, 34, 34, 0.28), transparent 7%),
-    radial-gradient(circle at 72% 40%, rgba(214, 166, 96, 0.12), transparent 18%),
-
-    /* candle-warm highlights */
-    radial-gradient(circle at 16% 28%, rgba(220, 175, 104, 0.16), transparent 14%),
-    radial-gradient(circle at 72% 38%, rgba(220, 175, 104, 0.18), transparent 16%),
-
-    /* faint plum magic */
-    radial-gradient(circle at 86% 78%, rgba(120, 70, 102, 0.10), transparent 18%),
-
-    /* parchment lines */
-    repeating-linear-gradient(
-      0deg,
-      rgba(182, 144, 100, 0.08) 0px,
-      rgba(182, 144, 100, 0.08) 1px,
-      rgba(0, 0, 0, 0) 1px,
-      rgba(0, 0, 0, 0) 16px
-    ),
-
-    /* fold + vignette */
-    linear-gradient(
-      90deg,
-      rgba(255, 245, 230, 0.03) 0%,
-      rgba(255, 245, 230, 0.01) 28%,
-      rgba(0, 0, 0, 0.10) 52%,
-      rgba(255, 245, 230, 0.01) 72%,
-      rgba(255, 245, 230, 0.02) 100%
-    ),
-
-    linear-gradient(
-      145deg,
-      rgba(116, 84, 58, 0.98) 0%,
-      rgba(79, 53, 36, 0.96) 42%,
-      rgba(38, 24, 18, 0.98) 100%
-    ) !important;
-}
-.contact-page .letter-art::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(230, 210, 185, 0.03) 0px,
-      rgba(230, 210, 185, 0.03) 1px,
-      rgba(0, 0, 0, 0) 1px,
-      rgba(0, 0, 0, 0) 14px
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.02) 0%,
-      rgba(0, 0, 0, 0.03) 100%
-    );
-  pointer-events: none;
-}
-/* =========================================
-   CONTACT PHASE 4 — LOCK POLISH
-========================================= */
-
-.contact-panel {
-  padding: 2.8rem 2rem 2.2rem;
-}
-
-.contact-intro {
-  max-width: 760px;
-  margin: 0 auto 2rem;
-  font-size: 1.18rem;
-  line-height: 1.75;
-}
-
-.contact-grid {
-  align-items: stretch;
-  gap: 2rem;
-}
-
-.contact-card,
-.contact-form-wrap {
-  min-height: 100%;
-}
-
-.contact-card {
-  padding-bottom: 2rem;
-}
-
-.contact-copy {
-  padding: 1.55rem 1.55rem 1.65rem;
-}
-
-.contact-copy h2 {
-  margin-bottom: 0.85rem;
-  font-size: clamp(2rem, 2.6vw, 2.6rem);
-}
-
-.contact-copy p {
-  line-height: 1.8;
-}
-
-.contact-details {
-  margin-top: 1.35rem;
-  gap: 0.95rem;
-}
-
-.contact-details li {
-  line-height: 1.6;
-}
-
-.contact-form-wrap {
-  padding: 1.55rem 1.55rem 1.4rem;
-}
-
-.contact-form-wrap h2 {
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 2.6vw, 2.6rem);
-}
-
-.contact-form label {
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
-}
-
-.contact-form input,
-.contact-form textarea {
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: rgba(194, 146, 79, 0.55);
-  box-shadow: 0 0 0 1px rgba(194, 146, 79, 0.18);
-  background: rgba(27, 10, 14, 0.95);
-}
-
-.contact-form textarea {
-  min-height: 150px;
-}
-
-.contact-submit {
-  margin-top: 1.15rem;
-  min-width: 140px;
-  justify-content: center;
-}
-
-@media (max-width: 980px) {
-  .contact-panel {
-    padding: 2.3rem 1.35rem 1.8rem;
-  }
-
-  .contact-grid {
-    gap: 1.5rem;
-  }
-
-  .contact-copy,
-  .contact-form-wrap {
-    padding: 1.3rem;
-  }
-}
-.site-footer {
-  margin-top: 2.75rem;
-  padding-top: 1.25rem;
 }
