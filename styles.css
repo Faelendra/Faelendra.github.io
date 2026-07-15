@@ -91,85 +91,115 @@ a{
 /* ========================================
    SHARED HEADER
 ======================================== */
+/* ========================================
+   FINAL MASTER HEADER
+   The Faelendra Workshop
+======================================== */
 
 .site-header{
   position:sticky;
   top:0;
-
-  z-index:50;
+  z-index:100;
 
   background:
     radial-gradient(
-      circle at 15% 0%,
-      rgba(106,41,79,.08),
-      transparent 30%
+      circle at 10% 50%,
+      rgba(106,41,79,.10),
+      transparent 28%
     ),
-
     radial-gradient(
-      circle at 85% 0%,
-      rgba(101,113,61,.08),
-      transparent 30%
+      circle at 90% 50%,
+      rgba(101,113,61,.09),
+      transparent 28%
     ),
-
     linear-gradient(
       180deg,
-      rgba(250,243,229,.98),
-      rgba(239,226,200,.98)
+      rgba(250,243,229,.99),
+      rgba(238,224,198,.99)
     );
 
+  border-top:
+    1px solid rgba(197,154,85,.30);
+
   border-bottom:
-    1px solid rgba(197,154,85,.45);
+    1px solid rgba(197,154,85,.42);
 
   box-shadow:
     0 1px 0 rgba(255,255,255,.75) inset,
-    0 8px 24px rgba(58,35,21,.10);
+    0 8px 24px rgba(50,29,17,.11);
 
-  backdrop-filter:blur(8px);
+  backdrop-filter:blur(9px);
+}
+
+
+/* Soft transition into the ledger artwork */
+
+.site-header::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:-12px;
+
+  height:12px;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(91,42,80,.08),
+      transparent
+    );
+
+  opacity:.65;
 }
 
 
 .site-header-inner{
-  max-width:1280px;
+  width:min(1280px,96%);
 
   margin:0 auto;
 
   padding:
-    14px
-    22px
-    16px;
+    13px
+    20px
+    15px;
 
   display:flex;
 
   justify-content:space-between;
   align-items:flex-end;
 
-  gap:28px;
+  gap:34px;
 
   flex-wrap:wrap;
 }
 
 
 /* ========================================
-   BRAND LOCKUP
+   HEADER BRAND
 ======================================== */
 
 .brand-lockup{
-  min-width:290px;
+  min-width:275px;
 
   line-height:1;
 
-  text-align:left;
+  text-align:center;
 }
 
 
 .brand-ornament{
-  width:210px;
-  height:8px;
+  width:180px;
+  height:9px;
 
   margin:
     0
-    0
-    7px;
+    auto
+    6px;
 
   position:relative;
 }
@@ -183,7 +213,7 @@ a{
 
   top:50%;
 
-  width:82px;
+  width:67px;
   height:1px;
 
   background:
@@ -220,7 +250,7 @@ a{
     1px solid var(--gold);
 
   background:
-    rgba(248,239,223,.95);
+    rgba(248,239,223,.98);
 
   transform:
     translate(-50%,-50%)
@@ -229,9 +259,9 @@ a{
 
 
 .brand-small{
-  font-size:.95rem;
+  font-size:.82rem;
 
-  letter-spacing:.22em;
+  letter-spacing:.28em;
 
   font-weight:700;
 
@@ -239,10 +269,26 @@ a{
 }
 
 
-.brand-large{
-  margin-top:2px;
+.brand-small::before,
+.brand-small::after{
+  content:"✦";
 
-  font-size:2.25rem;
+  margin:
+    0
+    9px;
+
+  color:var(--gold);
+
+  font-size:.55rem;
+
+  vertical-align:middle;
+}
+
+
+.brand-large{
+  margin-top:4px;
+
+  font-size:1.9rem;
 
   letter-spacing:.075em;
 
@@ -251,15 +297,15 @@ a{
   color:var(--plum);
 
   text-shadow:
-    0 1px 0
-    rgba(255,255,255,.70);
+    0 1px 0 rgba(255,255,255,.70),
+    0 2px 5px rgba(71,41,25,.08);
 }
 
 
 .brand-tag{
   margin-top:5px;
 
-  font-size:1rem;
+  font-size:.92rem;
 
   font-style:italic;
 
@@ -267,19 +313,18 @@ a{
 }
 
 
-/* ========================================
-   BOTANICAL BRAND DETAIL
-======================================== */
-
 .brand-botanical{
-  width:230px;
-  height:20px;
+  width:205px;
+  height:17px;
 
-  margin-top:6px;
+  margin:
+    5px
+    auto
+    0;
 
   position:relative;
 
-  opacity:.95;
+  opacity:.96;
 }
 
 
@@ -289,16 +334,17 @@ a{
 
   position:absolute;
 
-  top:10px;
+  top:9px;
 
-  width:91px;
+  width:79px;
   height:1px;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      var(--olive)
+      var(--olive),
+      var(--gold)
     );
 }
 
@@ -319,9 +365,9 @@ a{
 .botanical-right{
   position:absolute;
 
-  top:5px;
+  top:4px;
 
-  width:18px;
+  width:17px;
   height:10px;
 
   border-top:
@@ -332,14 +378,14 @@ a{
 
 
 .botanical-left{
-  left:84px;
+  left:75px;
 
   transform:rotate(24deg);
 }
 
 
 .botanical-right{
-  right:84px;
+  right:75px;
 
   transform:rotate(-24deg);
 }
@@ -349,7 +395,7 @@ a{
   position:absolute;
 
   left:50%;
-  top:3px;
+  top:2px;
 
   width:10px;
   height:10px;
@@ -373,7 +419,7 @@ a{
 
 
 /* ========================================
-   NAVIGATION
+   LEDGER CHAPTER NAVIGATION
 ======================================== */
 
 .main-nav{
@@ -382,40 +428,80 @@ a{
   align-items:center;
   justify-content:flex-end;
 
-  gap:1.05rem;
+  gap:
+    8px
+    28px;
 
   flex-wrap:wrap;
 
-  padding-bottom:8px;
+  padding-bottom:10px;
 }
 
 
 .main-nav a{
+  position:relative;
+
   padding:
-    7px
-    2px;
-
-  font-size:.95rem;
-
-  line-height:1;
+    9px
+    2px
+    11px;
 
   white-space:nowrap;
 
-  position:relative;
+  color:#5a4637;
 
-  color:#5e4939;
-
-  letter-spacing:.075em;
-
-  text-transform:uppercase;
+  font-size:.98rem;
 
   font-weight:600;
+
+  letter-spacing:.055em;
+
+  text-transform:none;
+
+  transition:
+    color .24s ease,
+    transform .24s ease;
 }
 
 
-.main-nav a:hover,
-.main-nav a.active{
+.main-nav a:hover{
   color:var(--plum);
+
+  transform:translateY(-1px);
+}
+
+
+.main-nav a::before{
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:3px;
+
+  width:0;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--olive),
+      var(--gold),
+      var(--plum),
+      transparent
+    );
+
+  transform:translateX(-50%);
+
+  transition:
+    width .28s ease;
+}
+
+
+.main-nav a:hover::before,
+.main-nav a.active::before{
+  width:100%;
 }
 
 
@@ -425,30 +511,179 @@ a{
   position:absolute;
 
   left:50%;
-  bottom:-.2rem;
+  bottom:-3px;
 
-  width:0;
-  height:2px;
+  width:6px;
+  height:6px;
 
-  background:
-    linear-gradient(
-      90deg,
-      var(--olive),
-      var(--gold),
-      var(--plum)
-    );
+  border-radius:
+    60%
+    40%
+    60%
+    40%;
 
-  transform:translateX(-50%);
+  background:var(--gold);
+
+  opacity:0;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
 
   transition:
-    width
-    .25s
-    ease;
+    opacity .24s ease,
+    bottom .24s ease;
 }
 
 
-.main-nav a:hover::after,
+.main-nav a:hover::after{
+  opacity:.62;
+
+  bottom:-1px;
+}
+
+
+.main-nav a.active{
+  color:var(--plum);
+
+  font-weight:700;
+}
+
+
 .main-nav a.active::after{
+  opacity:1;
+
+  bottom:-1px;
+
+  background:var(--gold);
+
+  box-shadow:
+    -6px 4px 0 -2px var(--olive),
+    6px -4px 0 -2px var(--plum);
+}
+
+
+/* ========================================
+   MASTER HEADER — TABLET
+======================================== */
+
+@media (max-width:980px){
+
+  .site-header-inner{
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+  }
+
+
+  .brand-lockup{
+    width:100%;
+  }
+
+
+  .main-nav{
+    width:100%;
+
+    justify-content:center;
+
+    padding-bottom:4px;
+  }
+
+}
+
+
+/* ========================================
+   MASTER HEADER — PHONE
+======================================== */
+
+@media (max-width:620px){
+
+  .site-header{
+    position:relative;
+  }
+
+
+  .site-header-inner{
+    width:100%;
+
+    padding:
+      13px
+      12px
+      15px;
+  }
+
+
+  .brand-large{
+    font-size:1.7rem;
+  }
+
+
+  .brand-small{
+    font-size:.72rem;
+
+    letter-spacing:.21em;
+  }
+
+
+  .brand-small::before,
+  .brand-small::after{
+    margin:
+      0
+      5px;
+  }
+
+
+  .brand-tag{
+    font-size:.86rem;
+  }
+
+
+  .brand-ornament{
+    width:165px;
+  }
+
+
+  .brand-botanical{
+    width:185px;
+  }
+
+
+  .brand-botanical::before,
+  .brand-botanical::after{
+    width:70px;
+  }
+
+
+  .botanical-left{
+    left:68px;
+  }
+
+
+  .botanical-right{
+    right:68px;
+  }
+
+
+  .main-nav{
+    gap:
+      2px
+      15px;
+  }
+
+
+  .main-nav a{
+    padding:
+      7px
+      0
+      10px;
+
+    font-size:.83rem;
+  }
+
+}
+{
   width:100%;
 }
 
