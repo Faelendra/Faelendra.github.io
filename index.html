@@ -36,11 +36,11 @@
 
   <link
     rel="stylesheet"
-    href="styles.css?v=finaldesktop48"
+    href="styles.css?v=workshopledger1"
   >
 </head>
 
-<body>
+<body class="home-page">
 
   <header class="site-header">
 
@@ -52,7 +52,7 @@
       >
 
         <div
-          class="brand-ornament brand-ornament-top"
+          class="brand-ornament"
           aria-hidden="true"
         >
           <span></span>
@@ -116,81 +116,209 @@
 
   </header>
 
-  <main class="page-shell">
+  <main>
 
     <section
-      class="story-panel"
-      aria-labelledby="home-story-title"
+      class="ledger-cover"
+      aria-labelledby="ledger-title"
     >
 
+      <h1
+        id="ledger-title"
+        class="visually-hidden"
+      >
+        Wrought by Faelendra
+      </h1>
+
       <img
-        src="background.jpg"
-        alt=""
-        class="story-image"
-        aria-hidden="true"
+        src="images/workshop-ledger.png"
+        alt="The Wrought by Faelendra Workshop Ledger, featuring botanical studies, woodworking tools, an owl, a maker's seal, and a warmly lit woodland workshop."
+        class="ledger-cover-image"
       >
 
-      <div class="panel-text">
+      <a
+        href="#workshop-chapters"
+        class="ledger-scroll-link"
+      >
+        Enter the Workshop
+        <span aria-hidden="true">↓</span>
+      </a>
 
-        <h1
-          id="home-story-title"
-          class="visually-hidden"
-        >
-          Wrought by Faelendra
-        </h1>
+    </section>
+
+    <section
+      id="workshop-chapters"
+      class="workshop-chapters"
+      aria-labelledby="chapters-title"
+    >
+
+      <div class="chapters-intro">
+
+        <p class="chapters-kicker">
+          Within the Ledger
+        </p>
+
+        <h2 id="chapters-title">
+          Continue into the Workshop
+        </h2>
 
         <p>
-          Faelendra is the name the work answers to when it
-          prefers not to be hurried.
+          Each page holds another part of the story—how the
+          name began, what has been wrought, and how a curious
+          idea may become something made by hand.
         </p>
 
         <div
-          class="orn-divider"
+          class="chapter-divider"
           aria-hidden="true"
         ></div>
 
-        <p>
-          She favors wood, earth, and wandering notions, and
-          has been known to speak with materials until they
-          agree to cooperate.
-        </p>
+      </div>
 
-        <div
-          class="orn-divider"
-          aria-hidden="true"
-        ></div>
+      <div class="chapter-grid">
 
-        <p>
-          The name appeared first in the margins of ledgers,
-          then on labels, and finally above the door—while the
-          maker herself carried on quite sensibly, otherwise
-          called Brenda.
-        </p>
+        <article class="chapter-card">
 
-        <div
-          class="orn-divider"
-          aria-hidden="true"
-        ></div>
+          <p class="chapter-number">
+            I
+          </p>
 
-        <p>
-          Nothing here is mass-made or loudly explained.
-          <br>
-          Everything is wrought by hand, with care.
-        </p>
+          <h3>
+            The Story
+          </h3>
 
-        <p class="closing-line">
-          Established quietly. Enter kindly.
-        </p>
+          <p>
+            Discover the name behind the workshop and the
+            maker otherwise called Brenda.
+          </p>
 
-        <p class="small-line">
-          No curses included, probably.
-        </p>
+          <a href="about.html">
+            Read the Story
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+
+        <article class="chapter-card">
+
+          <p class="chapter-number">
+            II
+          </p>
+
+          <h3>
+            The Gallery
+          </h3>
+
+          <p>
+            Browse hand-wrought curiosities in wood, earth,
+            paint, and wandering imagination.
+          </p>
+
+          <a href="gallery.html">
+            View the Gallery
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+
+        <article class="chapter-card">
+
+          <p class="chapter-number">
+            III
+          </p>
+
+          <h3>
+            Commissions
+          </h3>
+
+          <p>
+            Bring a beautifully specific idea to the workshop
+            and begin a custom creation.
+          </p>
+
+          <a href="orders.html">
+            Explore Custom Orders
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
+
+        <article class="chapter-card">
+
+          <p class="chapter-number">
+            IV
+          </p>
+
+          <h3>
+            Correspondence
+          </h3>
+
+          <p>
+            Send questions, curious notions, or a civilized
+            inquiry directly to Faelendra.
+          </p>
+
+          <a href="contact.html">
+            Write to Faelendra
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </article>
 
       </div>
 
     </section>
 
+    <section class="workshop-farewell">
+
+      <div
+        class="farewell-flourish"
+        aria-hidden="true"
+      >
+        <span></span>
+      </div>
+
+      <p class="farewell-title">
+        Thank you for visiting the workshop.
+      </p>
+
+      <p>
+        May your path be curious and your hands always find
+        something worth making.
+      </p>
+
+      <p class="farewell-signature">
+        Wrought by Faelendra
+      </p>
+
+      <p class="farewell-brenda">
+        otherwise called Brenda.
+      </p>
+
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+
+    <div
+      class="footer-botanical"
+      aria-hidden="true"
+    >
+      <span></span>
+    </div>
+
+    <p>
+      Wrought by Faelendra
+      <span aria-hidden="true">•</span>
+      Purveyor of Curious Arts
+    </p>
+
+    <p class="footer-motto">
+      No curses included, probably.
+    </p>
+
+  </footer>
 
 </body>
 
