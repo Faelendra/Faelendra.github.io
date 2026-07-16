@@ -1104,7 +1104,7 @@ textarea{
 .chapter-card{
   position:relative;
 
-  min-height:455px;
+  min-height:500px;
 
   padding:
     28px
@@ -1343,26 +1343,12 @@ textarea{
 ========================================================= */
 
 .chapter-illustration{
-    height:155px;
-
-    margin:
-        38px
-        auto
-        18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
-
-    border-radius:12px;
-}
+  height:155px;
 
   margin:
-    30px
+    42px
     auto
-    9px;
+    18px;
 
   display:flex;
 
@@ -1424,10 +1410,10 @@ textarea{
 .chapter-card h3{
   position:relative;
 
-  z-index:2;
+  z-index:5;
 
   margin:
-    3px
+    8px
     0
     12px;
 
@@ -2594,31 +2580,4 @@ textarea{
     max-width:230px;
   }
 
-}
-/* =========================================================
-   CHAPTER CARD LAYOUT CORRECTION
-========================================================= */
-
-.chapter-card{
-  min-height:500px;
-}
-
-.chapter-illustration{
-  height:155px;
-
-  margin:
-    42px
-    auto
-    18px;
-}
-
-.chapter-card h3{
-  position:relative;
-
-  z-index:5;
-
-  margin:
-    8px
-    0
-    12px;
 }
