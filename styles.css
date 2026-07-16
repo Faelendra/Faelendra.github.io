@@ -1104,7 +1104,7 @@ textarea{
 .chapter-card{
   position:relative;
 
-  min-height:500px;
+  min-height:520px;
 
   padding:
     28px
@@ -1346,7 +1346,7 @@ textarea{
   height:155px;
 
   margin:
-    42px
+    54px
     auto
     18px;
 
