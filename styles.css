@@ -1,30 +1,48 @@
+/* =========================================================
+   WROUGHT BY FAELENDRA
+   MASTER STYLESHEET — HOMEPAGE VERSION 1.0
+========================================================= */
+
+
+/* =========================================================
+   BRAND VARIABLES
+========================================================= */
+
 :root{
-  --ink:#24150f;
-  --ink-soft:#6f5a4b;
+  --ink:#291a13;
+  --ink-soft:#624b3b;
 
-  --paper:#efe2c8;
-  --paper-light:#f8efdf;
-  --paper-warm:#f3e5ca;
+  --paper:#efe0c1;
+  --paper-light:#fbf2df;
+  --paper-warm:#e8cf9f;
+  --paper-deep:#d8b77e;
 
-  --plum:#6a294f;
-  --plum-deep:#4f1838;
+  --plum:#692750;
+  --plum-deep:#491732;
+  --plum-soft:#8a496f;
 
-  --olive:#65713d;
-  --olive-deep:#465027;
+  --olive:#68733e;
+  --olive-deep:#454f27;
+  --olive-soft:#8c9860;
 
-  --gold:#c59a55;
-  --gold-soft:rgba(197,154,85,.28);
+  --gold:#c49a55;
+  --gold-light:#e0bd78;
+  --gold-dark:#8c6433;
 
-  --line:rgba(116,77,47,.22);
+  --line:rgba(132,88,49,.26);
+  --line-strong:rgba(132,88,49,.46);
 
-  --shadow:
-    0 18px 42px rgba(37,21,15,.20);
+  --soft-shadow:
+    0 18px 42px rgba(48,28,17,.16);
+
+  --deep-shadow:
+    0 28px 65px rgba(42,23,13,.25);
 }
 
 
-/* ========================================
-   BASIC PAGE SETTINGS
-======================================== */
+/* =========================================================
+   RESET AND PAGE FOUNDATION
+========================================================= */
 
 *{
   box-sizing:border-box;
@@ -39,6 +57,8 @@ html{
 body{
   margin:0;
 
+  min-height:100vh;
+
   font-family:
     "Cormorant Garamond",
     Georgia,
@@ -48,8 +68,8 @@ body{
 
   background:
     linear-gradient(
-      rgba(248,239,223,.91),
-      rgba(239,226,200,.94)
+      rgba(248,239,220,.93),
+      rgba(236,217,182,.95)
     ),
     url("background.jpg");
 
@@ -59,15 +79,32 @@ body{
 }
 
 
+body.home-page{
+  overflow-x:hidden;
+}
+
+
+img{
+  max-width:100%;
+}
+
+
 a{
   color:inherit;
   text-decoration:none;
 }
 
 
-/* ========================================
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+
+/* =========================================================
    ACCESSIBILITY
-======================================== */
+========================================================= */
 
 .visually-hidden{
   position:absolute !important;
@@ -81,6 +118,7 @@ a{
   overflow:hidden !important;
 
   clip:rect(0,0,0,0) !important;
+  clip-path:inset(50%) !important;
 
   white-space:nowrap !important;
 
@@ -88,51 +126,49 @@ a{
 }
 
 
-/* ========================================
-   SHARED HEADER
-======================================== */
-/* ========================================
+/* =========================================================
    FINAL MASTER HEADER
-   The Faelendra Workshop
-======================================== */
+========================================================= */
 
 .site-header{
   position:sticky;
+
   top:0;
+
   z-index:100;
 
   background:
     radial-gradient(
-      circle at 10% 50%,
-      rgba(106,41,79,.10),
-      transparent 28%
+      circle at 8% 40%,
+      rgba(105,39,80,.09),
+      transparent 29%
     ),
+
     radial-gradient(
-      circle at 90% 50%,
-      rgba(101,113,61,.09),
-      transparent 28%
+      circle at 92% 48%,
+      rgba(104,115,62,.09),
+      transparent 29%
     ),
+
     linear-gradient(
       180deg,
-      rgba(250,243,229,.99),
-      rgba(238,224,198,.99)
+      rgba(251,245,232,.99),
+      rgba(239,225,199,.99)
     );
 
   border-top:
-    1px solid rgba(197,154,85,.30);
+    1px solid rgba(196,154,85,.26);
 
   border-bottom:
-    1px solid rgba(197,154,85,.42);
+    1px solid rgba(196,154,85,.43);
 
   box-shadow:
-    0 1px 0 rgba(255,255,255,.75) inset,
-    0 8px 24px rgba(50,29,17,.11);
+    0 1px 0 rgba(255,255,255,.78) inset,
+    0 8px 25px rgba(50,29,17,.12);
 
   backdrop-filter:blur(9px);
 }
 
-
-/* Soft transition into the ledger artwork */
 
 .site-header::after{
   content:"";
@@ -141,20 +177,20 @@ a{
 
   left:0;
   right:0;
-  bottom:-12px;
+  bottom:-13px;
 
-  height:12px;
+  height:13px;
 
   pointer-events:none;
 
   background:
     linear-gradient(
       180deg,
-      rgba(91,42,80,.08),
+      rgba(105,39,80,.075),
       transparent
     );
 
-  opacity:.65;
+  opacity:.62;
 }
 
 
@@ -170,8 +206,8 @@ a{
 
   display:flex;
 
-  justify-content:space-between;
   align-items:flex-end;
+  justify-content:space-between;
 
   gap:34px;
 
@@ -179,9 +215,9 @@ a{
 }
 
 
-/* ========================================
-   HEADER BRAND
-======================================== */
+/* =========================================================
+   HEADER BRAND LOCKUP
+========================================================= */
 
 .brand-lockup{
   min-width:275px;
@@ -250,7 +286,7 @@ a{
     1px solid var(--gold);
 
   background:
-    rgba(248,239,223,.98);
+    rgba(249,240,220,.98);
 
   transform:
     translate(-50%,-50%)
@@ -275,11 +311,11 @@ a{
 
   margin:
     0
-    9px;
+    8px;
 
   color:var(--gold);
 
-  font-size:.55rem;
+  font-size:.54rem;
 
   vertical-align:middle;
 }
@@ -288,30 +324,34 @@ a{
 .brand-large{
   margin-top:4px;
 
-  font-size:1.9rem;
+  color:var(--plum);
 
-  letter-spacing:.075em;
+  font-size:1.92rem;
 
   font-weight:700;
 
-  color:var(--plum);
+  letter-spacing:.075em;
 
   text-shadow:
-    0 1px 0 rgba(255,255,255,.70),
-    0 2px 5px rgba(71,41,25,.08);
+    0 1px 0 rgba(255,255,255,.72),
+    0 2px 5px rgba(71,41,25,.09);
 }
 
 
 .brand-tag{
   margin-top:5px;
 
-  font-size:.92rem;
+  color:#765b42;
+
+  font-size:.93rem;
 
   font-style:italic;
-
-  color:#765c43;
 }
 
+
+/* =========================================================
+   HEADER BOTANICAL MARK
+========================================================= */
 
 .brand-botanical{
   width:205px;
@@ -418,9 +458,9 @@ a{
 }
 
 
-/* ========================================
-   LEDGER CHAPTER NAVIGATION
-======================================== */
+/* =========================================================
+   CHAPTER NAVIGATION
+========================================================= */
 
 .main-nav{
   display:flex;
@@ -448,15 +488,13 @@ a{
 
   white-space:nowrap;
 
-  color:#5a4637;
+  color:#594536;
 
-  font-size:.98rem;
+  font-size:1.03rem;
 
   font-weight:600;
 
-  letter-spacing:.055em;
-
-  text-transform:none;
+  letter-spacing:.05em;
 
   transition:
     color .24s ease,
@@ -494,8 +532,7 @@ a{
 
   transform:translateX(-50%);
 
-  transition:
-    width .28s ease;
+  transition:width .28s ease;
 }
 
 
@@ -537,9 +574,9 @@ a{
 
 
 .main-nav a:hover::after{
-  opacity:.62;
-
   bottom:-1px;
+
+  opacity:.62;
 }
 
 
@@ -551,9 +588,9 @@ a{
 
 
 .main-nav a.active::after{
-  opacity:1;
-
   bottom:-1px;
+
+  opacity:1;
 
   background:var(--gold);
 
@@ -563,11 +600,1564 @@ a{
 }
 
 
-/* ========================================
-   MASTER HEADER — TABLET
-======================================== */
+/* =========================================================
+   HOMEPAGE LEDGER COVER
+========================================================= */
 
-@media (max-width:980px){
+.ledger-cover{
+  position:relative;
+
+  width:100%;
+
+  padding:
+    20px
+    18px
+    70px;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:flex-start;
+
+  background:
+    radial-gradient(
+      circle at 50% 5%,
+      rgba(105,39,80,.10),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 12% 74%,
+      rgba(104,115,62,.10),
+      transparent 29%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(244,231,205,.97),
+      rgba(230,208,172,.98)
+    );
+
+  border-bottom:
+    1px solid rgba(196,154,85,.38);
+
+  box-shadow:
+    inset 0 -18px 38px rgba(72,43,25,.07);
+}
+
+
+.ledger-cover::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(92,58,35,.018) 0,
+      rgba(92,58,35,.018) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+
+.ledger-cover-image{
+  display:block;
+
+  width:min(1180px,96vw);
+  height:auto;
+
+  position:relative;
+
+  z-index:1;
+
+  border:
+    1px solid rgba(83,46,31,.42);
+
+  border-radius:17px;
+
+  box-shadow:
+    0 30px 74px rgba(42,22,13,.29),
+    0 6px 18px rgba(42,22,13,.17),
+    inset 0 0 0 1px rgba(255,244,219,.38);
+
+  filter:
+    saturate(1.03)
+    contrast(1.02);
+}
+
+
+.ledger-scroll-link{
+  position:absolute;
+
+  left:50%;
+  bottom:20px;
+
+  z-index:4;
+
+  transform:translateX(-50%);
+
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  padding:
+    11px
+    22px;
+
+  border:
+    1px solid rgba(215,174,94,.70);
+
+  border-radius:999px;
+
+  color:#fff9ec;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--plum-soft),
+      var(--plum-deep)
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,235,190,.25),
+    inset 0 -4px 7px rgba(35,13,23,.28),
+    0 10px 24px rgba(65,28,49,.25);
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  letter-spacing:.055em;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+
+.ledger-scroll-link:hover{
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--olive-soft),
+      var(--olive-deep)
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,235,190,.24),
+    inset 0 -4px 7px rgba(25,31,13,.28),
+    0 15px 28px rgba(51,59,31,.24);
+}
+
+
+.ledger-scroll-link span{
+  font-size:1.15rem;
+
+  line-height:1;
+}
+
+
+/* =========================================================
+   SUBTLE DUST MOTES
+========================================================= */
+
+.ledger-cover::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  pointer-events:none;
+
+  opacity:.19;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255,247,219,.88) 0,
+      rgba(255,247,219,.88) 1px,
+      transparent 1.8px
+    ),
+
+    radial-gradient(
+      circle,
+      rgba(255,247,219,.65) 0,
+      rgba(255,247,219,.65) 1px,
+      transparent 1.8px
+    );
+
+  background-size:
+    145px 145px,
+    205px 205px;
+
+  background-position:
+    25px 35px,
+    90px 20px;
+
+  animation:
+    faelendra-dust
+    24s
+    linear
+    infinite;
+}
+
+
+@keyframes faelendra-dust{
+
+  0%{
+    background-position:
+      25px 35px,
+      90px 20px;
+  }
+
+  50%{
+    background-position:
+      42px 5px,
+      68px 47px;
+  }
+
+  100%{
+    background-position:
+      25px -30px,
+      90px 75px;
+  }
+
+}
+
+
+@media (prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+
+  .ledger-cover::after{
+    animation:none;
+  }
+
+
+  *,
+  *::before,
+  *::after{
+    transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+  }
+
+}
+
+
+/* =========================================================
+   WITHIN THE LEDGER SECTION
+========================================================= */
+
+.workshop-chapters{
+  position:relative;
+
+  width:100%;
+
+  padding:
+    92px
+    24px
+    108px;
+
+  background:
+    radial-gradient(
+      circle at 11% 8%,
+      rgba(105,39,80,.075),
+      transparent 26%
+    ),
+
+    radial-gradient(
+      circle at 89% 92%,
+      rgba(104,115,62,.085),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      rgba(250,242,226,.94),
+      rgba(234,214,180,.96)
+    ),
+
+    url("background.jpg");
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat-y,
+    repeat-y;
+
+  background-size:
+    auto,
+    auto,
+    100% auto,
+    100% auto;
+
+  background-position:
+    top left,
+    bottom right,
+    top center,
+    top center;
+
+  border-bottom:
+    1px solid rgba(196,154,85,.30);
+}
+
+
+.workshop-chapters::before{
+  content:"";
+
+  position:absolute;
+
+  inset:
+    27px
+    24px;
+
+  pointer-events:none;
+
+  border:
+    1px solid rgba(105,39,80,.13);
+
+  border-radius:30px;
+}
+
+
+.chapters-intro{
+  position:relative;
+
+  z-index:2;
+
+  width:min(790px,92%);
+
+  margin:
+    0
+    auto
+    52px;
+
+  text-align:center;
+}
+
+
+.chapters-kicker{
+  margin:
+    0
+    0
+    14px;
+
+  color:var(--olive-deep);
+
+  font-size:.92rem;
+
+  font-weight:700;
+
+  letter-spacing:.26em;
+
+  text-transform:uppercase;
+}
+
+
+.chapters-intro h2{
+  margin:
+    0
+    0
+    20px;
+
+  color:var(--plum);
+
+  font-size:
+    clamp(
+      2.6rem,
+      5vw,
+      4.35rem
+    );
+
+  line-height:1;
+
+  font-weight:700;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.56),
+    0 3px 10px rgba(67,38,22,.10);
+}
+
+
+.chapters-intro > p:not(.chapters-kicker){
+  max-width:720px;
+
+  margin:0 auto;
+
+  color:#4d392c;
+
+  font-size:1.24rem;
+
+  line-height:1.64;
+}
+
+
+/* =========================================================
+   BOTANICAL CHAPTER DIVIDER
+========================================================= */
+
+.chapter-divider{
+  width:210px;
+  height:18px;
+
+  margin:
+    30px
+    auto
+    0;
+
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at center,
+      var(--plum) 0,
+      var(--plum) 5px,
+      transparent 6px
+    );
+}
+
+
+.chapter-divider::before,
+.chapter-divider::after{
+  content:"";
+
+  position:absolute;
+
+  top:9px;
+
+  width:84px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--olive),
+      var(--gold)
+    );
+}
+
+
+.chapter-divider::before{
+  left:0;
+}
+
+
+.chapter-divider::after{
+  right:0;
+
+  transform:scaleX(-1);
+}
+
+
+/* =========================================================
+   ILLUMINATED CHAPTER GRID
+========================================================= */
+
+.chapter-grid{
+  position:relative;
+
+  z-index:2;
+
+  width:min(1280px,96%);
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0,1fr)
+    );
+
+  gap:22px;
+
+  align-items:stretch;
+}
+
+
+/* =========================================================
+   LEDGER CHAPTER PAGES
+========================================================= */
+
+.chapter-card{
+  position:relative;
+
+  min-height:455px;
+
+  padding:
+    28px
+    24px
+    27px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  overflow:hidden;
+
+  text-align:center;
+
+  border:
+    1px solid rgba(145,96,50,.50);
+
+  border-radius:
+    20px
+    20px
+    24px
+    24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,.59),
+      transparent 36%
+    ),
+
+    repeating-linear-gradient(
+      0deg,
+      rgba(110,75,44,.024) 0,
+      rgba(110,75,44,.024) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+
+    linear-gradient(
+      145deg,
+      #fff9eb,
+      #e9d1a5
+    );
+
+  box-shadow:
+    0 18px 36px rgba(47,27,16,.18),
+    inset 0 1px 0 rgba(255,255,255,.80),
+    inset 0 0 31px rgba(126,84,47,.075);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+
+.chapter-card::before{
+  content:"";
+
+  position:absolute;
+
+  inset:8px;
+
+  z-index:3;
+
+  border:
+    1px solid rgba(105,39,80,.18);
+
+  border-radius:14px;
+
+  pointer-events:none;
+}
+
+
+.chapter-card::after{
+  content:"";
+
+  position:absolute;
+
+  inset:16px;
+
+  z-index:0;
+
+  pointer-events:none;
+
+  opacity:.47;
+
+  background:
+    radial-gradient(
+      circle at 0 0,
+      transparent 0 19px,
+      rgba(105,39,80,.28) 20px 21px,
+      transparent 22px
+    ),
+
+    radial-gradient(
+      circle at 100% 0,
+      transparent 0 19px,
+      rgba(104,115,62,.28) 20px 21px,
+      transparent 22px
+    ),
+
+    radial-gradient(
+      circle at 0 100%,
+      transparent 0 19px,
+      rgba(104,115,62,.28) 20px 21px,
+      transparent 22px
+    ),
+
+    radial-gradient(
+      circle at 100% 100%,
+      transparent 0 19px,
+      rgba(105,39,80,.28) 20px 21px,
+      transparent 22px
+    );
+}
+
+
+.chapter-story{
+  transform:rotate(-.30deg);
+}
+
+
+.chapter-gallery{
+  transform:rotate(.22deg);
+}
+
+
+.chapter-commissions{
+  transform:rotate(-.17deg);
+}
+
+
+.chapter-correspondence{
+  transform:rotate(.30deg);
+}
+
+
+.chapter-card:hover{
+  transform:
+    translateY(-8px)
+    rotate(0);
+
+  border-color:
+    rgba(105,39,80,.43);
+
+  box-shadow:
+    0 25px 46px rgba(47,27,16,.22),
+    0 0 26px rgba(105,39,80,.08),
+    inset 0 1px 0 rgba(255,255,255,.80);
+}
+
+
+/* =========================================================
+   EMBOSSED WAX-SEAL NUMERALS
+========================================================= */
+
+.chapter-number{
+  position:absolute;
+
+  top:14px;
+  left:50%;
+
+  z-index:5;
+
+  width:48px;
+  height:48px;
+
+  margin:0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  transform:translateX(-50%);
+
+  border:
+    2px solid rgba(220,178,93,.90);
+
+  border-radius:
+    52%
+    48%
+    54%
+    46%;
+
+  color:#f6df9d;
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      var(--plum-soft),
+      var(--plum) 45%,
+      var(--plum-deep) 100%
+    );
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,235,181,.30),
+    inset 0 -6px 9px rgba(35,13,23,.38),
+    0 5px 10px rgba(56,31,20,.29),
+    0 0 0 3px rgba(75,38,36,.14);
+
+  font-size:1.14rem;
+
+  font-weight:700;
+
+  line-height:1;
+
+  text-shadow:
+    0 1px 0 rgba(255,232,164,.45),
+    0 -1px 0 rgba(38,17,22,.52);
+}
+
+
+.chapter-card:nth-child(even) .chapter-number{
+  color:#f4dda0;
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      var(--olive-soft),
+      var(--olive) 45%,
+      var(--olive-deep) 100%
+    );
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,235,181,.25),
+    inset 0 -6px 9px rgba(26,31,13,.40),
+    0 5px 10px rgba(56,31,20,.29),
+    0 0 0 3px rgba(54,61,29,.16);
+}
+
+
+/* =========================================================
+   FINAL CHAPTER ARTWORK
+========================================================= */
+
+.chapter-illustration{
+  position:relative;
+
+  z-index:2;
+
+  height:190px;
+
+  margin:
+    30px
+    auto
+    9px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(145,96,50,.20);
+
+  border-radius:12px;
+
+  background:
+    rgba(248,234,206,.42);
+
+  box-shadow:
+    inset 0 0 20px rgba(81,50,28,.055);
+}
+
+
+.chapter-illustration img{
+  display:block;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  filter:
+    saturate(1.04)
+    contrast(1.02);
+
+  transition:
+    transform .35s ease,
+    filter .35s ease;
+}
+
+
+.chapter-card:hover .chapter-illustration img{
+  transform:scale(1.025);
+
+  filter:
+    saturate(1.08)
+    contrast(1.04);
+}
+
+
+.chapter-illustration svg{
+  display:none;
+}
+
+
+/* =========================================================
+   CHAPTER TYPOGRAPHY
+========================================================= */
+
+.chapter-card h3{
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    3px
+    0
+    12px;
+
+  color:var(--plum);
+
+  font-size:1.83rem;
+
+  line-height:1.05;
+
+  font-weight:700;
+}
+
+
+.chapter-card p:not(.chapter-number){
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    0
+    0
+    24px;
+
+  color:#574033;
+
+  font-size:1.035rem;
+
+  line-height:1.52;
+}
+
+
+/* =========================================================
+   CHAPTER BUTTONS
+========================================================= */
+
+.chapter-card a{
+  position:relative;
+
+  z-index:4;
+
+  min-height:43px;
+
+  margin-top:auto;
+
+  align-self:center;
+
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  padding:
+    9px
+    16px;
+
+  border:
+    1px solid rgba(215,174,94,.67);
+
+  border-radius:999px;
+
+  color:#fff9ec;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--plum-soft),
+      var(--plum-deep)
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,235,190,.23),
+    inset 0 -4px 7px rgba(35,13,23,.26),
+    0 8px 16px rgba(65,28,49,.18);
+
+  font-size:.98rem;
+
+  font-weight:700;
+
+  letter-spacing:.035em;
+
+  transition:
+    transform .23s ease,
+    box-shadow .23s ease,
+    background .23s ease;
+}
+
+
+.chapter-card:nth-child(even) a{
+  background:
+    linear-gradient(
+      145deg,
+      var(--olive-soft),
+      var(--olive-deep)
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,235,190,.21),
+    inset 0 -4px 7px rgba(25,31,13,.27),
+    0 8px 16px rgba(51,59,31,.18);
+}
+
+
+.chapter-card a:hover{
+  transform:translateY(-2px);
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--gold-light),
+      var(--gold-dark)
+    );
+
+  box-shadow:
+    inset 0 1px 1px rgba(255,246,210,.28),
+    inset 0 -4px 7px rgba(61,39,17,.25),
+    0 12px 21px rgba(73,47,22,.21);
+}
+
+
+/* =========================================================
+   WORKSHOP FAREWELL
+========================================================= */
+
+.workshop-farewell{
+  position:relative;
+
+  padding:
+    88px
+    24px
+    94px;
+
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(196,154,85,.11),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(244,230,203,.98),
+      rgba(227,204,168,.98)
+    );
+
+  border-bottom:
+    1px solid rgba(196,154,85,.30);
+}
+
+
+.workshop-farewell::before{
+  content:"";
+
+  position:absolute;
+
+  inset:
+    23px
+    max(22px,5vw);
+
+  border:
+    1px solid rgba(104,115,62,.16);
+
+  border-radius:30px;
+
+  pointer-events:none;
+}
+
+
+.farewell-flourish{
+  width:220px;
+  height:20px;
+
+  margin:
+    0
+    auto
+    26px;
+
+  position:relative;
+}
+
+
+.farewell-flourish::before,
+.farewell-flourish::after{
+  content:"";
+
+  position:absolute;
+
+  top:10px;
+
+  width:88px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--olive),
+      var(--gold)
+    );
+}
+
+
+.farewell-flourish::before{
+  left:0;
+}
+
+
+.farewell-flourish::after{
+  right:0;
+
+  transform:scaleX(-1);
+}
+
+
+.farewell-flourish span{
+  position:absolute;
+
+  left:50%;
+  top:4px;
+
+  width:11px;
+  height:11px;
+
+  background:var(--plum);
+
+  border:
+    1px solid var(--gold);
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+.farewell-title{
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    0
+    0
+    15px;
+
+  color:var(--plum);
+
+  font-size:
+    clamp(
+      2.2rem,
+      4vw,
+      3.55rem
+    );
+
+  font-weight:700;
+
+  font-style:italic;
+}
+
+
+.workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
+  position:relative;
+
+  z-index:2;
+
+  max-width:640px;
+
+  margin:
+    0
+    auto
+    28px;
+
+  color:#503a2d;
+
+  font-size:1.2rem;
+
+  line-height:1.64;
+}
+
+
+.farewell-signature{
+  position:relative;
+
+  z-index:2;
+
+  margin:
+    0
+    0
+    4px;
+
+  color:var(--plum);
+
+  font-size:1.53rem;
+
+  font-weight:700;
+
+  letter-spacing:.05em;
+}
+
+
+.farewell-brenda{
+  position:relative;
+
+  z-index:2;
+
+  margin:0;
+
+  color:var(--olive-deep);
+
+  font-size:1.08rem;
+
+  font-style:italic;
+}
+
+
+/* =========================================================
+   EMBOSSED MAKER'S SEAL
+========================================================= */
+
+.workshop-farewell::after{
+  content:"W • F";
+
+  position:relative;
+
+  z-index:2;
+
+  width:84px;
+  height:84px;
+
+  margin:
+    30px
+    auto
+    0;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border:
+    3px double rgba(105,39,80,.42);
+
+  border-radius:50%;
+
+  color:rgba(105,39,80,.62);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(215,174,94,.20),
+      rgba(105,39,80,.08) 53%,
+      transparent 55%
+    );
+
+  box-shadow:
+    inset 0 0 0 7px rgba(196,154,85,.105),
+    inset 0 2px 4px rgba(255,244,213,.24),
+    0 5px 15px rgba(62,36,20,.11);
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  letter-spacing:.08em;
+
+  opacity:.78;
+}
+
+
+/* =========================================================
+   SHARED FOOTER
+========================================================= */
+
+.site-footer{
+  padding:
+    44px
+    18px
+    50px;
+
+  text-align:center;
+
+  color:#584133;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250,242,226,.98),
+      rgba(236,218,186,.98)
+    );
+
+  border-top:
+    1px solid rgba(196,154,85,.30);
+}
+
+
+.site-footer p{
+  margin:
+    0
+    0
+    7px;
+
+  font-size:1rem;
+
+  letter-spacing:.05em;
+}
+
+
+.footer-motto{
+  color:var(--plum);
+
+  font-style:italic;
+
+  font-weight:600;
+}
+
+
+.footer-botanical{
+  width:180px;
+  height:15px;
+
+  margin:
+    0
+    auto
+    14px;
+
+  position:relative;
+}
+
+
+.footer-botanical::before,
+.footer-botanical::after{
+  content:"";
+
+  position:absolute;
+
+  top:7px;
+
+  width:70px;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--olive),
+      var(--gold)
+    );
+}
+
+
+.footer-botanical::before{
+  left:0;
+}
+
+
+.footer-botanical::after{
+  right:0;
+
+  transform:scaleX(-1);
+}
+
+
+.footer-botanical span{
+  position:absolute;
+
+  left:50%;
+  top:3px;
+
+  width:9px;
+  height:9px;
+
+  background:var(--plum);
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.page-shell{
+  width:100%;
+
+  margin:0 auto;
+
+  padding:
+    20px
+    0
+    50px;
+}
+
+
+.about-page{
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  padding:
+    24px
+    0
+    60px;
+}
+
+
+.about-frame{
+  width:min(96vw,1200px);
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(196,154,85,.28);
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      rgba(240,226,199,.96),
+      rgba(231,212,179,.97)
+    ),
+    url("background.jpg");
+
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+
+  box-shadow:
+    0 24px 60px rgba(30,18,12,.23);
+}
+
+
+.about-inner{
+  width:min(760px,88%);
+
+  margin:0 auto;
+
+  padding:
+    96px
+    0
+    108px;
+
+  text-align:center;
+}
+
+
+.about-kicker{
+  margin:
+    0
+    0
+    14px;
+
+  color:var(--olive-deep);
+
+  font-size:1.02rem;
+
+  font-weight:700;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+}
+
+
+.about-title{
+  margin:
+    0
+    0
+    24px;
+
+  color:var(--plum);
+
+  font-size:4.8rem;
+
+  line-height:1;
+
+  font-weight:700;
+
+  letter-spacing:.01em;
+
+  text-shadow:
+    0 1px 0 rgba(255,244,228,.66),
+    0 2px 8px rgba(62,38,20,.13);
+}
+
+
+.about-subline{
+  margin:
+    0
+    0
+    28px;
+
+  color:#6b5244;
+
+  font-size:1.18rem;
+
+  font-weight:700;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+}
+
+
+.about-lead{
+  margin:
+    0
+    0
+    28px;
+
+  color:#2a170f;
+
+  font-size:2.18rem;
+
+  line-height:1.22;
+
+  font-weight:600;
+}
+
+
+.about-inner p{
+  margin:
+    0
+    0
+    24px;
+
+  color:#2a170f;
+
+  font-size:1.8rem;
+
+  line-height:1.42;
+
+  font-weight:500;
+}
+
+
+.about-divider{
+  width:170px;
+  height:1px;
+
+  margin:
+    22px
+    auto
+    28px;
+
+  position:relative;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--olive),
+      var(--gold),
+      var(--plum),
+      transparent
+    );
+}
+
+
+.about-divider::after{
+  content:"☾ ✦ ☽";
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-58%);
+
+  padding:
+    0
+    14px;
+
+  color:#8c684b;
+
+  background:
+    rgba(239,224,194,.84);
+
+  font-size:.9rem;
+
+  letter-spacing:.2em;
+}
+
+
+.about-closing{
+  display:inline-block;
+
+  margin-top:14px !important;
+  margin-bottom:8px !important;
+
+  padding:
+    5px
+    18px;
+
+  border-radius:12px;
+
+  color:var(--plum) !important;
+
+  background:
+    rgba(249,240,219,.28);
+
+  font-size:2.06rem !important;
+
+  font-style:italic;
+
+  font-weight:700 !important;
+}
+
+
+.about-small{
+  display:inline-block;
+
+  padding:
+    4px
+    14px;
+
+  border-radius:10px;
+
+  color:#23130d !important;
+
+  background:
+    rgba(249,240,219,.24);
+
+  font-size:1.38rem !important;
+
+  font-weight:700 !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1020px){
 
   .site-header-inner{
     align-items:center;
@@ -591,14 +2181,45 @@ a{
     padding-bottom:4px;
   }
 
+
+  .ledger-cover{
+    padding:
+      20px
+      15px
+      68px;
+  }
+
+
+  .ledger-cover-image{
+    width:min(920px,96vw);
+  }
+
+
+  .chapter-grid{
+    max-width:860px;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0,1fr)
+      );
+
+    gap:24px;
+  }
+
+
+  .chapter-card{
+    min-height:445px;
+  }
+
 }
 
 
-/* ========================================
-   MASTER HEADER — PHONE
-======================================== */
+/* =========================================================
+   PHONE AND SMALL TABLET
+========================================================= */
 
-@media (max-width:620px){
+@media (max-width:720px){
 
   .site-header{
     position:relative;
@@ -679,1801 +2300,39 @@ a{
       0
       10px;
 
-    font-size:.83rem;
-  }
-
-}
-{
-  width:100%;
-}
-
-
-/* ========================================
-   HOME PAGE
-======================================== */
-
-.page-shell{
-  width:100%;
-
-  margin:0 auto;
-
-  padding:
-    20px
-    0
-    50px;
-}
-
-
-.story-panel{
-  position:relative;
-
-  width:
-    min(
-      99vw,
-      1650px
-    );
-
-  margin:
-    8px
-    auto
-    0;
-
-  border-radius:28px;
-
-  overflow:hidden;
-
-  border:
-    1px solid
-    rgba(197,154,85,.22);
-
-  box-shadow:var(--shadow);
-}
-
-
-.story-image{
-  display:block;
-
-  width:100%;
-  height:auto;
-
-  border-radius:28px;
-}
-
-
-.panel-text{
-  position:absolute;
-
-  left:50%;
-  top:700px;
-
-  transform:
-    translateX(-50%);
-
-  width:
-    min(
-      760px,
-      60%
-    );
-
-  text-align:center;
-}
-
-
-.panel-text p{
-  margin:
-    0
-    0
-    18px;
-
-  font-size:2rem;
-
-  line-height:1.24;
-
-  color:#2a1a12;
-
-  font-weight:600;
-
-  letter-spacing:.01em;
-
-  text-shadow:
-    0 1px 0 rgba(255,248,235,.45),
-    0 2px 5px rgba(62,38,20,.10);
-}
-
-
-/* ========================================
-   ORNAMENTAL DIVIDERS
-======================================== */
-
-.orn-divider{
-  width:145px;
-  height:1px;
-
-  margin:
-    12px
-    auto
-    16px;
-
-  position:relative;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--olive),
-      var(--gold),
-      var(--plum),
-      transparent
-    );
-}
-
-
-.orn-divider::after{
-  content:"✦";
-
-  position:absolute;
-
-  left:50%;
-  top:50%;
-
-  transform:
-    translate(-50%,-58%);
-
-  padding:
-    0
-    10px;
-
-  font-size:.95rem;
-
-  color:var(--gold);
-
-  background:
-    rgba(244,234,215,.76);
-}
-
-
-/* ========================================
-   HOME PAGE CLOSING PHRASES
-======================================== */
-
-.closing-line{
-  display:inline-block;
-
-  margin-top:28px !important;
-  margin-bottom:8px !important;
-
-  padding:
-    5px
-    16px;
-
-  border-radius:10px;
-
-  background:
-    rgba(248,239,223,.20);
-
-  font-style:italic;
-
-  font-size:2.1rem !important;
-
-  color:var(--plum) !important;
-
-  font-weight:700;
-
-  letter-spacing:.01em;
-
-  text-shadow:
-    0 1px 0 rgba(255,248,235,.55),
-    0 2px 5px rgba(62,38,20,.18);
-}
-
-
-.small-line{
-  display:inline-block;
-
-  padding:
-    4px
-    14px;
-
-  border-radius:10px;
-
-  background:
-    rgba(248,239,223,.18);
-
-  font-size:1.45rem !important;
-
-  color:#1f120c !important;
-
-  font-weight:700;
-
-  letter-spacing:.01em;
-
-  text-shadow:
-    0 1px 0 rgba(255,248,235,.45),
-    0 2px 4px rgba(62,38,20,.16);
-}
-
-
-/* ========================================
-   ABOUT PAGE
-======================================== */
-
-.about-page{
-  width:100%;
-
-  display:flex;
-
-  justify-content:center;
-
-  padding:
-    24px
-    0
-    60px;
-}
-
-
-.about-frame{
-  width:
-    min(
-      96vw,
-      1200px
-    );
-
-  border-radius:28px;
-
-  overflow:hidden;
-
-  border:
-    1px solid
-    rgba(197,154,85,.25);
-
-  box-shadow:
-    0 24px 60px
-    rgba(30,18,12,.24);
-
-  background:
-    linear-gradient(
-      rgba(239,226,200,.96),
-      rgba(232,216,188,.97)
-    ),
-    url("background.jpg");
-
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center center;
-}
-
-
-.about-inner{
-  width:
-    min(
-      760px,
-      88%
-    );
-
-  margin:0 auto;
-
-  padding:
-    96px
-    0
-    108px;
-
-  text-align:center;
-}
-
-
-.about-kicker{
-  margin:
-    0
-    0
-    14px;
-
-  font-size:1.02rem;
-
-  letter-spacing:.22em;
-
-  text-transform:uppercase;
-
-  color:var(--olive-deep);
-
-  font-weight:700;
-}
-
-
-.about-title{
-  margin:
-    0
-    0
-    24px;
-
-  font-size:4.8rem;
-
-  line-height:1;
-
-  color:var(--plum);
-
-  font-weight:700;
-
-  letter-spacing:.01em;
-
-  text-shadow:
-    0 1px 0 rgba(255,244,228,.65),
-    0 2px 8px rgba(62,38,20,.14);
-}
-
-
-.about-subline{
-  margin:
-    0
-    0
-    28px;
-
-  font-size:1.18rem;
-
-  letter-spacing:.14em;
-
-  text-transform:uppercase;
-
-  color:#6c5346;
-
-  font-weight:700;
-}
-
-
-.about-lead{
-  margin:
-    0
-    0
-    28px;
-
-  font-size:2.2rem;
-
-  line-height:1.22;
-
-  color:#2a170f;
-
-  font-weight:600;
-
-  text-shadow:
-    0 1px 0 rgba(255,248,235,.48),
-    0 2px 6px rgba(62,38,20,.09);
-}
-
-
-.about-inner p{
-  margin:
-    0
-    0
-    24px;
-
-  font-size:1.82rem;
-
-  line-height:1.42;
-
-  color:#2a170f;
-
-  font-weight:500;
-
-  text-shadow:
-    0 1px 0 rgba(255,248,235,.32),
-    0 2px 4px rgba(62,38,20,.07);
-}
-
-
-.about-divider{
-  width:170px;
-  height:1px;
-
-  margin:
-    22px
-    auto
-    28px;
-
-  position:relative;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--olive),
-      var(--gold),
-      var(--plum),
-      transparent
-    );
-}
-
-
-.about-divider::after{
-  content:"☾ ✦ ☽";
-
-  position:absolute;
-
-  left:50%;
-  top:50%;
-
-  transform:
-    translate(-50%,-58%);
-
-  padding:
-    0
-    14px;
-
-  font-size:.9rem;
-
-  letter-spacing:.2em;
-
-  color:#8f6a4d;
-
-  background:
-    rgba(239,226,200,.82);
-}
-
-
-.about-closing{
-  display:inline-block;
-
-  margin-top:14px !important;
-  margin-bottom:8px !important;
-
-  padding:
-    5px
-    18px;
-
-  border-radius:12px;
-
-  background:
-    rgba(248,239,223,.24);
-
-  font-style:italic;
-
-  font-size:2.08rem !important;
-
-  color:var(--plum) !important;
-
-  font-weight:700 !important;
-
-  letter-spacing:.01em;
-}
-
-
-.about-small{
-  display:inline-block;
-
-  padding:
-    4px
-    14px;
-
-  border-radius:10px;
-
-  background:
-    rgba(248,239,223,.22);
-
-  font-size:1.4rem !important;
-
-  color:#23130d !important;
-
-  font-weight:700 !important;
-
-  letter-spacing:.01em;
-}
-
-
-/* ========================================
-   TABLET AND SMALL DESKTOP
-======================================== */
-
-@media (max-width:1100px){
-
-  .site-header-inner{
-    align-items:flex-start;
+    font-size:.86rem;
   }
 
 
-  .panel-text{
-    top:44%;
-
-    width:70%;
-  }
-
-
-  .panel-text p{
-    font-size:1.45rem;
-  }
-
-
-  .closing-line{
-    font-size:1.55rem !important;
-  }
-
-
-  .small-line{
-    font-size:1.1rem !important;
-  }
-
-}
-
-
-/* ========================================
-   PHONE AND SMALL TABLET
-======================================== */
-
-@media (max-width:900px){
-
-  .site-header{
-    position:relative;
-  }
-
-
-  .site-header-inner{
+  .ledger-cover{
     padding:
-      14px
-      16px
-      16px;
-
-    align-items:flex-start;
-  }
-
-
-  .brand-lockup{
-    min-width:0;
-  }
-
-
-  .brand-large{
-    font-size:1.85rem;
-  }
-
-
-  .brand-ornament{
-    width:185px;
-  }
-
-
-  .brand-botanical{
-    width:205px;
-  }
-
-
-  .main-nav{
-    gap:.75rem;
-
-    padding-bottom:0;
-
-    justify-content:flex-start;
-  }
-
-
-  .main-nav a{
-    font-size:.84rem;
-  }
-
-
-  .page-shell{
-    width:
-      min(
-        98vw,
-        98vw
-      );
-
-    padding:
-      18px
+      13px
       8px
-      40px;
-  }
-
-
-  .story-panel{
-    width:
-      min(
-        96vw,
-        96vw
-      );
-
-    margin:
-      18px
-      auto
-      0;
-
-    border-radius:22px;
-  }
-
-
-  .story-image{
-    border-radius:22px;
-  }
-
-
-  .panel-text{
-    top:38%;
-
-    width:78%;
-  }
-
-
-  .panel-text p{
-    margin:
-      0
-      0
-      10px;
-
-    font-size:1rem;
-
-    line-height:1.18;
-  }
-
-
-  .closing-line{
-    margin-top:12px !important;
-    margin-bottom:5px !important;
-
-    font-size:1rem !important;
-  }
-
-
-  .small-line{
-    font-size:.85rem !important;
-  }
-
-
-  .orn-divider{
-    width:90px;
-
-    margin:
-      5px
-      auto
-      8px;
-  }
-
-
-  .about-page{
-    padding:
-      16px
-      0
-      36px;
-  }
-
-
-  .about-frame{
-    width:
-      min(
-        98vw,
-        98vw
-      );
-
-    border-radius:22px;
-  }
-
-
-  .about-inner{
-    width:
-      min(
-        88vw,
-        88vw
-      );
-
-    padding:
-      52px
-      0
-      60px;
-  }
-
-
-  .about-kicker{
-    margin:
-      0
-      0
-      14px;
-
-    font-size:1.02rem;
-
-    letter-spacing:.24em;
-  }
-
-
-  .about-title{
-    margin-bottom:16px;
-
-    font-size:2.5rem;
-  }
-
-
-  .about-lead{
-    margin-bottom:18px;
-
-    font-size:1.35rem;
-  }
-
-
-  .about-inner p{
-    margin-bottom:16px;
-
-    font-size:1.18rem;
-
-    line-height:1.32;
-  }
-
-
-  .about-divider{
-    width:110px;
-
-    margin:
-      14px
-      auto
-      18px;
-  }
-
-
-  .about-closing{
-    font-size:1.35rem !important;
-  }
-
-
-  .about-small{
-    font-size:1rem !important;
-  }
-
-}
-
-
-/* ========================================
-   VERY SMALL PHONES
-======================================== */
-
-@media (max-width:560px){
-
-  .site-header-inner{
-    display:block;
-  }
-
-
-  .brand-lockup{
-    text-align:center;
-  }
-
-
-  .brand-ornament,
-  .brand-botanical{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-
-  .brand-small{
-    font-size:.82rem;
-  }
-
-
-  .brand-large{
-    font-size:1.72rem;
-  }
-
-
-  .brand-tag{
-    font-size:.92rem;
-  }
-
-
-  .main-nav{
-    margin-top:14px;
-
-    justify-content:center;
-
-    gap:
-      .55rem
-      .85rem;
-  }
-
-
-  .main-nav a{
-    font-size:.77rem;
-  }
-
-
-  .panel-text{
-    top:36%;
-
-    width:82%;
-  }
-
-
-  .panel-text p{
-    font-size:.78rem;
-  }
-
-
-  .orn-divider{
-    display:none;
-  }
-
-
-  .closing-line{
-    font-size:.8rem !important;
-  }
-
-
-  .small-line{
-    font-size:.7rem !important;
-  }
-
-}
-/* =========================================================
-   WORKSHOP LEDGER HOMEPAGE
-   Add this section to the bottom of styles.css
-========================================================= */
-
-body.home-page{
-  overflow-x:hidden;
-}
-
-
-/* =========================================================
-   LEDGER COVER
-========================================================= */
-
-.ledger-cover{
-  position:relative;
-
-  width:100%;
-
-  padding:
-    34px
-    24px
-    78px;
-
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-
-  background:
-    radial-gradient(
-      circle at 50% 8%,
-      rgba(106,41,79,.10),
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 14% 72%,
-      rgba(101,113,61,.10),
-      transparent 28%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(243,230,204,.96),
-      rgba(231,210,176,.97)
-    );
-
-  border-bottom:
-    1px solid
-    rgba(197,154,85,.38);
-
-  box-shadow:
-    inset 0 -18px 38px rgba(72,43,25,.07);
-}
-
-
-.ledger-cover::before{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  pointer-events:none;
-
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(92,58,35,.018) 0,
-      rgba(92,58,35,.018) 1px,
-      transparent 1px,
-      transparent 5px
-    );
-}
-
-
-.ledger-cover-image{
-  display:block;
-
-  width:min(1180px,94vw);
-  height:auto;
-
-  position:relative;
-
-  z-index:1;
-
-  border-radius:18px;
-
-  border:
-    1px solid
-    rgba(83,46,31,.40);
-
-  box-shadow:
-    0 30px 75px rgba(42,22,13,.30),
-    0 6px 18px rgba(42,22,13,.18),
-    inset 0 0 0 1px rgba(255,244,219,.38);
-
-  filter:
-    saturate(1.02)
-    contrast(1.02);
-}
-
-
-.ledger-scroll-link{
-  position:absolute;
-
-  left:50%;
-  bottom:25px;
-
-  z-index:4;
-
-  transform:translateX(-50%);
-
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  gap:10px;
-
-  padding:
-    11px
-    22px;
-
-  border-radius:999px;
-
-  color:#fffaf0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(106,41,79,.96),
-      rgba(79,24,56,.98)
-    );
-
-  border:
-    1px solid
-    rgba(197,154,85,.65);
-
-  box-shadow:
-    0 10px 24px rgba(65,28,49,.25);
-
-  font-size:1.02rem;
-  font-weight:700;
-
-  letter-spacing:.055em;
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    background .25s ease;
-}
-
-
-.ledger-scroll-link:hover{
-  transform:
-    translateX(-50%)
-    translateY(-3px);
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--olive),
-      var(--olive-deep)
-    );
-
-  box-shadow:
-    0 15px 28px rgba(51,59,31,.24);
-}
-
-
-.ledger-scroll-link span{
-  font-size:1.15rem;
-
-  line-height:1;
-}
-
-
-/* =========================================================
-   WORKSHOP CHAPTERS
-========================================================= */
-
-.workshop-chapters{
-  position:relative;
-
-  width:100%;
-
-  padding:
-    100px
-    24px
-    110px;
-
-  background:
-    radial-gradient(
-      circle at 12% 8%,
-      rgba(106,41,79,.08),
-      transparent 25%
-    ),
-
-    radial-gradient(
-      circle at 88% 92%,
-      rgba(101,113,61,.09),
-      transparent 27%
-    ),
-
-    linear-gradient(
-      rgba(249,241,225,.94),
-      rgba(235,217,185,.96)
-    ),
-
-    url("background.jpg");
-
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    repeat-y,
-    repeat-y;
-
-  background-size:
-    auto,
-    auto,
-    100% auto,
-    100% auto;
-
-  background-position:
-    top left,
-    bottom right,
-    top center,
-    top center;
-
-  border-bottom:
-    1px solid
-    rgba(197,154,85,.30);
-}
-
-
-.workshop-chapters::before{
-  content:"";
-
-  position:absolute;
-
-  inset:
-    28px
-    24px;
-
-  pointer-events:none;
-
-  border:
-    1px solid
-    rgba(106,41,79,.13);
-
-  border-radius:30px;
-}
-
-
-.chapters-intro{
-  position:relative;
-
-  z-index:2;
-
-  width:min(790px,92%);
-
-  margin:
-    0
-    auto
-    56px;
-
-  text-align:center;
-}
-
-
-.chapters-kicker{
-  margin:
-    0
-    0
-    14px;
-
-  color:var(--olive-deep);
-
-  font-size:.92rem;
-  font-weight:700;
-
-  letter-spacing:.26em;
-
-  text-transform:uppercase;
-}
-
-
-.chapters-intro h2{
-  margin:
-    0
-    0
-    20px;
-
-  color:var(--plum);
-
-  font-size:
-    clamp(
-      2.6rem,
-      5vw,
-      4.4rem
-    );
-
-  line-height:1;
-
-  font-weight:700;
-
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.55),
-    0 3px 10px rgba(67,38,22,.10);
-}
-
-
-.chapters-intro > p:not(.chapters-kicker){
-  max-width:720px;
-
-  margin:0 auto;
-
-  color:#4d392c;
-
-  font-size:1.25rem;
-
-  line-height:1.65;
-}
-
-
-.chapter-divider{
-  width:210px;
-  height:18px;
-
-  margin:
-    30px
-    auto
-    0;
-
-  position:relative;
-}
-
-
-.chapter-divider::before,
-.chapter-divider::after{
-  content:"";
-
-  position:absolute;
-
-  top:9px;
-
-  width:84px;
-  height:1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--olive),
-      var(--gold)
-    );
-}
-
-
-.chapter-divider::before{
-  left:0;
-}
-
-
-.chapter-divider::after{
-  right:0;
-
-  transform:scaleX(-1);
-}
-
-
-.chapter-divider{
-  background:
-    radial-gradient(
-      circle at center,
-      var(--plum) 0,
-      var(--plum) 5px,
-      transparent 6px
-    );
-}
-
-
-/* =========================================================
-   CHAPTER CARDS
-========================================================= */
-
-.chapter-grid{
-  position:relative;
-
-  z-index:2;
-
-  width:min(1240px,94%);
-
-  margin:0 auto;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(
-      4,
-      minmax(0,1fr)
-    );
-
-  gap:24px;
-}
-
-
-.chapter-card{
-  position:relative;
-
-  min-height:330px;
-
-  padding:
-    35px
-    27px
-    31px;
-
-  display:flex;
-  flex-direction:column;
-
-  text-align:center;
-
-  border-radius:20px;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(255,255,255,.56),
-      transparent 34%
-    ),
-
-    linear-gradient(
-      145deg,
-      rgba(255,249,237,.97),
-      rgba(235,216,185,.98)
-    );
-
-  border:
-    1px solid
-    rgba(197,154,85,.43);
-
-  box-shadow:
-    0 17px 34px rgba(51,30,18,.15),
-    inset 0 1px 0 rgba(255,255,255,.70);
-
-  transition:
-    transform .28s ease,
-    box-shadow .28s ease,
-    border-color .28s ease;
-}
-
-
-.chapter-card::before{
-  content:"";
-
-  position:absolute;
-
-  inset:9px;
-
-  border:
-    1px solid
-    rgba(106,41,79,.10);
-
-  border-radius:13px;
-
-  pointer-events:none;
-}
-
-
-.chapter-card:hover{
-  transform:translateY(-7px);
-
-  border-color:
-    rgba(106,41,79,.42);
-
-  box-shadow:
-    0 24px 44px rgba(51,30,18,.20),
-    0 0 25px rgba(106,41,79,.08);
-}
-
-
-.chapter-number{
-  width:46px;
-  height:46px;
-
-  margin:
-    0
-    auto
-    18px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  border-radius:50%;
-
-  color:#fffaf0;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--plum),
-      var(--plum-deep)
-    );
-
-  border:
-    1px solid
-    rgba(197,154,85,.66);
-
-  box-shadow:
-    0 7px 14px rgba(71,31,55,.18);
-
-  font-size:1.15rem;
-  font-weight:700;
-
-  line-height:1;
-}
-
-
-.chapter-card:nth-child(even) .chapter-number{
-  background:
-    linear-gradient(
-      145deg,
-      var(--olive),
-      var(--olive-deep)
-    );
-}
-
-
-.chapter-card h3{
-  margin:
-    0
-    0
-    14px;
-
-  color:var(--plum);
-
-  font-size:1.85rem;
-
-  line-height:1.05;
-
-  font-weight:700;
-}
-
-
-.chapter-card p:not(.chapter-number){
-  margin:
-    0
-    0
-    24px;
-
-  color:#594235;
-
-  font-size:1.06rem;
-
-  line-height:1.6;
-}
-
-
-.chapter-card a{
-  margin-top:auto;
-
-  align-self:center;
-
-  display:inline-flex;
-  align-items:center;
-
-  gap:8px;
-
-  padding:
-    9px
-    16px;
-
-  border-radius:999px;
-
-  color:var(--plum);
-
-  background:
-    rgba(255,250,240,.54);
-
-  border:
-    1px solid
-    rgba(197,154,85,.43);
-
-  font-weight:700;
-
-  letter-spacing:.035em;
-
-  transition:
-    color .22s ease,
-    background .22s ease,
-    transform .22s ease;
-}
-
-
-.chapter-card a:hover{
-  transform:translateY(-2px);
-
-  color:#fffaf0;
-
-  background:var(--plum);
-}
-
-
-/* =========================================================
-   WORKSHOP FAREWELL
-========================================================= */
-
-.workshop-farewell{
-  position:relative;
-
-  padding:
-    100px
-    24px
-    94px;
-
-  text-align:center;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(197,154,85,.10),
-      transparent 33%
-    ),
-
-    linear-gradient(
-      180deg,
-      rgba(242,228,201,.97),
-      rgba(228,206,171,.98)
-    );
-
-  border-bottom:
-    1px solid
-    rgba(197,154,85,.30);
-}
-
-
-.workshop-farewell::before{
-  content:"";
-
-  position:absolute;
-
-  inset:
-    23px
-    max(22px,5vw);
-
-  border:
-    1px solid
-    rgba(101,113,61,.16);
-
-  border-radius:30px;
-
-  pointer-events:none;
-}
-
-
-.farewell-flourish{
-  width:220px;
-  height:20px;
-
-  margin:
-    0
-    auto
-    26px;
-
-  position:relative;
-}
-
-
-.farewell-flourish::before,
-.farewell-flourish::after{
-  content:"";
-
-  position:absolute;
-
-  top:10px;
-
-  width:88px;
-  height:1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--olive),
-      var(--gold)
-    );
-}
-
-
-.farewell-flourish::before{
-  left:0;
-}
-
-
-.farewell-flourish::after{
-  right:0;
-
-  transform:scaleX(-1);
-}
-
-
-.farewell-flourish span{
-  position:absolute;
-
-  left:50%;
-  top:4px;
-
-  width:11px;
-  height:11px;
-
-  background:var(--plum);
-
-  border:
-    1px solid
-    var(--gold);
-
-  transform:
-    translateX(-50%)
-    rotate(45deg);
-}
-
-
-.farewell-title{
-  position:relative;
-
-  z-index:2;
-
-  margin:
-    0
-    0
-    15px;
-
-  color:var(--plum);
-
-  font-size:
-    clamp(
-      2.2rem,
-      4vw,
-      3.6rem
-    );
-
-  font-weight:700;
-
-  font-style:italic;
-}
-
-
-.workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
-  position:relative;
-
-  z-index:2;
-
-  max-width:640px;
-
-  margin:
-    0
-    auto
-    28px;
-
-  color:#503b2e;
-
-  font-size:1.22rem;
-
-  line-height:1.65;
-}
-
-
-.farewell-signature{
-  position:relative;
-
-  z-index:2;
-
-  margin:
-    0
-    0
-    4px;
-
-  color:var(--plum);
-
-  font-size:1.55rem;
-
-  font-weight:700;
-
-  letter-spacing:.05em;
-}
-
-
-.farewell-brenda{
-  position:relative;
-
-  z-index:2;
-
-  margin:0;
-
-  color:var(--olive-deep);
-
-  font-size:1.08rem;
-
-  font-style:italic;
-}
-
-
-/* =========================================================
-   HOMEPAGE FOOTER
-========================================================= */
-
-.home-page .site-footer{
-  margin:0;
-
-  padding:
-    46px
-    18px
-    52px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(249,241,225,.98),
-      rgba(237,220,190,.98)
-    );
-
-  border-top:
-    1px solid
-    rgba(197,154,85,.30);
-}
-
-
-/* =========================================================
-   LEDGER DUST MOTES
-   Very subtle decorative atmosphere
-========================================================= */
-
-.ledger-cover::after{
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  z-index:2;
-
-  pointer-events:none;
-
-  opacity:.24;
-
-  background-image:
-    radial-gradient(
-      circle,
-      rgba(255,247,219,.85) 0,
-      rgba(255,247,219,.85) 1px,
-      transparent 1.8px
-    ),
-
-    radial-gradient(
-      circle,
-      rgba(255,247,219,.65) 0,
-      rgba(255,247,219,.65) 1px,
-      transparent 1.8px
-    );
-
-  background-size:
-    130px 130px,
-    190px 190px;
-
-  background-position:
-    25px 35px,
-    90px 20px;
-
-  animation:
-    faelendra-dust
-    22s
-    linear
-    infinite;
-}
-
-
-@keyframes faelendra-dust{
-
-  0%{
-    background-position:
-      25px 35px,
-      90px 20px;
-  }
-
-  50%{
-    background-position:
-      42px 5px,
-      68px 47px;
-  }
-
-  100%{
-    background-position:
-      25px -30px,
-      90px 75px;
-  }
-
-}
-
-
-@media (prefers-reduced-motion:reduce){
-
-  .ledger-cover::after{
-    animation:none;
-  }
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width:1020px){
-
-  .ledger-cover{
-    padding:
-      28px
-      18px
-      72px;
-  }
-
-
-  .ledger-cover-image{
-    width:min(920px,96vw);
-  }
-
-
-  .chapter-grid{
-    grid-template-columns:
-      repeat(
-        2,
-        minmax(0,1fr)
-      );
-
-    max-width:850px;
-  }
-
-
-  .chapter-card{
-    min-height:300px;
-  }
-
-}
-
-
-/* =========================================================
-   PHONE
-========================================================= */
-
-@media (max-width:720px){
-
-  .ledger-cover{
-    padding:
-      18px
-      10px
-      68px;
+      65px;
   }
 
 
   .ledger-cover-image{
     width:100%;
 
-    border-radius:12px;
+    border-radius:11px;
   }
 
 
   .ledger-scroll-link{
-    bottom:18px;
+    bottom:17px;
 
     padding:
       9px
       16px;
 
-    font-size:.9rem;
+    font-size:.89rem;
   }
 
 
   .workshop-chapters{
     padding:
-      72px
+      70px
       15px
       80px;
   }
@@ -2505,9 +2364,9 @@ body.home-page{
   .chapters-intro h2{
     font-size:
       clamp(
-        2.35rem,
+        2.3rem,
         11vw,
-        3.4rem
+        3.35rem
       );
   }
 
@@ -2518,32 +2377,48 @@ body.home-page{
 
 
   .chapter-grid{
-    width:92%;
+    width:94%;
 
     grid-template-columns:1fr;
 
-    gap:20px;
+    gap:22px;
   }
 
 
-  .chapter-card{
-    min-height:auto;
+  .chapter-card,
+  .chapter-story,
+  .chapter-gallery,
+  .chapter-commissions,
+  .chapter-correspondence{
+    min-height:465px;
 
     padding:
-      30px
+      28px
       22px
       27px;
+
+    transform:none;
+  }
+
+
+  .chapter-card:hover{
+    transform:translateY(-6px);
+  }
+
+
+  .chapter-illustration{
+    height:220px;
   }
 
 
   .chapter-card h3{
-    font-size:1.65rem;
+    font-size:1.7rem;
   }
 
 
   .workshop-farewell{
     padding:
-      76px
+      75px
       20px
       72px;
   }
@@ -2569,7 +2444,75 @@ body.home-page{
 
 
   .workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
-    font-size:1.05rem;
+    font-size:1.04rem;
+  }
+
+
+  .about-page{
+    padding:
+      16px
+      0
+      36px;
+  }
+
+
+  .about-frame{
+    width:98vw;
+
+    border-radius:22px;
+  }
+
+
+  .about-inner{
+    width:88vw;
+
+    padding:
+      52px
+      0
+      60px;
+  }
+
+
+  .about-title{
+    margin-bottom:16px;
+
+    font-size:2.5rem;
+  }
+
+
+  .about-lead{
+    margin-bottom:18px;
+
+    font-size:1.35rem;
+  }
+
+
+  .about-inner p{
+    margin-bottom:16px;
+
+    font-size:1.17rem;
+
+    line-height:1.33;
+  }
+
+
+  .about-divider{
+    width:110px;
+
+    margin:
+      14px
+      auto
+      18px;
+  }
+
+
+  .about-closing{
+    font-size:1.34rem !important;
+  }
+
+
+  .about-small{
+    font-size:1rem !important;
   }
 
 }
@@ -2582,8 +2525,8 @@ body.home-page{
 @media (max-width:480px){
 
   .ledger-cover{
-    padding-left:6px;
-    padding-right:6px;
+    padding-left:5px;
+    padding-right:5px;
   }
 
 
@@ -2597,7 +2540,7 @@ body.home-page{
 
     max-width:88%;
 
-    font-size:.83rem;
+    font-size:.82rem;
   }
 
 
@@ -2614,359 +2557,31 @@ body.home-page{
     width:70px;
   }
 
-}
-/* =========================================================
-   ILLUMINATED LEDGER CHAPTER PAGES
-========================================================= */
-
-.chapter-grid{
-  width:min(1280px,96%);
-  gap:22px;
-}
-
-.chapter-card{
-  min-height:430px;
-
-  padding:
-    28px
-    24px
-    26px;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(255,255,255,.58),
-      transparent 35%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(110,75,44,.025) 0,
-      rgba(110,75,44,.025) 1px,
-      transparent 1px,
-      transparent 5px
-    ),
-    linear-gradient(
-      145deg,
-      #fff9eb,
-      #ead4ad
-    );
-
-  border:
-    1px solid
-    rgba(150,102,55,.48);
-
-  border-radius:
-    20px
-    20px
-    24px
-    24px;
-
-  box-shadow:
-    0 18px 36px rgba(47,27,16,.18),
-    inset 0 1px 0 rgba(255,255,255,.78),
-    inset 0 0 30px rgba(126,84,47,.07);
-}
-
-.chapter-card::before{
-  inset:8px;
-
-  border:
-    1px solid
-    rgba(106,41,79,.18);
-
-  border-radius:14px;
-}
-
-.chapter-card::after{
-  content:"";
-
-  position:absolute;
-
-  inset:16px;
-
-  z-index:0;
-
-  pointer-events:none;
-
-  opacity:.48;
-
-  background:
-    radial-gradient(
-      circle at 0 0,
-      transparent 0 19px,
-      rgba(91,42,80,.28) 20px 21px,
-      transparent 22px
-    ),
-    radial-gradient(
-      circle at 100% 0,
-      transparent 0 19px,
-      rgba(101,113,61,.28) 20px 21px,
-      transparent 22px
-    ),
-    radial-gradient(
-      circle at 0 100%,
-      transparent 0 19px,
-      rgba(101,113,61,.28) 20px 21px,
-      transparent 22px
-    ),
-    radial-gradient(
-      circle at 100% 100%,
-      transparent 0 19px,
-      rgba(91,42,80,.28) 20px 21px,
-      transparent 22px
-    );
-}
-
-.chapter-number,
-.chapter-illustration,
-.chapter-card h3,
-.chapter-card p,
-.chapter-card a{
-  position:relative;
-  z-index:2;
-}
-
-.chapter-number{
-  position:absolute;
-
-  top:16px;
-  left:50%;
-
-  transform:translateX(-50%);
-
-  width:45px;
-  height:45px;
-
-  margin:0;
-
-  z-index:4;
-
-  border:
-    2px solid
-    rgba(197,154,85,.72);
-}
-
-.chapter-illustration{
-  height:145px;
-
-  margin:
-    24px
-    auto
-    12px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.chapter-illustration svg{
-  width:100%;
-  max-width:190px;
-  height:125px;
-
-  overflow:visible;
-
-  fill:
-    rgba(197,154,85,.10);
-
-  stroke:var(--olive-deep);
-
-  stroke-width:2;
-
-  stroke-linecap:round;
-  stroke-linejoin:round;
-
-  filter:
-    drop-shadow(
-      0 4px 3px
-      rgba(67,40,24,.10)
-    );
-}
-
-.chapter-illustration .leaf{
-  fill:
-    rgba(101,113,61,.22);
-
-  stroke:var(--olive);
-}
-
-.chapter-illustration .accent{
-  fill:
-    rgba(106,41,79,.30);
-
-  stroke:var(--plum);
-}
-
-.chapter-illustration .seal{
-  fill:var(--plum);
-
-  stroke:
-    rgba(197,154,85,.85);
-
-  stroke-width:2;
-}
-
-.chapter-illustration .seal-mark{
-  fill:
-    rgba(197,154,85,.76);
-
-  stroke:
-    rgba(255,244,219,.45);
-
-  stroke-width:1;
-}
-
-.chapter-card h3{
-  margin-bottom:12px;
-
-  font-size:1.85rem;
-}
-
-.chapter-card p:not(.chapter-number){
-  font-size:1.04rem;
-
-  line-height:1.5;
-}
-
-.chapter-card a{
-  min-height:43px;
-
-  justify-content:center;
-
-  padding:
-    9px
-    15px;
-}
-
-
-/* Slight individual character for each ledger page */
-
-.chapter-story{
-  transform:rotate(-.35deg);
-}
-
-.chapter-gallery{
-  transform:rotate(.25deg);
-}
-
-.chapter-commissions{
-  transform:rotate(-.18deg);
-}
-
-.chapter-correspondence{
-  transform:rotate(.35deg);
-}
-
-.chapter-story:hover,
-.chapter-gallery:hover,
-.chapter-commissions:hover,
-.chapter-correspondence:hover{
-  transform:translateY(-8px) rotate(0);
-}
-
-
-/* =========================================================
-   HERO AND HEADER REFINEMENT
-========================================================= */
-
-.ledger-cover{
-  padding-top:22px;
-}
-
-.ledger-cover-image{
-  width:min(1180px,96vw);
-}
-
-.main-nav a{
-  font-size:1.03rem;
-}
-
-
-/* =========================================================
-   FINISHED WORKSHOP FAREWELL
-========================================================= */
-
-.workshop-farewell{
-  padding:
-    88px
-    24px
-    92px;
-}
-
-.workshop-farewell::after{
-  content:"";
-
-  display:block;
-
-  width:82px;
-  height:82px;
-
-  margin:
-    28px
-    auto
-    0;
-
-  border-radius:50%;
-
-  border:
-    3px double
-    rgba(106,41,79,.36);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(197,154,85,.18),
-      rgba(106,41,79,.08) 52%,
-      transparent 54%
-    );
-
-  box-shadow:
-    inset 0 0 0 7px
-    rgba(197,154,85,.10),
-    0 5px 15px
-    rgba(62,36,20,.10);
-
-  opacity:.74;
-}
-
-
-/* =========================================================
-   RESPONSIVE ILLUMINATED PAGES
-========================================================= */
-
-@media (max-width:1020px){
 
   .chapter-card{
-    min-height:410px;
+    min-height:440px;
+
+    padding:
+      27px
+      18px
+      24px;
   }
 
-}
-
-
-@media (max-width:720px){
-
-  .chapter-grid{
-    width:94%;
-  }
-
-  .chapter-card{
-    min-height:405px;
-
-    transform:none;
-  }
 
   .chapter-illustration{
-    height:140px;
+    height:185px;
   }
 
-  .chapter-illustration svg{
-    max-width:180px;
+
+  .chapter-card p:not(.chapter-number){
+    font-size:1rem;
   }
 
-  .main-nav a{
-    font-size:.86rem;
+
+  .chapter-card a{
+    width:100%;
+
+    max-width:230px;
   }
 
 }
