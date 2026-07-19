@@ -1302,3 +1302,44 @@ body.gallery-page{
   }
 
 }
+/* Commission invitation alignment tweak */
+
+.commission-invitation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commission-invitation .piece-copy {
+  width: 100%;
+  height: auto;
+  padding: 48px 34px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.commission-invitation .commission-mark {
+  margin-bottom: 10px;
+}
+
+.commission-invitation .commission-link {
+  margin-top: 26px;
+}
+
+
+/* Footer navigation spacing */
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 10px 0;
+}
+
+.footer-nav a {
+  display: inline-block;
+}
