@@ -469,8 +469,8 @@ textarea{
   justify-content:flex-end;
 
   gap:
-    8px
-    28px;
+    12px
+    34px;
 
   flex-wrap:wrap;
 
@@ -488,24 +488,26 @@ textarea{
 
   white-space:nowrap;
 
-  color:#594536;
+  color:#665040;
+
+  text-decoration:none;
 
   font-size:1.03rem;
 
   font-weight:600;
 
-  letter-spacing:.05em;
+  letter-spacing:.08em;
 
   transition:
-    color .24s ease,
-    transform .24s ease;
+    color .35s ease,
+    transform .35s ease;
 }
 
 
 .main-nav a:hover{
   color:var(--plum);
 
-  transform:translateY(-1px);
+  transform:translateY(-0.5px);
 }
 
 
@@ -594,10 +596,9 @@ textarea{
 
   background:var(--gold);
 
-  box-shadow:
-    -6px 4px 0 -2px var(--olive),
-    6px -4px 0 -2px var(--plum);
-}
+box-shadow:
+    0 0 8px rgba(178,150,82,.45);
+   }
 
 
 /* =========================================================
