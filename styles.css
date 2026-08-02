@@ -4958,53 +4958,49 @@ textarea{
 @keyframes corvenFeather {
 
   0% {
+    opacity: 0;
     transform:
-      translate(0px,-60px)
+      translate(0px, -60px)
       rotate(-18deg);
-    opacity:0;
   }
 
   10% {
-    opacity:.9;
+    opacity: .9;
   }
 
   25% {
     transform:
-      translate(-18px,40px)
-      rotate(-8deg);
+      translate(-8px, 60px)
+      rotate(-10deg);
   }
 
-  42% {
+  45% {
     transform:
-      translate(12px,110px)
-      rotate(10deg);
+      translate(10px, 150px)
+      rotate(6deg);
   }
 
-  58% {
+  65% {
     transform:
-      translate(-10px,185px)
-      rotate(-6deg);
+      translate(-6px, 250px)
+      rotate(-4deg);
   }
 
-  74% {
+  85% {
+    opacity: .8;
     transform:
-      translate(16px,265px)
-      rotate(14deg);
-  }
-
-  90% {
-    opacity:.8;
+      translate(8px, 360px)
+      rotate(8deg);
   }
 
   100% {
+    opacity: 0;
     transform:
-      translate(-6px,340px)
-      rotate(4deg);
-    opacity:0;
+      translate(-4px, 460px)
+      rotate(12deg);
   }
 
 }
-
 
 @media (max-width:720px){
 
