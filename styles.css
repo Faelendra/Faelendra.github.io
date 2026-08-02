@@ -3191,3 +3191,230 @@ textarea{
   }
 
 }
+
+/* =========================================================
+   GRAND ENTRANCE — POLISH PASS 1
+========================================================= */
+
+/* Quieter exterior sign above the entrance */
+.home-page .site-header{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(250,244,231,.99),
+      rgba(236,220,192,.99)
+    );
+
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.82) inset,
+    0 5px 18px rgba(49,29,18,.10);
+}
+
+.home-page .site-header-inner{
+  position:relative;
+  padding-bottom:24px;
+}
+
+.home-page .brand-lockup{
+  transform:scale(.92);
+  transform-origin:left center;
+  opacity:.94;
+}
+
+.home-page .header-invitation{
+  position:absolute;
+  right:20px;
+  bottom:5px;
+
+  margin:0;
+
+  color:rgba(91,67,49,.66);
+
+  font-size:.72rem;
+  font-style:italic;
+  letter-spacing:.14em;
+}
+
+/* Lighter, warmer old-oak doorway edges */
+.grand-entrance{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(77,50,32,.72) 0,
+      rgba(123,84,52,.28) 9%,
+      transparent 24%,
+      transparent 76%,
+      rgba(123,84,52,.28) 91%,
+      rgba(77,50,32,.72) 100%
+    ),
+    radial-gradient(
+      circle at 50% 18%,
+      rgba(255,251,240,.96),
+      rgba(241,224,190,.94) 46%,
+      rgba(216,184,133,.92) 100%
+    );
+}
+
+.grand-entrance::before{
+  background:
+    radial-gradient(
+      circle at 86% 18%,
+      rgba(222,181,111,.22),
+      transparent 26%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(79,50,31,.90) 0,
+      rgba(139,94,57,.88) 13px,
+      rgba(94,58,35,.92) 27px
+    );
+
+  box-shadow:
+    inset -16px 0 30px rgba(45,25,15,.22);
+}
+
+.grand-entrance::after{
+  background:
+    radial-gradient(
+      circle at 14% 22%,
+      rgba(222,181,111,.22),
+      transparent 26%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(94,58,35,.92) 0,
+      rgba(139,94,57,.88) 13px,
+      rgba(79,50,31,.90) 27px
+    );
+
+  box-shadow:
+    inset 16px 0 30px rgba(45,25,15,.22);
+}
+
+/* Make the entrance feel like a substantial old ledger */
+.entrance-inner{
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(255,255,255,.42),
+      transparent 34%
+    ),
+    linear-gradient(
+      165deg,
+      rgba(252,244,226,.98),
+      rgba(234,211,171,.97)
+    );
+
+  border-color:rgba(111,72,39,.58);
+
+  box-shadow:
+    0 44px 90px rgba(28,15,9,.38),
+    0 12px 28px rgba(28,15,9,.24),
+    0 2px 0 rgba(255,255,255,.62) inset,
+    inset 0 0 0 7px rgba(255,248,232,.40),
+    inset 0 0 0 8px rgba(117,77,42,.19);
+}
+
+.entrance-inner::before,
+.entrance-inner::after{
+  width:62px;
+  height:62px;
+  opacity:.68;
+}
+
+/* More tactile doorway cards */
+.doorway{
+  box-shadow:
+    0 10px 20px rgba(55,31,18,.11),
+    0 1px 0 rgba(255,255,255,.70) inset;
+}
+
+.doorway:hover,
+.doorway:focus-visible{
+  transform:
+    translateY(-4px)
+    rotate(-.15deg);
+
+  box-shadow:
+    0 18px 30px rgba(55,31,18,.18),
+    0 0 24px rgba(105,39,80,.08),
+    inset 0 1px 0 rgba(255,255,255,.76);
+}
+
+/* Give the lower workshop cards the same gentle lift */
+.entrance-workshop .chapter-card{
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.entrance-workshop .chapter-card:hover{
+  transform:
+    translateY(-5px)
+    rotate(-.12deg);
+
+  border-color:rgba(105,39,80,.34);
+
+  box-shadow:
+    0 22px 38px rgba(56,31,18,.18),
+    0 0 22px rgba(105,39,80,.06);
+}
+
+/* Warmer farewell and a softer final note */
+.workshop-farewell{
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(255,255,255,.32),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(245,231,203,.96),
+      rgba(228,203,164,.96)
+    );
+}
+
+.workshop-farewell .farewell-title{
+  font-size:clamp(2.4rem,5vw,4.1rem);
+}
+
+.workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   POLISH PASS 1 — RESPONSIVE
+========================================================= */
+
+@media (max-width:1020px){
+
+  .home-page .brand-lockup{
+    transform:none;
+  }
+
+  .home-page .header-invitation{
+    position:static;
+    width:100%;
+    margin-top:-2px;
+    text-align:center;
+  }
+
+}
+
+@media (max-width:720px){
+
+  .home-page .site-header-inner{
+    padding-bottom:14px;
+  }
+
+  .home-page .header-invitation{
+    display:none;
+  }
+
+}
