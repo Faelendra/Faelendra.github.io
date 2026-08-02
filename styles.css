@@ -5016,11 +5016,7 @@ textarea{
 
   transform-origin:50% 10%;
 
-  animation:
-    corven-feather-drift
-    18s
-    ease-in-out
-    infinite !important;
+animation: corven-feather-drift 18s ease-in-out 3s infinite;
 }
 
 
