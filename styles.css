@@ -4955,55 +4955,52 @@ textarea{
 }
 
 
-@keyframes corven-feather-drift{
+@keyframes corvenFeather {
 
-  0%{
-    opacity:0;
-
+  0% {
     transform:
-      translate3d(6px,-48px,0)
-      rotate(-18deg)
-      scale(.86);
-  }
-
-  8%{
-    opacity:.88;
-  }
-
-  30%{
-    transform:
-      translate3d(-26px,72px,0)
-      rotate(10deg)
-      scale(.92);
-  }
-
-  54%{
-    transform:
-      translate3d(19px,168px,0)
-      rotate(-15deg)
-      scale(.96);
-  }
-
-  76%{
-    opacity:.76;
-
-    transform:
-      translate3d(-12px,260px,0)
-      rotate(17deg)
-      scale(1);
-  }
-
-  91%{
+      translate(0px,-60px)
+      rotate(-18deg);
     opacity:0;
   }
 
-  100%{
-    opacity:0;
+  10% {
+    opacity:.9;
+  }
 
+  25% {
     transform:
-      translate3d(10px,340px,0)
-      rotate(-10deg)
-      scale(1.02);
+      translate(-18px,40px)
+      rotate(-8deg);
+  }
+
+  42% {
+    transform:
+      translate(12px,110px)
+      rotate(10deg);
+  }
+
+  58% {
+    transform:
+      translate(-10px,185px)
+      rotate(-6deg);
+  }
+
+  74% {
+    transform:
+      translate(16px,265px)
+      rotate(14deg);
+  }
+
+  90% {
+    opacity:.8;
+  }
+
+  100% {
+    transform:
+      translate(-6px,340px)
+      rotate(4deg);
+    opacity:0;
   }
 
 }
