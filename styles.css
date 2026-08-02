@@ -4955,7 +4955,7 @@ textarea{
 }
 
 
-@keyframes corvenFeather {
+@keyframes corven-feather-drift {
 
   0% {
     opacity: 0;
@@ -5001,7 +5001,6 @@ textarea{
   }
 
 }
-
 @media (max-width:720px){
 
   .entrance-brand::after{
