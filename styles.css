@@ -4995,8 +4995,8 @@ textarea{
   width:68px !important;
   height:150px !important;
 
-  right:3% !important;
-  top:0% !important;
+  right:2% !important;
+  top:-2% !important;
 
   background:
     url("images/corven-feather.png")
