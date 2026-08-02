@@ -3604,3 +3604,258 @@ textarea{
   }
 
 }
+
+/* =========================================================
+   VERSION 1.2 — RESTORATION I: THE LIVING DOORWAYS
+========================================================= */
+
+.doorway{
+  --doorway-accent:var(--gold-dark);
+  --doorway-accent-soft:rgba(140,100,51,.16);
+
+  grid-template-columns:
+    58px
+    minmax(0,1fr)
+    34px;
+
+  min-height:92px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255,250,238,.96),
+      rgba(235,216,181,.95)
+    );
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--doorway-accent) 36%,
+      rgba(126,83,45,.28)
+    );
+}
+
+
+.doorway::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  opacity:0;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent 18%,
+      rgba(255,250,225,.18) 34%,
+      rgba(255,250,225,.52) 48%,
+      rgba(255,250,225,.16) 62%,
+      transparent 78%
+    );
+
+  transform:translateX(-55%);
+
+  transition:
+    opacity .32s ease,
+    transform .55s ease;
+}
+
+
+.doorway:hover::after,
+.doorway:focus-visible::after{
+  opacity:1;
+
+  transform:translateX(55%);
+}
+
+
+.doorway-icon{
+  color:var(--doorway-accent);
+
+  border-color:
+    color-mix(
+      in srgb,
+      var(--doorway-accent) 52%,
+      rgba(140,100,51,.25)
+    );
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(255,255,255,.72),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(246,232,199,.96),
+      var(--doorway-accent-soft)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.72),
+    0 4px 10px rgba(70,41,23,.08);
+}
+
+
+.doorway-arrow{
+  color:var(--doorway-accent);
+}
+
+
+.doorway-copy em{
+  transition:
+    opacity .24s ease,
+    transform .24s ease;
+}
+
+
+.doorway-whisper{
+  display:block;
+
+  max-height:0;
+
+  margin-top:0;
+
+  overflow:hidden;
+
+  color:var(--doorway-accent);
+
+  opacity:0;
+
+  font-size:.89rem;
+  font-style:italic;
+  line-height:1.2;
+
+  transform:translateY(-4px);
+
+  transition:
+    max-height .32s ease,
+    margin-top .32s ease,
+    opacity .26s ease,
+    transform .32s ease;
+}
+
+
+.doorway:hover .doorway-whisper,
+.doorway:focus-visible .doorway-whisper{
+  max-height:24px;
+
+  margin-top:5px;
+
+  opacity:.88;
+
+  transform:translateY(0);
+}
+
+
+.doorway:hover .doorway-icon,
+.doorway:focus-visible .doorway-icon{
+  color:var(--doorway-accent);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.78),
+    0 0 0 3px var(--doorway-accent-soft),
+    0 5px 14px rgba(70,41,23,.12);
+
+  transform:
+    rotate(-4deg)
+    scale(1.06);
+}
+
+
+.doorway:hover .doorway-arrow,
+.doorway:focus-visible .doorway-arrow{
+  color:var(--doorway-accent);
+}
+
+
+/* Individual doorway identities */
+
+.doorway-workshop{
+  --doorway-accent:#6a743c;
+  --doorway-accent-soft:rgba(106,116,60,.16);
+}
+
+
+.doorway-story{
+  --doorway-accent:#742651;
+  --doorway-accent-soft:rgba(116,38,81,.15);
+}
+
+
+.doorway-gallery{
+  --doorway-accent:#ad7a2e;
+  --doorway-accent-soft:rgba(173,122,46,.17);
+}
+
+
+.doorway-ledger{
+  --doorway-accent:#6f1f36;
+  --doorway-accent-soft:rgba(111,31,54,.17);
+}
+
+
+.doorway-correspondence{
+  --doorway-accent:#70815b;
+  --doorway-accent-soft:rgba(112,129,91,.17);
+}
+
+
+/* A tiny handcrafted stagger */
+.doorway-story,
+.doorway-ledger{
+  transform:translateX(4px);
+}
+
+
+.doorway-story:hover,
+.doorway-story:focus-visible,
+.doorway-ledger:hover,
+.doorway-ledger:focus-visible{
+  transform:
+    translateX(4px)
+    translateY(-4px)
+    rotate(-.15deg);
+}
+
+
+/* =========================================================
+   LIVING DOORWAYS — PHONE
+========================================================= */
+
+@media (max-width:720px){
+
+  .doorway{
+    grid-template-columns:
+      43px
+      minmax(0,1fr)
+      23px;
+
+    min-height:78px;
+  }
+
+
+  .doorway-whisper{
+    display:none;
+  }
+
+
+  .doorway-story,
+  .doorway-ledger{
+    transform:none;
+  }
+
+
+  .doorway-story:hover,
+  .doorway-story:focus-visible,
+  .doorway-ledger:hover,
+  .doorway-ledger:focus-visible{
+    transform:translateY(-4px);
+  }
+
+}
+
