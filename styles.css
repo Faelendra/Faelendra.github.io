@@ -4901,32 +4901,18 @@ textarea{
 
 
 
-/* =========================================================
-   CORVEN'S CHAIR BY THE WINDOW
-========================================================= */
-
-.corven-chair-note{
-  margin:22px 0 0;
-  padding-top:17px;
-  border-top:1px solid rgba(105,39,80,.22);
-  color:#5a4031;
-  font-size:clamp(.95rem,1.45vw,1.12rem);
-  line-height:1.38;
-  font-style:italic;
-  text-align:left;
-}
-
-.corven-chair-note span{
-  display:block;
-  margin-top:5px;
-  color:var(--plum-deep);
-  font-weight:600;
-  text-align:right;
-}
-
-@media (max-width:720px){
-  .corven-chair-note,
-  .corven-chair-note span{
-    text-align:center;
-  }
-}
+/* WELCOME HOME — FINAL WORKSHOP PASS */
+.workshop-bench-final{width:min(1240px,95%);margin:72px auto 96px;padding:28px;position:relative;isolation:isolate;border:1px solid rgba(105,39,80,.24);border-radius:28px;background:radial-gradient(circle at 12% 20%,rgba(105,39,80,.10),transparent 30%),radial-gradient(circle at 88% 80%,rgba(196,154,85,.13),transparent 32%),linear-gradient(145deg,rgba(239,220,185,.95),rgba(204,171,127,.88));box-shadow:0 27px 58px rgba(49,26,15,.18),inset 0 1px 0 rgba(255,255,255,.55)}
+.workshop-bench-final::before{content:"";position:absolute;inset:12px;z-index:-1;border:1px solid rgba(196,154,85,.26);border-radius:20px}
+.workshop-bench-frame{overflow:hidden;border:1px solid rgba(34,20,13,.74);border-radius:15px;background:#160e0d;box-shadow:0 29px 56px rgba(28,14,9,.35),0 8px 17px rgba(28,14,9,.21),inset 0 0 0 1px rgba(255,229,177,.12)}
+.workshop-bench-frame img{display:block;width:100%;height:auto;object-fit:cover}
+.workshop-bench-motto{margin:25px 0 1px;color:var(--plum-deep);font-size:1.22rem;font-style:italic;text-align:center;letter-spacing:.045em}
+.entrance-workshop{padding-bottom:34px}
+.workshop-farewell{position:relative;overflow:hidden;margin-top:42px;padding-top:98px;padding-bottom:98px}
+.workshop-farewell .farewell-chair{margin:20px auto!important;color:var(--plum-deep)!important;font-size:clamp(1.45rem,2.6vw,2rem)!important;font-style:italic;font-weight:600}
+.farewell-fern{position:absolute;left:4%;bottom:-28px;width:128px;height:280px;opacity:.28;transform:rotate(-18deg);pointer-events:none}
+.farewell-fern::before{content:"";position:absolute;left:62px;top:0;width:3px;height:270px;border-radius:999px;background:linear-gradient(180deg,#92995e,#59633b)}
+.farewell-fern span::before,.farewell-fern span::after{content:"";position:absolute;top:16px;width:59px;height:232px;background:repeating-linear-gradient(180deg,rgba(104,115,62,.92) 0 12px,transparent 12px 24px)}
+.farewell-fern span::before{left:2px;clip-path:polygon(100% 0,70% 6%,100% 12%,56% 20%,100% 28%,44% 37%,100% 47%,32% 57%,100% 68%,18% 80%,100% 91%,0 100%)}
+.farewell-fern span::after{right:2px;clip-path:polygon(0 0,30% 6%,0 12%,44% 20%,0 28%,56% 37%,0 47%,68% 57%,0 68%,82% 80%,0 91%,100% 100%)}
+@media(max-width:720px){.workshop-bench-final{margin:38px auto 58px;padding:10px;border-radius:18px}.workshop-bench-final::before{inset:6px;border-radius:13px}.workshop-bench-frame img{aspect-ratio:4/3;object-position:center}.workshop-bench-motto{margin-top:18px;font-size:1.05rem}.workshop-farewell{padding-top:72px;padding-bottom:78px}.farewell-fern{left:-34px;bottom:-52px;opacity:.20;transform:scale(.80) rotate(-18deg)}}
