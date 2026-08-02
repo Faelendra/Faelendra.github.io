@@ -4676,13 +4676,60 @@ textarea{
   to{opacity:.22;transform:translateX(8%);}
 }
 
-@keyframes single-feather-fall{
-  0%{opacity:0;transform:translate3d(0,-28px,0) rotate(-9deg);}
-  9%{opacity:.58;}
-  42%{transform:translate3d(-21px,112px,0) rotate(17deg);}
-  72%{opacity:.46;transform:translate3d(18px,230px,0) rotate(-18deg);}
-  90%{opacity:0;}
-  100%{opacity:0;transform:translate3d(-7px,320px,0) rotate(26deg);}
+@keyframes corven-feather-drift{
+
+  0%{
+    opacity:0;
+
+    transform:
+      translate3d(0,-70px,0)
+      rotate(-16deg)
+      scale(.88);
+  }
+
+  10%{
+    opacity:.9;
+  }
+
+  28%{
+    transform:
+      translate3d(-7px,55px,0)
+      rotate(-9deg)
+      scale(.92);
+  }
+
+  48%{
+    transform:
+      translate3d(8px,145px,0)
+      rotate(5deg)
+      scale(.95);
+  }
+
+  68%{
+    transform:
+      translate3d(-5px,245px,0)
+      rotate(-4deg)
+      scale(.98);
+  }
+
+  86%{
+    opacity:.78;
+
+    transform:
+      translate3d(7px,355px,0)
+      rotate(7deg)
+      scale(1);
+  }
+
+  100%{
+    opacity:0;
+
+    transform:
+      translate3d(-3px,465px,0)
+      rotate(11deg)
+      scale(1.02);
+  }
+
 }
 
 @media (max-width:720px){
