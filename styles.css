@@ -3418,3 +3418,189 @@ textarea{
   }
 
 }
+
+/* =========================================================
+   VERSION 1.1 — STEP 1: LET THE ENTRANCE BREATHE
+========================================================= */
+
+.grand-entrance{
+  min-height:auto;
+
+  padding:
+    42px
+    22px
+    54px;
+}
+
+.entrance-inner{
+  padding:
+    38px
+    52px
+    34px;
+}
+
+.entrance-sigil{
+  margin-bottom:11px;
+}
+
+.entrance-small{
+  margin-bottom:5px;
+}
+
+.entrance-brand h1{
+  font-size:
+    clamp(
+      3.25rem,
+      8vw,
+      6.15rem
+    );
+}
+
+.entrance-tag{
+  margin-top:14px;
+}
+
+.entrance-flourish{
+  margin:
+    18px
+    auto
+    15px;
+}
+
+.entrance-established{
+  font-size:1.42rem;
+}
+
+.entrance-kindly{
+  font-size:1.92rem;
+}
+
+.entrance-question{
+  margin:
+    24px
+    auto
+    17px;
+}
+
+.doorway-list{
+  gap:10px;
+}
+
+.doorway{
+  min-height:82px;
+
+  padding:
+    12px
+    20px;
+}
+
+.doorway-icon{
+  width:46px;
+  height:46px;
+}
+
+.doorway-copy strong{
+  font-size:
+    clamp(
+      1.45rem,
+      2.8vw,
+      1.92rem
+    );
+}
+
+.doorway-copy em{
+  margin-top:5px;
+  font-size:1rem;
+}
+
+.entrance-threshold{
+  margin-top:23px;
+  padding-top:18px;
+}
+
+.entrance-threshold .entrance-probably{
+  margin-top:10px;
+}
+
+.entrance-workshop{
+  padding-top:62px;
+}
+
+
+/* =========================================================
+   STEP 1 — TABLET
+========================================================= */
+
+@media (max-width:900px){
+
+  .grand-entrance{
+    padding:
+      34px
+      18px
+      46px;
+  }
+
+  .entrance-inner{
+    padding:
+      34px
+      36px
+      30px;
+  }
+
+}
+
+
+/* =========================================================
+   STEP 1 — PHONE
+========================================================= */
+
+@media (max-width:720px){
+
+  .grand-entrance{
+    padding:
+      20px
+      9px
+      34px;
+  }
+
+  .entrance-inner{
+    padding:
+      30px
+      18px
+      26px;
+  }
+
+  .entrance-brand h1{
+    font-size:
+      clamp(
+        2.75rem,
+        15vw,
+        4.15rem
+      );
+  }
+
+  .entrance-question{
+    margin:
+      20px
+      auto
+      14px;
+  }
+
+  .doorway{
+    min-height:76px;
+
+    padding:
+      10px
+      13px;
+  }
+
+  .entrance-threshold{
+    margin-top:18px;
+    padding-top:15px;
+  }
+
+  .entrance-workshop{
+    padding-top:46px;
+  }
+
+}
