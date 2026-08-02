@@ -4916,3 +4916,123 @@ textarea{
 .farewell-fern span::before{left:2px;clip-path:polygon(100% 0,70% 6%,100% 12%,56% 20%,100% 28%,44% 37%,100% 47%,32% 57%,100% 68%,18% 80%,100% 91%,0 100%)}
 .farewell-fern span::after{right:2px;clip-path:polygon(0 0,30% 6%,0 12%,44% 20%,0 28%,56% 37%,0 47%,68% 57%,0 68%,82% 80%,0 91%,100% 100%)}
 @media(max-width:720px){.workshop-bench-final{margin:38px auto 58px;padding:10px;border-radius:18px}.workshop-bench-final::before{inset:6px;border-radius:13px}.workshop-bench-frame img{aspect-ratio:4/3;object-position:center}.workshop-bench-motto{margin-top:18px;font-size:1.05rem}.workshop-farewell{padding-top:72px;padding-bottom:78px}.farewell-fern{left:-34px;bottom:-52px;opacity:.20;transform:scale(.80) rotate(-18deg)}}
+
+
+/* =========================================================
+   CORVEN'S FALLING FEATHER — FINAL ILLUSTRATED ASSET
+========================================================= */
+
+.entrance-brand::after{
+  width:68px !important;
+  height:150px !important;
+
+  right:6% !important;
+  top:7% !important;
+
+  background:
+    url("images/corven-feather.png")
+    center / contain
+    no-repeat !important;
+
+  clip-path:none !important;
+  filter:
+    drop-shadow(
+      0
+      9px
+      7px
+      rgba(39,21,14,.22)
+    ) !important;
+
+  opacity:0;
+
+  transform-origin:50% 10%;
+
+  animation:
+    corven-feather-drift
+    18s
+    ease-in-out
+    infinite !important;
+}
+
+
+@keyframes corven-feather-drift{
+
+  0%{
+    opacity:0;
+
+    transform:
+      translate3d(6px,-48px,0)
+      rotate(-18deg)
+      scale(.86);
+  }
+
+  8%{
+    opacity:.88;
+  }
+
+  30%{
+    transform:
+      translate3d(-26px,72px,0)
+      rotate(10deg)
+      scale(.92);
+  }
+
+  54%{
+    transform:
+      translate3d(19px,168px,0)
+      rotate(-15deg)
+      scale(.96);
+  }
+
+  76%{
+    opacity:.76;
+
+    transform:
+      translate3d(-12px,260px,0)
+      rotate(17deg)
+      scale(1);
+  }
+
+  91%{
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+
+    transform:
+      translate3d(10px,340px,0)
+      rotate(-10deg)
+      scale(1.02);
+  }
+
+}
+
+
+@media (max-width:720px){
+
+  .entrance-brand::after{
+    width:48px !important;
+    height:108px !important;
+
+    right:3% !important;
+    top:10% !important;
+  }
+
+}
+
+
+@media (prefers-reduced-motion:reduce){
+
+  .entrance-brand::after{
+    animation:none !important;
+
+    opacity:.48;
+
+    transform:
+      translate3d(0,155px,0)
+      rotate(9deg)
+      scale(.88);
+  }
+
+}
