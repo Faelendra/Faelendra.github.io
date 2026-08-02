@@ -4630,18 +4630,40 @@ textarea{
 
 .entrance-brand::after{
   content:"";
+
   position:absolute;
-  right:8%;
-  top:12%;
-  width:17px;
-  height:58px;
+
+  right:6%;
+  top:7%;
+
+  width:78px;
+  height:172px;
+
   z-index:5;
-  opacity:.58;
-  background:linear-gradient(180deg,#18161a,#393139 48%,#5d4b58 100%);
-  clip-path:polygon(50% 0,84% 11%,100% 31%,73% 45%,94% 62%,64% 75%,74% 100%,50% 85%,26% 100%,36% 75%,6% 62%,27% 45%,0 31%,16% 11%);
-  filter:drop-shadow(0 5px 4px rgba(39,21,14,.16));
-  transform-origin:50% 0;
-  animation:single-feather-fall 17s ease-in-out infinite;
+
+  pointer-events:none;
+
+  background:
+    url("images/corven-feather.png")
+    center / contain
+    no-repeat;
+
+  clip-path:none;
+
+  filter:
+    drop-shadow(
+      0 9px 7px rgba(39,21,14,.22)
+    );
+
+  opacity:0;
+
+  transform-origin:50% 10%;
+
+  animation:
+    corven-feather-drift
+    18s
+    ease-in-out
+    infinite;
 }
 
 @keyframes workshop-dust{
