@@ -4899,3 +4899,34 @@ textarea{
 
 }
 
+
+
+/* =========================================================
+   CORVEN'S CHAIR BY THE WINDOW
+========================================================= */
+
+.corven-chair-note{
+  margin:22px 0 0;
+  padding-top:17px;
+  border-top:1px solid rgba(105,39,80,.22);
+  color:#5a4031;
+  font-size:clamp(.95rem,1.45vw,1.12rem);
+  line-height:1.38;
+  font-style:italic;
+  text-align:left;
+}
+
+.corven-chair-note span{
+  display:block;
+  margin-top:5px;
+  color:var(--plum-deep);
+  font-weight:600;
+  text-align:right;
+}
+
+@media (max-width:720px){
+  .corven-chair-note,
+  .corven-chair-note span{
+    text-align:center;
+  }
+}
