@@ -3859,3 +3859,608 @@ textarea{
 
 }
 
+/* =========================================================
+   A NOTE FROM THE RAVEN
+========================================================= */
+
+.raven-note-section{
+  position:relative;
+
+  width:min(1180px,94%);
+
+  margin:
+    12px
+    auto
+    84px;
+
+  padding:
+    70px
+    24px
+    54px;
+
+  isolation:isolate;
+}
+
+
+.raven-note-section::before{
+  content:"";
+
+  position:absolute;
+
+  inset:
+    14px
+    3%
+    10px;
+
+  z-index:-2;
+
+  border-radius:28px;
+
+  background:
+    radial-gradient(
+      circle at 22% 20%,
+      rgba(105,39,80,.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 80%,
+      rgba(104,115,62,.13),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(236,218,185,.82),
+      rgba(213,187,148,.70)
+    );
+
+  border:
+    1px solid
+    rgba(124,82,45,.22);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.42),
+    0 18px 34px rgba(59,34,19,.10);
+}
+
+
+.raven-note{
+  width:min(670px,92%);
+
+  margin:0 auto;
+
+  position:relative;
+
+  padding:
+    58px
+    58px
+    46px;
+
+  transform:rotate(-1.15deg);
+
+  color:#493528;
+
+  background:
+    radial-gradient(
+      circle at 76% 22%,
+      rgba(117,68,37,.06) 0 3px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(117,68,37,.05) 0 2px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(100,65,38,.025) 0,
+      rgba(100,65,38,.025) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255,249,232,.98),
+      rgba(229,204,162,.97)
+    );
+
+  border:
+    1px solid
+    rgba(120,77,42,.48);
+
+  clip-path:
+    polygon(
+      1.5% 1%,
+      98.6% 0,
+      99.4% 96.5%,
+      96.2% 99%,
+      2% 98.3%,
+      .4% 4%
+    );
+
+  box-shadow:
+    0 26px 46px rgba(43,24,14,.24),
+    0 8px 17px rgba(43,24,14,.16),
+    inset 0 1px 0 rgba(255,255,255,.70);
+}
+
+
+.raven-note::before,
+.raven-note::after{
+  content:"";
+
+  position:absolute;
+
+  pointer-events:none;
+}
+
+
+.raven-note::before{
+  inset:14px;
+
+  border:
+    1px solid
+    rgba(105,39,80,.13);
+}
+
+
+.raven-note::after{
+  left:8%;
+  right:8%;
+  bottom:18px;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(104,115,62,.55),
+      rgba(196,154,85,.70),
+      rgba(105,39,80,.42),
+      transparent
+    );
+}
+
+
+.raven-tack{
+  position:absolute;
+
+  left:50%;
+  top:15px;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #f1d49b 0 15%,
+      #b78337 34%,
+      #735021 72%,
+      #3f2912 100%
+    );
+
+  box-shadow:
+    0 3px 5px rgba(44,25,14,.35);
+
+  transform:translateX(-50%);
+}
+
+
+.raven-kicker{
+  margin:
+    0
+    0
+    27px;
+
+  color:var(--plum-deep);
+
+  font-size:
+    clamp(
+      2.1rem,
+      4.3vw,
+      3.45rem
+    );
+
+  line-height:1;
+  font-style:italic;
+  font-weight:600;
+  text-align:center;
+}
+
+
+.raven-kicker::before{
+  content:"✦";
+
+  margin-right:12px;
+
+  color:var(--gold-dark);
+
+  font-size:.65em;
+  font-style:normal;
+
+  vertical-align:middle;
+}
+
+
+.raven-copy{
+  width:min(500px,100%);
+
+  margin:0 auto;
+
+  text-align:center;
+}
+
+
+.raven-copy p{
+  margin:
+    0
+    0
+    10px;
+
+  font-size:1.22rem;
+  line-height:1.48;
+}
+
+
+.raven-copy .raven-pause{
+  margin-top:18px;
+
+  color:var(--plum);
+
+  font-style:italic;
+}
+
+
+.raven-aside{
+  width:min(500px,100%);
+
+  margin:
+    25px
+    auto
+    0;
+
+  color:#6a4d38;
+
+  font-size:1rem;
+  font-style:italic;
+  text-align:right;
+}
+
+
+.raven-feather{
+  position:absolute;
+
+  left:7%;
+  bottom:42px;
+
+  width:54px;
+  height:190px;
+
+  z-index:2;
+
+  transform:rotate(-24deg);
+}
+
+
+.raven-feather::before{
+  content:"";
+
+  position:absolute;
+
+  left:25px;
+  top:2px;
+
+  width:3px;
+  height:182px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2f2824,
+      #6d574a 72%,
+      #9b7654
+    );
+
+  transform:rotate(2deg);
+}
+
+
+.raven-feather span::before,
+.raven-feather span::after{
+  content:"";
+
+  position:absolute;
+
+  top:6px;
+
+  width:28px;
+  height:150px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #171516,
+      #342e31 46%,
+      #51464c 100%
+    );
+
+  filter:
+    drop-shadow(
+      0
+      5px
+      5px
+      rgba(35,20,14,.18)
+    );
+}
+
+
+.raven-feather span::before{
+  left:0;
+
+  clip-path:
+    polygon(
+      100% 0,
+      89% 12%,
+      100% 20%,
+      80% 29%,
+      100% 39%,
+      73% 48%,
+      96% 58%,
+      67% 70%,
+      89% 81%,
+      53% 100%,
+      24% 78%,
+      10% 50%
+    );
+}
+
+
+.raven-feather span::after{
+  right:0;
+
+  clip-path:
+    polygon(
+      0 0,
+      11% 12%,
+      0 20%,
+      20% 29%,
+      0 39%,
+      27% 48%,
+      4% 58%,
+      33% 70%,
+      11% 81%,
+      47% 100%,
+      76% 78%,
+      90% 50%
+    );
+}
+
+
+.raven-silhouette{
+  position:absolute;
+
+  right:7%;
+  bottom:30px;
+
+  width:112px;
+  height:105px;
+
+  z-index:2;
+
+  opacity:.82;
+
+  filter:
+    drop-shadow(
+      0
+      8px
+      7px
+      rgba(35,20,14,.18)
+    );
+}
+
+
+.raven-body{
+  position:absolute;
+
+  left:31px;
+  top:24px;
+
+  width:52px;
+  height:64px;
+
+  border-radius:
+    60%
+    45%
+    52%
+    58%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #242025,
+      #0e0d10
+    );
+
+  transform:rotate(-9deg);
+}
+
+
+.raven-body::before{
+  content:"";
+
+  position:absolute;
+
+  left:3px;
+  top:-18px;
+
+  width:36px;
+  height:34px;
+
+  border-radius:
+    52%
+    60%
+    48%
+    48%;
+
+  background:#171419;
+
+  transform:rotate(-8deg);
+}
+
+
+.raven-wing{
+  position:absolute;
+
+  left:39px;
+  top:39px;
+
+  width:43px;
+  height:50px;
+
+  border-radius:
+    62%
+    18%
+    70%
+    28%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #383039,
+      #171419
+    );
+
+  transform:rotate(12deg);
+}
+
+
+.raven-beak{
+  position:absolute;
+
+  left:20px;
+  top:15px;
+
+  width:23px;
+  height:13px;
+
+  background:#151216;
+
+  clip-path:
+    polygon(
+      100% 45%,
+      0 0,
+      10% 100%
+    );
+
+  transform:rotate(5deg);
+}
+
+
+.raven-tail{
+  position:absolute;
+
+  left:61px;
+  top:76px;
+
+  width:37px;
+  height:26px;
+
+  background:#111014;
+
+  clip-path:
+    polygon(
+      0 0,
+      100% 27%,
+      56% 55%,
+      92% 100%,
+      18% 72%
+    );
+
+  transform:rotate(13deg);
+}
+
+
+/* =========================================================
+   RAVEN NOTE — RESPONSIVE
+========================================================= */
+
+@media (max-width:900px){
+
+  .raven-feather{
+    left:3%;
+    opacity:.62;
+  }
+
+
+  .raven-silhouette{
+    right:3%;
+    opacity:.68;
+  }
+
+}
+
+
+@media (max-width:720px){
+
+  .raven-note-section{
+    width:96%;
+
+    margin-bottom:58px;
+
+    padding:
+      48px
+      8px
+      38px;
+  }
+
+
+  .raven-note{
+    width:96%;
+
+    padding:
+      48px
+      25px
+      39px;
+
+    transform:rotate(-.55deg);
+  }
+
+
+  .raven-kicker{
+    margin-bottom:22px;
+  }
+
+
+  .raven-copy p{
+    font-size:1.05rem;
+  }
+
+
+  .raven-aside{
+    font-size:.91rem;
+    text-align:center;
+  }
+
+
+  .raven-feather{
+    display:none;
+  }
+
+
+  .raven-silhouette{
+    right:13px;
+    bottom:17px;
+
+    transform:scale(.70);
+    transform-origin:right bottom;
+
+    opacity:.42;
+  }
+
+}
+
