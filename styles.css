@@ -4464,33 +4464,129 @@ textarea{
 
 }
 
-
-
 /* =========================================================
-   THE LIVING WORKBENCH
+   THE LIVING WORKBENCH — WARM WORKSHOP
 ========================================================= */
 
 .living-workbench{
   position:relative;
+
   margin:6px -22px 0;
-  padding:31px 34px 37px;
-  border:1px solid rgba(67,39,23,.46);
-  border-radius:6px 6px 18px 18px;
+  padding:34px 36px 40px;
+
+  overflow:hidden;
+  isolation:isolate;
+
+  border:1px solid rgba(72,43,25,.52);
+  border-radius:8px 8px 22px 22px;
+
   background:
-    radial-gradient(circle at 18% 22%, rgba(231,182,101,.10), transparent 20%),
-    linear-gradient(90deg, rgba(42,24,15,.18), transparent 12%, transparent 88%, rgba(42,24,15,.18)),
-    repeating-linear-gradient(92deg, #5e3a25 0, #75492e 18px, #684029 37px, #825438 58px, #5e3a25 80px);
+    /* Candle glow from the left */
+    radial-gradient(
+      circle at 7% 76%,
+      rgba(255,199,91,.32) 0,
+      rgba(232,151,54,.16) 19%,
+      transparent 37%
+    ),
+
+    /* Candle glow from the right */
+    radial-gradient(
+      circle at 94% 28%,
+      rgba(255,210,117,.25) 0,
+      rgba(219,139,49,.12) 18%,
+      transparent 36%
+    ),
+
+    /* Dim shelves and workshop shadows */
+    linear-gradient(
+      90deg,
+      rgba(28,17,12,.72) 0%,
+      rgba(54,34,22,.42) 16%,
+      rgba(67,42,27,.18) 31%,
+      rgba(67,42,27,.18) 69%,
+      rgba(54,34,22,.42) 84%,
+      rgba(28,17,12,.72) 100%
+    ),
+
+    /* Warm, worn workshop wood */
+    repeating-linear-gradient(
+      91deg,
+      #3e281c 0,
+      #503322 24px,
+      #67442d 47px,
+      #4a2e20 73px,
+      #755039 103px,
+      #3e281c 132px
+    );
+
   box-shadow:
-    inset 0 2px 0 rgba(255,236,195,.18),
-    inset 0 -11px 20px rgba(32,17,10,.22),
-    0 14px 24px rgba(38,20,11,.22);
+    inset 0 2px 0 rgba(255,230,178,.20),
+    inset 0 0 45px rgba(15,8,5,.30),
+    inset 0 -18px 30px rgba(20,10,6,.34),
+    0 17px 30px rgba(38,20,11,.25);
 }
+
+
+/* Soft candlelit atmosphere over the wood */
+.living-workbench::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  z-index:0;
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 18%,
+      rgba(255,228,167,.16),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 77% 84%,
+      rgba(126,43,79,.10),
+      transparent 40%
+    );
+
+  mix-blend-mode:screen;
+}
+
+
+/* Darkened lower workbench edge */
+.living-workbench::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:34px;
+
+  z-index:1;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(20,10,6,.34)
+    );
+
+  border-radius:0 0 20px 20px;
+}
+
 
 .living-workbench .doorway-list{
   position:relative;
-  z-index:3;
+
+  z-index:5;
+
   gap:12px;
 }
+
 
 .living-workbench .doorway{
   box-shadow:
@@ -4499,38 +4595,139 @@ textarea{
     inset 0 1px 0 rgba(255,255,255,.74);
 }
 
+
+/* =========================================================
+   FRESHLY CUT WORKSHOP FERN
+========================================================= */
+
 .workbench-fern{
   position:absolute;
-  left:-17px;
-  top:70px;
-  width:110px;
-  height:265px;
-  z-index:4;
-  opacity:.64;
-  transform:rotate(-17deg);
+
+  left:-30px;
+  top:36px;
+
+  width:170px;
+  height:340px;
+
+  z-index:6;
+
+  opacity:.94;
+
+  transform:
+    rotate(-11deg);
+
+  transform-origin:50% 100%;
+
+  filter:
+    drop-shadow(
+      0 8px 8px rgba(18,27,11,.25)
+    );
+
   pointer-events:none;
 }
 
+
+/* Main fresh stem */
 .workbench-fern::before{
   content:"";
+
   position:absolute;
-  left:53px;
-  top:0;
-  width:3px;
-  height:252px;
+
+  left:80px;
+  top:4px;
+
+  width:4px;
+  height:322px;
+
   border-radius:999px;
-  background:linear-gradient(180deg,#8a8f55,#4f5b34);
+
+  background:
+    linear-gradient(
+      180deg,
+      #a4ad62 0%,
+      #708244 42%,
+      #40562d 100%
+    );
+
+  box-shadow:
+    1px 0 0 rgba(222,229,163,.20);
 }
 
+
+/* Left and right sets of full fronds */
 .workbench-fern span::before,
 .workbench-fern span::after{
   content:"";
+
   position:absolute;
-  top:19px;
-  width:51px;
-  height:216px;
-  background:repeating-linear-gradient(180deg,rgba(103,116,60,.92) 0 12px,transparent 12px 23px);
+
+  top:16px;
+
+  width:79px;
+  height:286px;
+
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(94,118,55,.98) 0 14px,
+      transparent 14px 24px
+    );
+
+  filter:
+    drop-shadow(
+      0 2px 1px rgba(25,39,15,.13)
+    );
 }
+
+
+.workbench-fern span::before{
+  left:5px;
+
+  clip-path:
+    polygon(
+      100% 0%,
+      60% 4%,
+      100% 9%,
+      42% 14%,
+      100% 20%,
+      27% 27%,
+      100% 34%,
+      14% 42%,
+      100% 50%,
+      4% 59%,
+      100% 68%,
+      18% 77%,
+      100% 86%,
+      35% 93%,
+      100% 100%
+    );
+}
+
+
+.workbench-fern span::after{
+  right:5px;
+
+  clip-path:
+    polygon(
+      0% 0%,
+      40% 4%,
+      0% 9%,
+      58% 14%,
+      0% 20%,
+      73% 27%,
+      0% 34%,
+      86% 42%,
+      0% 50%,
+      96% 59%,
+      0% 68%,
+      82% 77%,
+      0% 86%,
+      65% 93%,
+      0% 100%
+    );
+}
+
+
 
 .workbench-fern span::before{
   left:5px;
