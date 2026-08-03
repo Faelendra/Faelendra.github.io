@@ -5358,3 +5358,66 @@ textarea{
 
 }
 
+/* =========================================================
+   WORKSHOP ROOM — FINAL PARCHMENT POLISH
+   Lowered, narrowed, warmed, and more naturally hung.
+========================================================= */
+
+.home-page .grand-entrance{
+  padding-top:102px;
+}
+
+.home-page .entrance-inner{
+  width:min(780px,89%);
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(92,58,35,.026) 0,
+      rgba(92,58,35,.026) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    radial-gradient(
+      circle at 50% 0,
+      rgba(255,255,255,.34),
+      transparent 33%
+    ),
+    linear-gradient(
+      165deg,
+      rgba(247,232,201,.972),
+      rgba(220,191,145,.958)
+    );
+
+  box-shadow:
+    0 48px 94px rgba(17,8,4,.44),
+    0 14px 28px rgba(17,8,4,.25),
+    0 0 0 1px rgba(151,104,60,.10),
+    inset 0 0 0 6px rgba(255,247,228,.24),
+    inset 0 0 0 7px rgba(117,77,42,.13);
+}
+
+@media (max-width:1020px){
+
+  .home-page .grand-entrance{
+    padding-top:78px;
+  }
+
+  .home-page .entrance-inner{
+    width:min(760px,92%);
+  }
+
+}
+
+@media (max-width:720px){
+
+  .home-page .grand-entrance{
+    padding-top:38px;
+  }
+
+  .home-page .entrance-inner{
+    width:100%;
+  }
+
+}
+
