@@ -5033,3 +5033,118 @@ textarea{
   }
 
 }
+/* =========================================================
+   WORKSHOP WARMTH — SAFE OVERRIDE
+========================================================= */
+
+.living-workbench{
+  overflow:hidden;
+
+  border-color:rgba(73,42,23,.58);
+
+  background:
+    /* Left candle glow */
+    radial-gradient(
+      circle at 4% 70%,
+      rgba(255,209,118,.28) 0,
+      rgba(228,145,54,.14) 19%,
+      transparent 39%
+    ),
+
+    /* Right candle glow */
+    radial-gradient(
+      circle at 96% 28%,
+      rgba(255,218,139,.24) 0,
+      rgba(220,139,51,.12) 18%,
+      transparent 38%
+    ),
+
+    /* A quiet plum warmth through the center */
+    radial-gradient(
+      ellipse at 62% 78%,
+      rgba(105,39,80,.12) 0,
+      transparent 46%
+    ),
+
+    /* Gentle darkness at the sides */
+    linear-gradient(
+      90deg,
+      rgba(30,17,11,.52) 0%,
+      rgba(52,31,20,.24) 15%,
+      transparent 33%,
+      transparent 67%,
+      rgba(52,31,20,.24) 85%,
+      rgba(30,17,11,.52) 100%
+    ),
+
+    /* Warmer, less cardboard-like wood */
+    repeating-linear-gradient(
+      92deg,
+      #3e281c 0,
+      #523422 22px,
+      #68432d 45px,
+      #4b2f20 68px,
+      #765039 96px,
+      #432a1d 124px
+    );
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,234,191,.20),
+    inset 0 0 42px rgba(20,10,6,.28),
+    inset 0 -15px 27px rgba(18,9,5,.30),
+    0 16px 28px rgba(38,20,11,.25);
+}
+
+
+/* Soft amber light over the entire workbench */
+.living-workbench::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      113deg,
+      transparent 8%,
+      rgba(255,229,169,.10) 28%,
+      transparent 47%
+    ),
+    radial-gradient(
+      ellipse at 50% 4%,
+      rgba(255,240,200,.11),
+      transparent 48%
+    );
+
+  opacity:.82;
+}
+
+
+/* Keep the doorway cards safely above the glow */
+.living-workbench .doorway-list{
+  position:relative;
+  z-index:5;
+}
+
+
+/* Give the doorway cards a warmer candlelit edge */
+.living-workbench .doorway{
+  border-color:rgba(156,108,62,.40);
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255,250,236,.96),
+      rgba(238,216,178,.95)
+    );
+
+  box-shadow:
+    0 12px 20px rgba(28,15,9,.23),
+    0 3px 6px rgba(28,15,9,.12),
+    inset 0 1px 0 rgba(255,255,255,.78),
+    inset 0 0 18px rgba(207,151,72,.06);
+}
