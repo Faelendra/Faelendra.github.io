@@ -5724,3 +5724,212 @@ html{scroll-behavior:smooth;}
     transform:translateY(145px) rotate(8deg) scale(.90);
   }
 }
+
+/* =========================================================
+   WORKSHOP HERO POLISH — FAREWELL + FRESH FERN
+   Final full-file update
+========================================================= */
+
+/* Tighten the farewell so the message begins sooner. */
+.home-page .workshop-farewell{
+  padding-top:58px;
+  padding-bottom:72px;
+}
+
+.home-page .workshop-farewell::before{
+  inset:
+    22px
+    max(28px,8vw);
+}
+
+.home-page .farewell-flourish{
+  margin-bottom:16px;
+}
+
+.home-page .farewell-title{
+  margin-bottom:10px;
+}
+
+.home-page .workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
+  margin-bottom:16px;
+}
+
+.home-page .farewell-signature{
+  margin-top:4px;
+}
+
+.home-page .workshop-farewell::after{
+  margin-top:16px;
+}
+
+
+/* Replace the old angular fern with a fuller, freshly cut frond. */
+.home-page .farewell-fern{
+  left:3.4%;
+  bottom:-42px;
+
+  width:182px;
+  height:330px;
+
+  opacity:.34;
+
+  transform:
+    rotate(-13deg);
+
+  transform-origin:
+    50%
+    100%;
+
+  filter:
+    drop-shadow(
+      0 7px 5px rgba(31,44,18,.12)
+    );
+}
+
+
+.home-page .farewell-fern::before{
+  left:88px;
+  top:0;
+
+  width:4px;
+  height:316px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #aeb77a 0%,
+      #81915a 42%,
+      #56683c 100%
+    );
+
+  box-shadow:
+    1px 0 0 rgba(231,236,188,.18);
+}
+
+
+.home-page .farewell-fern span::before,
+.home-page .farewell-fern span::after{
+  top:12px;
+
+  width:86px;
+  height:286px;
+
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(112,129,74,.94) 0 14px,
+      transparent 14px 23px
+    );
+
+  filter:
+    drop-shadow(
+      0 2px 1px rgba(42,57,26,.08)
+    );
+}
+
+
+.home-page .farewell-fern span::before{
+  left:2px;
+
+  clip-path:
+    polygon(
+      100% 0%,
+      63% 4%,
+      100% 9%,
+      48% 14%,
+      100% 20%,
+      34% 27%,
+      100% 34%,
+      20% 42%,
+      100% 50%,
+      8% 59%,
+      100% 68%,
+      19% 77%,
+      100% 86%,
+      38% 94%,
+      100% 100%
+    );
+}
+
+
+.home-page .farewell-fern span::after{
+  right:2px;
+
+  clip-path:
+    polygon(
+      0% 0%,
+      37% 4%,
+      0% 9%,
+      52% 14%,
+      0% 20%,
+      66% 27%,
+      0% 34%,
+      80% 42%,
+      0% 50%,
+      92% 59%,
+      0% 68%,
+      81% 77%,
+      0% 86%,
+      62% 94%,
+      0% 100%
+    );
+}
+
+
+/* Add a soft secondary frond so the fern feels gathered, not stamped. */
+.home-page .farewell-fern span{
+  position:absolute;
+  inset:0;
+}
+
+.home-page .farewell-fern span{
+  filter:
+    drop-shadow(
+      26px 18px 0 rgba(116,132,78,.14)
+    );
+}
+
+
+@media (max-width:1020px){
+
+  .home-page .workshop-farewell{
+    padding-top:52px;
+    padding-bottom:66px;
+  }
+
+  .home-page .workshop-farewell::before{
+    inset:
+      19px
+      max(18px,5vw);
+  }
+
+}
+
+
+@media (max-width:720px){
+
+  .home-page .workshop-farewell{
+    padding-top:46px;
+    padding-bottom:58px;
+  }
+
+  .home-page .workshop-farewell::before{
+    inset:
+      16px
+      8px;
+  }
+
+  .home-page .farewell-fern{
+    left:-42px;
+    bottom:-58px;
+
+    opacity:.22;
+
+    transform:
+      scale(.76)
+      rotate(-13deg);
+  }
+
+}
