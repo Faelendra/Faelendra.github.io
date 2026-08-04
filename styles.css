@@ -5933,3 +5933,75 @@ html{scroll-behavior:smooth;}
   }
 
 }
+
+/* =========================================================
+   WORKSHOP HOMEPAGE
+   VERSION 1.0 — LOCKED
+   Final finishing pass
+========================================================= */
+
+/* Softer transition from the workshop room into the farewell. */
+.home-page .grand-entrance{
+  box-shadow:
+    inset 0 28px 68px rgba(18,9,5,.25),
+    inset 0 -42px 86px rgba(18,9,5,.34);
+}
+
+
+/* Keep the farewell intimate and visually centered. */
+.home-page .workshop-farewell{
+  padding-top:52px;
+  padding-bottom:64px;
+}
+
+
+.home-page .workshop-farewell::before{
+  inset:
+    18px
+    max(28px,8vw);
+}
+
+
+.home-page .farewell-flourish{
+  margin-bottom:12px;
+}
+
+
+.home-page .farewell-title{
+  margin-bottom:8px;
+}
+
+
+.home-page .workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
+  margin-bottom:14px;
+}
+
+
+/* Let the fern remain present without competing with the farewell copy. */
+.home-page .farewell-fern{
+  opacity:.28;
+}
+
+
+/* Quiet the footer so the farewell remains the emotional ending. */
+.home-page .site-footer{
+  padding-top:24px;
+  padding-bottom:28px;
+}
+
+
+@media (max-width:720px){
+
+  .home-page .workshop-farewell{
+    padding-top:42px;
+    padding-bottom:52px;
+  }
+
+
+  .home-page .workshop-farewell::before{
+    inset:
+      14px
+      8px;
+  }
+
+}
