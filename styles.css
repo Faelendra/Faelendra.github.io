@@ -6290,3 +6290,533 @@ html{scroll-behavior:smooth;}
   }
 
 }
+
+/* =========================================================
+   WORKSHOP HOMEPAGE — FINAL LIVE BUILD
+   One continuous room with live HTML/CSS cards
+========================================================= */
+
+.home-page main{
+  display:block;
+}
+
+.home-page .workshop-home-scene{
+  position:relative;
+  min-height:100vh;
+  padding:64px 20px 48px;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    linear-gradient(180deg,rgba(15,8,5,.14),rgba(15,8,5,.32)),
+    url("images/workshop-room-final.jpg")
+    center top / cover
+    no-repeat;
+  border-bottom:1px solid rgba(196,154,85,.34);
+  box-shadow:
+    inset 0 40px 90px rgba(12,6,3,.28),
+    inset 0 -40px 90px rgba(12,6,3,.36);
+}
+
+.home-page .workshop-home-overlay{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 14%,rgba(255,234,181,.13),transparent 34%),
+    linear-gradient(90deg,rgba(9,4,2,.20),transparent 18%,transparent 82%,rgba(9,4,2,.20));
+}
+
+.home-page .workshop-home-inner{
+  width:min(1120px,96%);
+  margin:0 auto;
+}
+
+/* Welcome parchment */
+.home-page .workshop-welcome-card{
+  width:min(690px,88%);
+  margin:0 auto 30px;
+  padding:42px 54px 38px;
+  position:relative;
+  text-align:center;
+  border:1px solid rgba(118,76,38,.52);
+  border-radius:8px;
+  background:
+    repeating-linear-gradient(0deg,rgba(92,58,35,.022) 0,rgba(92,58,35,.022) 1px,transparent 1px,transparent 5px),
+    radial-gradient(circle at 50% 0,rgba(255,255,255,.32),transparent 34%),
+    linear-gradient(165deg,rgba(244,226,190,.97),rgba(218,184,132,.95));
+  box-shadow:
+    0 26px 60px rgba(16,8,4,.40),
+    0 8px 18px rgba(16,8,4,.22),
+    inset 0 0 0 6px rgba(255,247,226,.18);
+}
+
+.home-page .workshop-welcome-card::before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(105,39,80,.16);
+  pointer-events:none;
+}
+
+.home-page .workshop-welcome-card h1{
+  margin:0 0 20px;
+  color:var(--plum);
+  font-size:clamp(2.2rem,4vw,3.25rem);
+  font-style:italic;
+  line-height:1.05;
+}
+
+.home-page .workshop-welcome-card p{
+  margin:0 0 7px;
+  color:#2f2118;
+  font-size:1.24rem;
+  line-height:1.4;
+}
+
+.home-page .workshop-welcome-card .welcome-probably{
+  margin-top:14px;
+  color:var(--plum);
+  font-size:1.28rem;
+  font-style:italic;
+  font-weight:600;
+}
+
+.home-page .welcome-flourish,
+.home-page .welcome-bottom-flourish{
+  width:170px;
+  height:16px;
+  margin:0 auto 18px;
+  position:relative;
+}
+
+.home-page .welcome-bottom-flourish{
+  margin:18px auto 0;
+}
+
+.home-page .welcome-flourish::before,
+.home-page .welcome-flourish::after,
+.home-page .welcome-bottom-flourish::before,
+.home-page .welcome-bottom-flourish::after{
+  content:"";
+  position:absolute;
+  top:8px;
+  width:68px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+}
+
+.home-page .welcome-flourish::before,
+.home-page .welcome-bottom-flourish::before{left:0;}
+
+.home-page .welcome-flourish::after,
+.home-page .welcome-bottom-flourish::after{
+  right:0;
+  transform:scaleX(-1);
+}
+
+.home-page .welcome-flourish span,
+.home-page .welcome-bottom-flourish{
+  color:var(--plum);
+}
+
+.home-page .welcome-flourish span::before,
+.home-page .welcome-bottom-flourish::before{
+  content:"";
+}
+
+/* Lead */
+.home-page .workshop-lead{
+  text-align:center;
+  margin:0 auto 26px;
+}
+
+.home-page .workshop-lead p{
+  margin:0 0 10px;
+  color:var(--gold-light);
+  font-size:clamp(1.55rem,2.4vw,2.2rem);
+  font-weight:600;
+  text-shadow:0 2px 10px rgba(0,0,0,.45);
+}
+
+.home-page .workshop-lead-divider{
+  width:220px;
+  height:14px;
+  margin:0 auto;
+  position:relative;
+}
+
+.home-page .workshop-lead-divider::before,
+.home-page .workshop-lead-divider::after{
+  content:"";
+  position:absolute;
+  top:7px;
+  width:90px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+}
+
+.home-page .workshop-lead-divider::before{left:0;}
+
+.home-page .workshop-lead-divider::after{
+  right:0;
+  transform:scaleX(-1);
+}
+
+.home-page .workshop-lead-divider span{
+  position:absolute;
+  left:50%;
+  top:3px;
+  width:9px;
+  height:9px;
+  background:var(--gold-light);
+  transform:translateX(-50%) rotate(45deg);
+}
+
+/* Destination grid */
+.home-page .workshop-destination-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  align-items:stretch;
+  margin-bottom:28px;
+}
+
+.home-page .workshop-destination{
+  position:relative;
+  min-height:500px;
+  padding:54px 20px 22px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow:hidden;
+  text-align:center;
+  border:1px solid rgba(126,83,42,.52);
+  border-radius:12px;
+  background:
+    repeating-linear-gradient(0deg,rgba(92,58,35,.024) 0,rgba(92,58,35,.024) 1px,transparent 1px,transparent 5px),
+    linear-gradient(165deg,rgba(246,230,198,.98),rgba(217,183,132,.96));
+  box-shadow:
+    0 22px 44px rgba(14,7,3,.36),
+    inset 0 0 0 5px rgba(255,247,228,.16);
+  transition:
+    transform .26s ease,
+    box-shadow .26s ease,
+    border-color .26s ease;
+}
+
+.home-page .workshop-destination::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid rgba(105,39,80,.14);
+  pointer-events:none;
+}
+
+.home-page .workshop-destination:hover{
+  transform:translateY(-7px);
+  border-color:rgba(196,154,85,.68);
+  box-shadow:
+    0 30px 56px rgba(14,7,3,.42),
+    0 0 26px rgba(196,154,85,.10),
+    inset 0 0 0 5px rgba(255,247,228,.18);
+}
+
+.home-page .destination-seal{
+  position:absolute;
+  top:-20px;
+  left:50%;
+  z-index:4;
+  width:72px;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:translateX(-50%);
+  border:2px solid rgba(222,183,108,.78);
+  border-radius:52% 48% 54% 46%;
+  color:#e5c977;
+  background:
+    radial-gradient(circle at 35% 25%,var(--plum-soft),var(--plum) 46%,var(--plum-deep) 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255,235,181,.28),
+    inset 0 -7px 10px rgba(35,13,23,.38),
+    0 6px 12px rgba(26,13,8,.34),
+    0 0 0 4px rgba(60,28,40,.16);
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+.home-page .destination-title{
+  position:relative;
+  z-index:2;
+  margin:10px 0 8px;
+  color:var(--plum);
+  font-size:1.75rem;
+  font-weight:700;
+  line-height:1.05;
+}
+
+.home-page .destination-rule{
+  width:66px;
+  height:1px;
+  margin:2px 0 12px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.home-page .destination-copy{
+  position:relative;
+  z-index:2;
+  min-height:76px;
+  color:#2f2118;
+  font-size:1.02rem;
+  line-height:1.45;
+}
+
+.home-page .destination-art{
+  width:100%;
+  margin-top:auto;
+  display:block;
+  position:relative;
+  z-index:2;
+}
+
+.home-page .destination-art img{
+  display:block;
+  width:100%;
+  height:255px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:8px;
+  filter:saturate(.82) sepia(.12) contrast(1.03);
+  mix-blend-mode:multiply;
+}
+
+/* Farewell in same room */
+.home-page .workshop-home-farewell{
+  width:min(760px,90%);
+  margin:0 auto;
+  padding:36px 42px 34px;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  border:1px solid rgba(118,76,38,.50);
+  border-radius:10px;
+  background:
+    repeating-linear-gradient(0deg,rgba(92,58,35,.022) 0,rgba(92,58,35,.022) 1px,transparent 1px,transparent 5px),
+    radial-gradient(circle at 50% 0,rgba(255,255,255,.28),transparent 34%),
+    linear-gradient(165deg,rgba(243,225,188,.96),rgba(216,181,128,.94));
+  box-shadow:
+    0 26px 58px rgba(14,7,3,.38),
+    0 7px 18px rgba(14,7,3,.20),
+    inset 0 0 0 5px rgba(255,247,228,.16);
+}
+
+.home-page .workshop-home-farewell::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid rgba(105,39,80,.14);
+  pointer-events:none;
+}
+
+.home-page .farewell-live-flourish{
+  width:190px;
+  height:18px;
+  margin:0 auto 14px;
+  position:relative;
+}
+
+.home-page .farewell-live-flourish::before,
+.home-page .farewell-live-flourish::after{
+  content:"";
+  position:absolute;
+  top:9px;
+  width:76px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+}
+
+.home-page .farewell-live-flourish::before{left:0;}
+
+.home-page .farewell-live-flourish::after{
+  right:0;
+  transform:scaleX(-1);
+}
+
+.home-page .farewell-live-flourish span{
+  position:absolute;
+  left:50%;
+  top:4px;
+  width:10px;
+  height:10px;
+  background:var(--plum);
+  border:1px solid var(--gold);
+  transform:translateX(-50%) rotate(45deg);
+}
+
+.home-page .farewell-live-title{
+  margin:0 0 10px;
+  color:var(--plum);
+  font-size:clamp(2.2rem,4vw,3.35rem);
+  font-style:italic;
+  font-weight:700;
+}
+
+.home-page .workshop-home-farewell > p:not(.farewell-live-title):not(.farewell-live-signature):not(.farewell-live-brenda){
+  max-width:650px;
+  margin:0 auto 14px;
+  position:relative;
+  z-index:2;
+  color:#3a291f;
+  font-size:1.12rem;
+  line-height:1.5;
+}
+
+.home-page .farewell-live-chair{
+  color:var(--plum) !important;
+  font-size:1.5rem !important;
+  font-style:italic;
+  font-weight:600;
+}
+
+.home-page .farewell-live-signature{
+  margin:8px 0 2px;
+  position:relative;
+  z-index:2;
+  color:var(--plum);
+  font-size:1.42rem;
+  font-weight:700;
+}
+
+.home-page .farewell-live-brenda{
+  margin:0;
+  position:relative;
+  z-index:2;
+  color:var(--olive-deep);
+  font-size:1.04rem;
+  font-style:italic;
+}
+
+.home-page .farewell-live-seal{
+  width:74px;
+  height:74px;
+  margin:22px auto 0;
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:3px double rgba(105,39,80,.42);
+  border-radius:50%;
+  color:rgba(105,39,80,.65);
+  background:radial-gradient(circle,rgba(215,174,94,.20),rgba(105,39,80,.08) 53%,transparent 55%);
+  box-shadow:
+    inset 0 0 0 7px rgba(196,154,85,.105),
+    0 5px 15px rgba(62,36,20,.11);
+  font-size:.95rem;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.home-page .farewell-live-fern{
+  position:absolute;
+  left:-4px;
+  bottom:-26px;
+  width:170px;
+  height:270px;
+  z-index:1;
+  opacity:.22;
+  transform:rotate(-12deg);
+  pointer-events:none;
+}
+
+.home-page .farewell-live-fern::before{
+  content:"";
+  position:absolute;
+  left:82px;
+  top:0;
+  width:3px;
+  height:260px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#aeb77a,#596c3f);
+}
+
+.home-page .farewell-live-fern span::before,
+.home-page .farewell-live-fern span::after{
+  content:"";
+  position:absolute;
+  top:12px;
+  width:80px;
+  height:238px;
+  background:repeating-linear-gradient(180deg,rgba(112,129,74,.92) 0 13px,transparent 13px 22px);
+}
+
+.home-page .farewell-live-fern span::before{
+  left:2px;
+  clip-path:polygon(100% 0,60% 5%,100% 11%,44% 17%,100% 24%,30% 32%,100% 41%,16% 50%,100% 59%,5% 69%,100% 79%,18% 89%,100% 100%);
+}
+
+.home-page .farewell-live-fern span::after{
+  right:2px;
+  clip-path:polygon(0 0,40% 5%,0 11%,56% 17%,0 24%,70% 32%,0 41%,84% 50%,0 59%,95% 69%,0 79%,82% 89%,0 100%);
+}
+
+/* Footer transition */
+.home-page .site-footer{
+  color:#d9c8a6;
+  background:
+    linear-gradient(180deg,rgba(35,16,28,.98),rgba(18,8,13,.99));
+  border-top:1px solid rgba(196,154,85,.28);
+}
+
+.home-page .site-footer p{
+  color:#d9c8a6;
+}
+
+.home-page .footer-motto{
+  color:#d7a6c5;
+}
+
+/* Responsive */
+@media (max-width:1020px){
+  .home-page .workshop-destination-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    max-width:760px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media (max-width:720px){
+  .home-page .workshop-home-scene{
+    padding:34px 8px 34px;
+    background-position:center top;
+  }
+
+  .home-page .workshop-welcome-card,
+  .home-page .workshop-home-farewell{
+    width:100%;
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .home-page .workshop-destination-grid{
+    grid-template-columns:1fr;
+    width:min(420px,100%);
+  }
+
+  .home-page .workshop-destination{
+    min-height:460px;
+  }
+
+  .home-page .destination-art img{
+    height:240px;
+  }
+
+  .home-page .farewell-live-fern{
+    left:-50px;
+    opacity:.14;
+    transform:scale(.78) rotate(-12deg);
+  }
+}
