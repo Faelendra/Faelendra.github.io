@@ -6820,3 +6820,303 @@ html{scroll-behavior:smooth;}
     transform:scale(.78) rotate(-12deg);
   }
 }
+
+/* =========================================================
+   FINAL NAVIGATION + WAX SEAL POLISH
+   Deep Victorian plum header and ornate embossed seals
+========================================================= */
+
+/* ---------------------------------------------------------
+   NAVIGATION BAR — DEEP VICTORIAN PLUM
+--------------------------------------------------------- */
+
+.home-page .site-header{
+  background:
+    radial-gradient(
+      circle at 14% 40%,
+      rgba(255,255,255,.045),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 86% 42%,
+      rgba(196,154,85,.06),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #5b2a50 0%,
+      #4b203f 58%,
+      #3b182f 100%
+    );
+
+  border-top:
+    1px solid rgba(224,189,120,.44);
+
+  border-bottom:
+    1px solid rgba(224,189,120,.56);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.07),
+    0 8px 24px rgba(29,10,23,.28);
+
+  backdrop-filter:none;
+}
+
+
+.home-page .site-header::after{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(224,189,120,.14),
+      transparent
+    );
+
+  opacity:.75;
+}
+
+
+.home-page .brand-small{
+  color:#ead6a8;
+}
+
+
+.home-page .brand-small::before,
+.home-page .brand-small::after{
+  color:#d9ad5f;
+}
+
+
+.home-page .brand-large{
+  color:#efd59a;
+
+  text-shadow:
+    0 1px 0 rgba(255,248,220,.14),
+    0 2px 8px rgba(12,4,10,.30);
+}
+
+
+.home-page .brand-tag{
+  color:#e8d7b5;
+}
+
+
+.home-page .brand-ornament span{
+  background:#4b203f;
+}
+
+
+.home-page .brand-botanical::before,
+.home-page .brand-botanical::after{
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #9da66f,
+      #d7aa58
+    );
+}
+
+
+.home-page .botanical-left,
+.home-page .botanical-right{
+  border-top-color:#9da66f;
+}
+
+
+.home-page .main-nav{
+  gap:
+    8px
+    34px;
+}
+
+
+.home-page .main-nav a{
+  color:#f0dfbf;
+
+  font-size:1.18rem;
+
+  font-weight:600;
+
+  letter-spacing:.055em;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.06),
+    0 2px 6px rgba(15,4,12,.20);
+}
+
+
+.home-page .main-nav a:hover{
+  color:#f2c96f;
+}
+
+
+.home-page .main-nav a::before{
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #d8ae62,
+      #f0d38d,
+      #d8ae62,
+      transparent
+    );
+}
+
+
+.home-page .main-nav a::after{
+  background:#d8ae62;
+}
+
+
+.home-page .main-nav a.active{
+  color:#f2c96f;
+}
+
+
+.home-page .main-nav a.active::after{
+  background:#f2c96f;
+
+  box-shadow:
+    -6px 4px 0 -2px #9da66f,
+    6px -4px 0 -2px #d8ae62;
+}
+
+
+.home-page .header-invitation{
+  color:#d9bd89;
+}
+
+
+/* ---------------------------------------------------------
+   WAX SEALS — ORNATE EMBOSSED BUTTONS
+--------------------------------------------------------- */
+
+.home-page .destination-seal{
+  top:-22px;
+
+  width:76px;
+  height:76px;
+
+  border:
+    2px solid rgba(226,188,108,.92);
+
+  border-radius:
+    54%
+    46%
+    51%
+    49%;
+
+  color:#f0cf7b;
+
+  background:
+    radial-gradient(
+      circle at 34% 26%,
+      rgba(178,88,139,.95) 0%,
+      rgba(128,45,92,.98) 30%,
+      rgba(91,28,66,1) 62%,
+      rgba(54,16,39,1) 100%
+    );
+
+  box-shadow:
+    inset 0 3px 5px rgba(255,226,184,.30),
+    inset 0 -9px 12px rgba(29,8,22,.46),
+    inset 0 0 0 6px rgba(105,39,80,.34),
+    inset 0 0 0 8px rgba(222,178,93,.30),
+    0 7px 14px rgba(23,10,15,.34),
+    0 0 0 4px rgba(66,29,43,.20);
+
+  font-size:1.42rem;
+
+  letter-spacing:.03em;
+
+  text-shadow:
+    0 1px 0 rgba(255,230,168,.28),
+    0 -1px 0 rgba(36,10,27,.68);
+}
+
+
+.home-page .destination-seal::before{
+  content:"";
+
+  position:absolute;
+
+  inset:8px;
+
+  border:
+    1px solid rgba(239,202,124,.72);
+
+  border-radius:
+    50%;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,232,181,.20),
+    inset 0 -2px 3px rgba(42,12,31,.36);
+}
+
+
+.home-page .destination-seal::after{
+  content:"";
+
+  position:absolute;
+
+  inset:15px;
+
+  border:
+    1px dotted rgba(240,207,123,.54);
+
+  border-radius:
+    50%;
+}
+
+
+/* Keep Roman numerals above seal decoration. */
+.home-page .destination-seal{
+  isolation:isolate;
+}
+
+
+.home-page .destination-seal{
+  z-index:6;
+}
+
+
+/* Subtle hover lift for the wax seal itself. */
+.home-page .workshop-destination:hover .destination-seal{
+  transform:
+    translateX(-50%)
+    translateY(-3px)
+    rotate(-1deg);
+
+  box-shadow:
+    inset 0 3px 5px rgba(255,226,184,.32),
+    inset 0 -9px 12px rgba(29,8,22,.46),
+    inset 0 0 0 6px rgba(105,39,80,.34),
+    inset 0 0 0 8px rgba(222,178,93,.34),
+    0 10px 18px rgba(23,10,15,.38),
+    0 0 18px rgba(216,174,95,.12);
+}
+
+
+/* Mobile sizing */
+@media (max-width:720px){
+
+  .home-page .main-nav{
+    gap:
+      4px
+      18px;
+  }
+
+
+  .home-page .main-nav a{
+    font-size:.96rem;
+  }
+
+
+  .home-page .destination-seal{
+    width:68px;
+    height:68px;
+
+    font-size:1.28rem;
+  }
+
+}
