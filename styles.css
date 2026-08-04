@@ -6005,3 +6005,67 @@ html{scroll-behavior:smooth;}
   }
 
 }
+
+/* =========================================================
+   FAREWELL LAYOUT FIX — AUGUST 4, 2026
+   The fern must remain decorative and out of document flow.
+========================================================= */
+
+.home-page .workshop-farewell > .farewell-fern{
+  position:absolute !important;
+
+  left:3.4%;
+  bottom:-42px;
+
+  width:182px;
+  height:330px;
+
+  z-index:1;
+
+  margin:0;
+
+  opacity:.28;
+
+  transform:rotate(-13deg);
+  transform-origin:50% 100%;
+
+  pointer-events:none;
+}
+
+
+/* Keep only the farewell text and flourish in normal flow. */
+.home-page .workshop-farewell > .farewell-flourish,
+.home-page .workshop-farewell > p{
+  position:relative;
+  z-index:2;
+}
+
+
+/* Final compact farewell spacing. */
+.home-page .workshop-farewell{
+  padding-top:52px;
+  padding-bottom:64px;
+}
+
+
+.home-page .workshop-farewell::before{
+  inset:
+    18px
+    max(28px,8vw);
+}
+
+
+@media (max-width:720px){
+
+  .home-page .workshop-farewell > .farewell-fern{
+    left:-42px;
+    bottom:-58px;
+
+    opacity:.20;
+
+    transform:
+      scale(.76)
+      rotate(-13deg);
+  }
+
+}
