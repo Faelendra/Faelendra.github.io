@@ -5464,36 +5464,263 @@ html{
 }
 
 /* =========================================================
-   WORKSHOP ROOM — FINAL BACKGROUND LOCK
-   Keeps the approved room visible after all earlier rules.
+   WORKSHOP COMPLETE — FINAL MASTER OVERRIDES
+   Locked August 4, 2026
 ========================================================= */
 
+html{scroll-behavior:smooth;}
+
 .home-page .grand-entrance{
+  position:relative;
+  min-height:auto;
+  padding:84px 20px 64px;
+  overflow:hidden;
+  isolation:isolate;
   background-image:
-    linear-gradient(
-      180deg,
-      rgba(20,10,6,.12),
-      rgba(20,10,6,.28)
-    ),
+    linear-gradient(180deg,rgba(20,10,6,.10),rgba(20,10,6,.24)),
     url("/images/workshop-room-final.jpg") !important;
-
-  background-position:
-    center center,
-    center center !important;
-
-  background-size:
-    cover,
-    cover !important;
-
-  background-repeat:
-    no-repeat,
-    no-repeat !important;
-
+  background-position:center center,center center !important;
+  background-size:cover,cover !important;
+  background-repeat:no-repeat,no-repeat !important;
   background-color:#25150d !important;
+  border-bottom:1px solid rgba(196,154,85,.34);
+  box-shadow:
+    inset 0 28px 68px rgba(18,9,5,.25),
+    inset 0 -28px 70px rgba(18,9,5,.30);
 }
 
 .home-page .grand-entrance::before,
-.home-page .grand-entrance::after{
-  display:none !important;
+.home-page .grand-entrance::after{display:none !important;}
+
+.home-page .entrance-atmosphere{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 50% 25%,rgba(255,237,190,.15),transparent 44%),
+    linear-gradient(90deg,rgba(17,8,5,.20),transparent 18%,transparent 82%,rgba(17,8,5,.20)) !important;
 }
 
+.home-page .entrance-inner{
+  width:min(780px,89%);
+  margin:0 auto;
+  padding:42px 42px 30px;
+  position:relative;
+  text-align:center;
+  border:1px solid rgba(112,72,39,.50);
+  border-radius:10px;
+  background:
+    repeating-linear-gradient(0deg,rgba(92,58,35,.025) 0,rgba(92,58,35,.025) 1px,transparent 1px,transparent 5px),
+    radial-gradient(circle at 50% 0,rgba(255,255,255,.34),transparent 33%),
+    linear-gradient(165deg,rgba(247,232,201,.972),rgba(220,191,145,.958));
+  box-shadow:
+    0 45px 88px rgba(17,8,4,.42),
+    0 12px 26px rgba(17,8,4,.24),
+    0 0 0 1px rgba(151,104,60,.10),
+    inset 0 0 0 6px rgba(255,247,228,.24),
+    inset 0 0 0 7px rgba(117,77,42,.13);
+}
+
+.home-page .entrance-inner::before,
+.home-page .entrance-inner::after{
+  width:54px;
+  height:54px;
+  opacity:.48;
+}
+
+.home-page .entrance-brand{position:relative;}
+
+.home-page .entrance-brand::after{
+  right:2%;
+  top:-2%;
+  width:78px;
+  height:172px;
+  z-index:8;
+  opacity:0;
+  pointer-events:none;
+  background:url("/images/corven-feather.png") center/contain no-repeat !important;
+  clip-path:none !important;
+  filter:drop-shadow(0 9px 7px rgba(39,21,14,.22));
+  transform-origin:50% 10%;
+  animation:corven-feather-drift 18s ease-in-out 3s infinite;
+}
+
+.home-page .living-workbench{display:contents;}
+
+.home-page .living-workbench::before,
+.home-page .living-workbench::after,
+.home-page .workbench-fern,
+.home-page .workbench-key,
+.home-page .workbench-pencil{display:none !important;}
+
+.home-page .doorway-list{
+  width:100%;
+  margin:14px auto 0;
+  display:grid;
+  gap:14px;
+  position:relative;
+  z-index:5;
+}
+
+.home-page .doorway{
+  min-height:78px;
+  padding:11px 20px;
+  border:1px solid rgba(170,128,74,.34);
+  border-radius:12px;
+  background:
+    radial-gradient(circle at 10% 50%,rgba(255,255,255,.32),transparent 24%),
+    linear-gradient(100deg,rgba(255,250,237,.98),rgba(235,211,173,.96));
+  box-shadow:
+    0 8px 18px rgba(32,17,9,.16),
+    0 2px 4px rgba(32,17,9,.08),
+    inset 0 1px 0 rgba(255,255,255,.82),
+    inset 0 0 18px rgba(207,151,72,.045);
+  transition:
+    transform .24s ease,
+    box-shadow .24s ease,
+    border-color .24s ease,
+    background .24s ease;
+}
+
+.home-page .doorway:hover{
+  transform:translateY(-2px);
+  border-color:rgba(105,39,80,.42);
+  background:
+    radial-gradient(circle at 10% 50%,rgba(255,255,255,.38),transparent 25%),
+    linear-gradient(100deg,rgba(255,251,240,.99),rgba(239,218,183,.98));
+  box-shadow:
+    0 13px 23px rgba(32,17,9,.20),
+    0 3px 6px rgba(32,17,9,.10),
+    inset 0 1px 0 rgba(255,255,255,.84),
+    0 0 20px rgba(105,39,80,.06);
+}
+
+.home-page .doorway:focus-visible{
+  outline:2px solid rgba(105,39,80,.72);
+  outline-offset:4px;
+}
+
+.home-page .entrance-threshold{
+  margin-top:22px;
+  padding-top:18px;
+  padding-bottom:0;
+}
+
+.home-page .entrance-threshold p{margin:0 0 5px;}
+
+.home-page .entrance-threshold .entrance-probably{
+  margin-top:8px;
+  margin-bottom:0;
+}
+
+.home-page .workshop-farewell{
+  position:relative;
+  padding:92px 24px 86px;
+  overflow:hidden;
+  isolation:isolate;
+  text-align:center;
+  background-image:
+    linear-gradient(180deg,rgba(26,13,8,.68),rgba(36,18,11,.58)),
+    url("/images/workshop-room-final.jpg") !important;
+  background-position:center 72%,center bottom !important;
+  background-size:cover,cover !important;
+  background-repeat:no-repeat,no-repeat !important;
+  border-top:1px solid rgba(196,154,85,.32);
+  border-bottom:1px solid rgba(196,154,85,.32);
+  box-shadow:
+    inset 0 28px 58px rgba(10,5,3,.24),
+    inset 0 -24px 54px rgba(10,5,3,.28);
+}
+
+.home-page .workshop-farewell::before{
+  content:"";
+  position:absolute;
+  inset:38px max(28px,8vw);
+  z-index:-1;
+  border:1px solid rgba(221,185,121,.28);
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(245,225,188,.92),rgba(224,193,145,.90));
+  box-shadow:
+    0 28px 64px rgba(13,6,3,.35),
+    inset 0 1px 0 rgba(255,248,230,.38);
+}
+
+.home-page .workshop-farewell > *{
+  position:relative;
+  z-index:2;
+}
+
+.home-page .farewell-title{margin-bottom:12px;}
+
+.home-page .workshop-farewell > p:not(.farewell-title):not(.farewell-signature):not(.farewell-brenda){
+  margin-bottom:20px;
+}
+
+.home-page .workshop-farewell::after{margin-top:22px;}
+
+.home-page .site-footer{padding:28px 18px 32px;}
+.home-page .footer-botanical{margin-bottom:10px;}
+.home-page .site-footer p{margin-bottom:4px;}
+
+@media (max-width:1020px){
+  .home-page .grand-entrance{padding:68px 14px 56px;}
+  .home-page .entrance-inner{
+    width:min(760px,92%);
+    padding:40px 34px 28px;
+  }
+  .home-page .workshop-farewell::before{
+    inset:30px max(18px,5vw);
+  }
+}
+
+@media (max-width:720px){
+  .home-page .grand-entrance{
+    padding:28px 8px 42px;
+    background-position:center top,center top !important;
+  }
+  .home-page .entrance-inner{
+    width:100%;
+    padding:34px 16px 26px;
+  }
+  .home-page .entrance-brand::after{
+    right:1%;
+    top:1%;
+    width:54px;
+    height:120px;
+  }
+  .home-page .doorway-list{gap:11px;}
+  .home-page .doorway{
+    min-height:72px;
+    padding:10px 13px;
+  }
+  .home-page .workshop-farewell{
+    padding:70px 12px 64px;
+  }
+  .home-page .workshop-farewell::before{
+    inset:22px 8px;
+    border-radius:20px;
+  }
+}
+
+@media (max-width:480px){
+  .home-page .grand-entrance{
+    padding-left:5px;
+    padding-right:5px;
+  }
+  .home-page .entrance-inner{
+    padding-left:11px;
+    padding-right:11px;
+  }
+  .home-page .doorway{border-radius:10px;}
+  .home-page .site-footer{padding:24px 12px 27px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .home-page .entrance-brand::after{
+    animation:none !important;
+    opacity:.34;
+    transform:translateY(145px) rotate(8deg) scale(.90);
+  }
+}
