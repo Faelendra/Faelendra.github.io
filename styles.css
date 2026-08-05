@@ -7488,128 +7488,196 @@ html{scroll-behavior:smooth;}
     font-size:1.28rem;
   }
 }
-/* ==========================================================
-   FINAL POLISH PATCH
-   Homepage Destination Cards + Header
-========================================================== */
 
+/* =========================================================
+   DEFINITIVE WAX-SEAL CORRECTION
+   Replaces every earlier circular seal override.
+========================================================= */
 
-/* ---------- HEADER ---------- */
+.home-page .destination-seal{
+  position:absolute;
+  top:-31px;
+  left:50%;
+  z-index:8;
 
-.site-header{
-    background:
-        linear-gradient(180deg,#69305b 0%,#4b1f41 100%);
-    border-bottom:1px solid rgba(214,176,98,.55);
-}
+  width:92px;
+  height:92px;
 
-.brand-small,
-.brand-tag{
-    color:#ecd8b1;
-}
+  display:grid;
+  place-items:center;
 
-.brand-large{
-    color:#f0d18d;
-}
+  border:0;
+  border-radius:0;
+  background:none;
+  box-shadow:none;
 
-.main-nav a{
-    color:#f5dfb2;
-    font-size:1.18rem;
-    letter-spacing:.03em;
-}
+  color:#f1cf79;
+  font-size:1.52rem;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:.025em;
 
-.main-nav a:hover{
-    color:#fff2ca;
-}
+  text-shadow:
+    0 1px 0 rgba(255,239,187,.32),
+    0 -2px 2px rgba(37,8,25,.72);
 
-.main-nav a.active{
-    color:#ffd978;
-}
+  isolation:isolate;
 
+  transform:
+    translateX(-50%)
+    rotate(-1.5deg);
 
-/* ---------- DESTINATION CARD ART ---------- */
-
-.destination-art{
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-
-    margin-top:auto;
-    padding-top:18px;
-
-    height:180px;
-}
-
-.destination-art img{
-
-    max-width:82%;
-    max-height:145px;
-
-    width:auto;
-    height:auto;
-
-    object-fit:contain;
+  transition:
+    transform .24s ease,
+    filter .24s ease;
 }
 
 
-/* ---------- WAX SEALS ---------- */
+/* Irregular melted-wax outer edge */
+.home-page .destination-seal::before{
+  content:"";
 
-.destination-seal{
+  position:absolute;
+  inset:0;
+  z-index:-2;
 
-    width:74px;
-    height:74px;
+  border:0;
+  border-radius:0;
 
-    top:-20px;
+  background:
+    radial-gradient(
+      circle at 31% 23%,
+      rgba(218,133,183,.98) 0%,
+      rgba(157,61,113,.99) 27%,
+      rgba(104,30,76,1) 60%,
+      rgba(52,13,38,1) 100%
+    );
 
-    background:
-        radial-gradient(circle at 32% 26%,
-            #b86ba1 0%,
-            #8a356d 32%,
-            #64214f 65%,
-            #441636 100%);
+  clip-path:polygon(
+    50% 0%,
+    59% 6%,
+    68% 2%,
+    75% 10%,
+    85% 8%,
+    89% 18%,
+    98% 23%,
+    94% 33%,
+    100% 42%,
+    94% 52%,
+    98% 62%,
+    89% 69%,
+    90% 80%,
+    80% 83%,
+    75% 93%,
+    64% 91%,
+    56% 100%,
+    47% 95%,
+    37% 99%,
+    30% 91%,
+    19% 92%,
+    15% 81%,
+    5% 77%,
+    8% 66%,
+    0% 58%,
+    6% 49%,
+    1% 39%,
+    8% 31%,
+    6% 20%,
+    16% 16%,
+    21% 6%,
+    32% 8%,
+    40% 0%
+  );
 
-    border:2px solid #ddb468;
+  box-shadow:none;
 
-    color:#ffe5a2;
-
-    font-size:2rem;
-    font-weight:700;
-
-    text-shadow:
-        0 1px 0 rgba(255,255,255,.25),
-        0 -1px 0 rgba(35,10,18,.65);
-
-    box-shadow:
-        inset 0 2px 2px rgba(255,255,255,.28),
-        inset 0 -7px 10px rgba(25,5,12,.42),
-        0 8px 18px rgba(0,0,0,.30);
+  filter:
+    drop-shadow(0 9px 7px rgba(22,8,15,.42))
+    drop-shadow(0 0 1px rgba(235,192,106,.70));
 }
 
-/* outer emboss ring */
 
-.destination-seal::before{
+/* Pressed medallion and gold emboss ring */
+.home-page .destination-seal::after{
+  content:"";
 
-    content:"";
+  position:absolute;
+  inset:15px;
+  z-index:-1;
 
-    position:absolute;
+  border:
+    2px solid rgba(235,194,109,.96);
 
-    inset:5px;
+  border-radius:50%;
 
-    border:2px solid rgba(243,209,130,.55);
+  background:
+    radial-gradient(
+      circle at 35% 27%,
+      rgba(188,92,145,.96) 0%,
+      rgba(123,39,88,.99) 46%,
+      rgba(68,17,50,1) 100%
+    );
 
-    border-radius:50%;
+  box-shadow:
+    0 0 0 4px rgba(69,18,51,.72),
+    0 0 0 6px rgba(224,177,88,.48),
+    inset 3px 4px 5px rgba(255,220,178,.20),
+    inset -4px -6px 8px rgba(31,6,22,.52);
 }
 
-/* inner emboss ring */
 
-.destination-seal::after{
+/* Each seal has a slightly different pressed-wax angle */
+.home-page .workshop-destination:nth-child(2) .destination-seal{
+  transform:
+    translateX(-50%)
+    rotate(1.4deg);
+}
 
-    content:"";
+.home-page .workshop-destination:nth-child(3) .destination-seal{
+  transform:
+    translateX(-50%)
+    rotate(-.6deg);
+}
 
-    position:absolute;
+.home-page .workshop-destination:nth-child(4) .destination-seal{
+  transform:
+    translateX(-50%)
+    rotate(1.8deg);
+}
 
-    inset:12px;
 
-    border:1px solid rgba(243,209,130,.35);
+/* Hover keeps the wax character intact */
+.home-page .workshop-destination:hover .destination-seal{
+  transform:
+    translateX(-50%)
+    translateY(-4px)
+    rotate(-.4deg);
 
-    border-radius:50%;
+  filter:
+    brightness(1.04)
+    saturate(1.04);
+}
+
+.home-page .workshop-destination:nth-child(2):hover .destination-seal,
+.home-page .workshop-destination:nth-child(4):hover .destination-seal{
+  transform:
+    translateX(-50%)
+    translateY(-4px)
+    rotate(.5deg);
+}
+
+
+@media (max-width:720px){
+
+  .home-page .destination-seal{
+    top:-25px;
+    width:78px;
+    height:78px;
+    font-size:1.32rem;
+  }
+
+  .home-page .destination-seal::after{
+    inset:13px;
+  }
+
 }
