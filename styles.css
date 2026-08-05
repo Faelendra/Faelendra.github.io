@@ -7490,194 +7490,77 @@ html{scroll-behavior:smooth;}
 }
 
 /* =========================================================
-   DEFINITIVE WAX-SEAL CORRECTION
-   Replaces every earlier circular seal override.
+   REAL WAX-SEAL ASSET — FINAL OVERRIDE
+   Uses images/wax-seal-plum.png; no CSS circle construction.
 ========================================================= */
 
 .home-page .destination-seal{
-  position:absolute;
-  top:-31px;
-  left:50%;
-  z-index:8;
+  position:absolute !important;
+  top:-31px !important;
+  left:50% !important;
+  z-index:10 !important;
 
-  width:92px;
-  height:92px;
+  width:94px !important;
+  height:94px !important;
 
-  display:grid;
-  place-items:center;
+  display:grid !important;
+  place-items:center !important;
 
-  border:0;
-  border-radius:0;
-  background:none;
-  box-shadow:none;
+  border:0 !important;
+  border-radius:0 !important;
 
-  color:#f1cf79;
-  font-size:1.52rem;
-  font-weight:700;
-  line-height:1;
-  letter-spacing:.025em;
+  background:
+    url("images/wax-seal-plum.png")
+    center / contain
+    no-repeat !important;
+
+  box-shadow:none !important;
+
+  color:#f4d37f !important;
+  font-size:1.5rem !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  letter-spacing:.02em !important;
 
   text-shadow:
-    0 1px 0 rgba(255,239,187,.32),
-    0 -2px 2px rgba(37,8,25,.72);
+    0 1px 0 rgba(255,239,183,.35),
+    0 -2px 2px rgba(39,8,28,.78) !important;
 
-  isolation:isolate;
-
-  transform:
-    translateX(-50%)
-    rotate(-1.5deg);
-
-  transition:
-    transform .24s ease,
-    filter .24s ease;
+  transform:translateX(-50%) rotate(-1deg) !important;
+  filter:drop-shadow(0 8px 5px rgba(22,8,15,.34)) !important;
+  isolation:isolate !important;
 }
 
-
-/* Irregular melted-wax outer edge */
-.home-page .destination-seal::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-  z-index:-2;
-
-  border:0;
-  border-radius:0;
-
-  background:
-    radial-gradient(
-      circle at 31% 23%,
-      rgba(218,133,183,.98) 0%,
-      rgba(157,61,113,.99) 27%,
-      rgba(104,30,76,1) 60%,
-      rgba(52,13,38,1) 100%
-    );
-
-  clip-path:polygon(
-    50% 0%,
-    59% 6%,
-    68% 2%,
-    75% 10%,
-    85% 8%,
-    89% 18%,
-    98% 23%,
-    94% 33%,
-    100% 42%,
-    94% 52%,
-    98% 62%,
-    89% 69%,
-    90% 80%,
-    80% 83%,
-    75% 93%,
-    64% 91%,
-    56% 100%,
-    47% 95%,
-    37% 99%,
-    30% 91%,
-    19% 92%,
-    15% 81%,
-    5% 77%,
-    8% 66%,
-    0% 58%,
-    6% 49%,
-    1% 39%,
-    8% 31%,
-    6% 20%,
-    16% 16%,
-    21% 6%,
-    32% 8%,
-    40% 0%
-  );
-
-  box-shadow:none;
-
-  filter:
-    drop-shadow(0 9px 7px rgba(22,8,15,.42))
-    drop-shadow(0 0 1px rgba(235,192,106,.70));
-}
-
-
-/* Pressed medallion and gold emboss ring */
+.home-page .destination-seal::before,
 .home-page .destination-seal::after{
-  content:"";
-
-  position:absolute;
-  inset:15px;
-  z-index:-1;
-
-  border:
-    2px solid rgba(235,194,109,.96);
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle at 35% 27%,
-      rgba(188,92,145,.96) 0%,
-      rgba(123,39,88,.99) 46%,
-      rgba(68,17,50,1) 100%
-    );
-
-  box-shadow:
-    0 0 0 4px rgba(69,18,51,.72),
-    0 0 0 6px rgba(224,177,88,.48),
-    inset 3px 4px 5px rgba(255,220,178,.20),
-    inset -4px -6px 8px rgba(31,6,22,.52);
+  content:none !important;
+  display:none !important;
 }
 
-
-/* Each seal has a slightly different pressed-wax angle */
 .home-page .workshop-destination:nth-child(2) .destination-seal{
-  transform:
-    translateX(-50%)
-    rotate(1.4deg);
+  transform:translateX(-50%) rotate(1deg) !important;
 }
 
 .home-page .workshop-destination:nth-child(3) .destination-seal{
-  transform:
-    translateX(-50%)
-    rotate(-.6deg);
+  transform:translateX(-50%) rotate(-.5deg) !important;
 }
 
 .home-page .workshop-destination:nth-child(4) .destination-seal{
-  transform:
-    translateX(-50%)
-    rotate(1.8deg);
+  transform:translateX(-50%) rotate(1.5deg) !important;
 }
 
-
-/* Hover keeps the wax character intact */
 .home-page .workshop-destination:hover .destination-seal{
-  transform:
-    translateX(-50%)
-    translateY(-4px)
-    rotate(-.4deg);
-
+  transform:translateX(-50%) translateY(-4px) rotate(0deg) !important;
   filter:
-    brightness(1.04)
-    saturate(1.04);
+    drop-shadow(0 11px 7px rgba(22,8,15,.38))
+    brightness(1.04) !important;
 }
-
-.home-page .workshop-destination:nth-child(2):hover .destination-seal,
-.home-page .workshop-destination:nth-child(4):hover .destination-seal{
-  transform:
-    translateX(-50%)
-    translateY(-4px)
-    rotate(.5deg);
-}
-
 
 @media (max-width:720px){
-
   .home-page .destination-seal{
-    top:-25px;
-    width:78px;
-    height:78px;
-    font-size:1.32rem;
+    top:-26px !important;
+    width:80px !important;
+    height:80px !important;
+    font-size:1.3rem !important;
   }
-
-  .home-page .destination-seal::after{
-    inset:13px;
-  }
-
 }
