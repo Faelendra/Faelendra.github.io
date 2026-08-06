@@ -7639,3 +7639,181 @@ html{scroll-behavior:smooth;}
 .destination-story .destination-seal{background-image:url("images/wax-seal-II.png");}
 .destination-gallery .destination-seal{background-image:url("images/wax-seal-III.png");}
 .destination-ledger .destination-seal{background-image:url("images/wax-seal-IV.png");}
+/* =========================================================
+   WAX SEAL FIX — PIECE 1
+   Remove all earlier CSS-built seal effects
+========================================================= */
+
+.home-page .destination-seal{
+  position:absolute !important;
+  left:50% !important;
+  top:-52px !important;
+  z-index:20 !important;
+
+  width:138px !important;
+  height:138px !important;
+
+  display:block !important;
+
+  border:0 !important;
+  border-radius:0 !important;
+
+  background-color:transparent !important;
+  background-position:center !important;
+  background-repeat:no-repeat !important;
+  background-size:contain !important;
+
+  box-shadow:none !important;
+
+  color:transparent !important;
+  font-size:0 !important;
+  line-height:0 !important;
+  text-indent:-9999px !important;
+
+  overflow:visible !important;
+
+  transform:translateX(-50%) !important;
+
+  filter:
+    drop-shadow(0 10px 8px rgba(28,10,20,.42)) !important;
+}
+
+.home-page .destination-seal::before,
+.home-page .destination-seal::after{
+  content:none !important;
+  display:none !important;
+  border:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+}
+/* =========================================================
+   WAX SEAL FIX — PIECE 2
+   Connect each directional card to its seal image
+========================================================= */
+
+.home-page .destination-workshop .destination-seal{
+  background-image:url("images/wax-seal-I.png") !important;
+}
+
+.home-page .destination-story .destination-seal{
+  background-image:url("images/wax-seal-II.png") !important;
+}
+
+.home-page .destination-gallery .destination-seal{
+  background-image:url("images/wax-seal-III.png") !important;
+}
+
+.home-page .destination-ledger .destination-seal{
+  background-image:url("images/wax-seal-IV.png") !important;
+}
+
+.home-page .workshop-destination:hover .destination-seal{
+  transform:
+    translateX(-50%)
+    translateY(-4px) !important;
+
+  filter:
+    drop-shadow(0 14px 10px rgba(28,10,20,.48))
+    brightness(1.04) !important;
+}
+/* =========================================================
+   WAX SEAL FIX — PIECE 3
+   Card spacing and proportional directional artwork
+========================================================= */
+
+.home-page .workshop-destination{
+  min-height:520px !important;
+
+  padding:
+    82px
+    20px
+    24px !important;
+
+  overflow:visible !important;
+}
+
+.home-page .destination-title{
+  margin-top:4px !important;
+}
+
+.home-page .destination-art{
+  width:100% !important;
+  height:230px !important;
+
+  margin:
+    auto
+    auto
+    0 !important;
+
+  padding:0 !important;
+
+  display:flex !important;
+  align-items:flex-end !important;
+  justify-content:center !important;
+
+  overflow:visible !important;
+}
+
+.home-page .destination-art img{
+  display:block !important;
+
+  width:auto !important;
+  height:auto !important;
+
+  max-width:94% !important;
+  max-height:218px !important;
+
+  object-fit:contain !important;
+  object-position:center bottom !important;
+
+  mix-blend-mode:multiply !important;
+}
+
+.home-page .destination-workshop .destination-art img{
+  width:92% !important;
+  max-width:92% !important;
+  max-height:210px !important;
+}
+
+@media (max-width:1020px){
+
+  .home-page .workshop-destination{
+    padding-top:76px !important;
+  }
+
+  .home-page .destination-seal{
+    top:-46px !important;
+    width:126px !important;
+    height:126px !important;
+  }
+
+  .home-page .destination-art{
+    height:215px !important;
+  }
+
+  .home-page .destination-art img{
+    max-height:205px !important;
+  }
+}
+
+@media (max-width:720px){
+
+  .home-page .workshop-destination{
+    min-height:480px !important;
+    padding-top:70px !important;
+  }
+
+  .home-page .destination-seal{
+    top:-40px !important;
+    width:112px !important;
+    height:112px !important;
+  }
+
+  .home-page .destination-art{
+    height:200px !important;
+  }
+
+  .home-page .destination-art img{
+    max-height:190px !important;
+  }
+}
