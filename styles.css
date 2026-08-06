@@ -7611,3 +7611,31 @@ html{scroll-behavior:smooth;}
   .home-page .destination-art{height:210px !important;}
   .home-page .destination-art img{max-height:200px !important;}
 }
+
+
+/* =========================================================
+   FINAL WAX SEALS - AUG 6 2026
+========================================================= */
+
+.destination-seal{
+  position:absolute;
+  top:-44px;
+  left:50%;
+  transform:translateX(-50%);
+  width:128px;
+  height:128px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  border:none;
+  box-shadow:none;
+  color:transparent;
+  font-size:0;
+  text-indent:-9999px;
+  overflow:hidden;
+  z-index:20;
+}
+.destination-workshop .destination-seal{background-image:url("images/wax-seal-I.png");}
+.destination-story .destination-seal{background-image:url("images/wax-seal-II.png");}
+.destination-gallery .destination-seal{background-image:url("images/wax-seal-III.png");}
+.destination-ledger .destination-seal{background-image:url("images/wax-seal-IV.png");}
