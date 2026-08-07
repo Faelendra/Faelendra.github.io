@@ -8246,3 +8246,34 @@ body.story-page{
     opacity:.28;
   }
 }
+/* =========================================================
+   THE STORY — LOCKED CORVEN
+   Real artwork replaces temporary CSS Corven
+========================================================= */
+
+.story-page .story-corven{
+    position:absolute;
+    z-index:7;
+
+    left:-190px;
+    right:auto;
+    top:115px;
+
+    width:360px;
+    height:300px;
+
+    background-image:url("images/story-corven.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+
+    pointer-events:none;
+    filter:drop-shadow(0 14px 14px rgba(0,0,0,.38));
+}
+
+/* Kill the temporary CSS bird and perch */
+.story-page .story-corven::before,
+.story-page .story-corven::after{
+    content:none !important;
+    display:none !important;
+}
