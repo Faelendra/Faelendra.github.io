@@ -8277,3 +8277,17 @@ body.story-page{
     content:none !important;
     display:none !important;
 }
+/* =========================================================
+   THE STORY — CORVEN POSITION FINAL TUNE
+========================================================= */
+
+.story-page .story-corven{
+    left:-105px !important;
+    top:90px !important;
+
+    width:500px !important;
+    height:390px !important;
+
+    background-size:contain !important;
+    background-position:center !important;
+}
