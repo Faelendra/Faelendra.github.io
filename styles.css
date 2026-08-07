@@ -7335,3 +7335,16 @@ FINAL RESPONSIVE BALANCE
 .home-page .destination-workshop .destination-seal{
     background-image:url("images/wax-seal-I.png?v=20260807-1") !important;
 }
+/* FORCE NEW WAX SEALS — CACHE FIX */
+
+.home-page .destination-story .destination-seal{
+    background-image:url("images/wax-seal-II.png?v=20260807-1") !important;
+}
+
+.home-page .destination-gallery .destination-seal{
+    background-image:url("images/wax-seal-III.png?v=20260807-1") !important;
+}
+
+.home-page .destination-ledger .destination-seal{
+    background-image:url("images/wax-seal-IV.png?v=20260807-1") !important;
+}
