@@ -8366,3 +8366,18 @@ body.story-page{
     content:none !important;
     display:none !important;
 }
+/* =========================================================
+   THE STORY — OWL FINAL POSITION / SCALE
+   Asset locked: story-owl.png
+========================================================= */
+
+.story-page .story-candle{
+    right:-115px !important;
+    bottom:125px !important;
+
+    width:540px !important;
+    height:650px !important;
+
+    background-size:contain !important;
+    background-position:center bottom !important;
+}
