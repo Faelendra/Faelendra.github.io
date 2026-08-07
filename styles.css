@@ -6991,141 +6991,8 @@ html{scroll-behavior:smooth;}
 
 
 /* ---------------------------------------------------------
-   WAX SEALS — ORNATE EMBOSSED BUTTONS
---------------------------------------------------------- */
 
-.home-page .destination-seal{
-  top:-22px;
-
-  width:76px;
-  height:76px;
-
-  border:
-    2px solid rgba(226,188,108,.92);
-
-  border-radius:
-    54%
-    46%
-    51%
-    49%;
-
-  color:#f0cf7b;
-
-  background:
-    radial-gradient(
-      circle at 34% 26%,
-      rgba(178,88,139,.95) 0%,
-      rgba(128,45,92,.98) 30%,
-      rgba(91,28,66,1) 62%,
-      rgba(54,16,39,1) 100%
-    );
-
-  box-shadow:
-    inset 0 3px 5px rgba(255,226,184,.30),
-    inset 0 -9px 12px rgba(29,8,22,.46),
-    inset 0 0 0 6px rgba(105,39,80,.34),
-    inset 0 0 0 8px rgba(222,178,93,.30),
-    0 7px 14px rgba(23,10,15,.34),
-    0 0 0 4px rgba(66,29,43,.20);
-
-  font-size:1.42rem;
-
-  letter-spacing:.03em;
-
-  text-shadow:
-    0 1px 0 rgba(255,230,168,.28),
-    0 -1px 0 rgba(36,10,27,.68);
-}
-
-
-.home-page .destination-seal::before{
-  content:"";
-
-  position:absolute;
-
-  inset:8px;
-
-  border:
-    1px solid rgba(239,202,124,.72);
-
-  border-radius:
-    50%;
-
-  box-shadow:
-    inset 0 1px 2px rgba(255,232,181,.20),
-    inset 0 -2px 3px rgba(42,12,31,.36);
-}
-
-
-.home-page .destination-seal::after{
-  content:"";
-
-  position:absolute;
-
-  inset:15px;
-
-  border:
-    1px dotted rgba(240,207,123,.54);
-
-  border-radius:
-    50%;
-}
-
-
-/* Keep Roman numerals above seal decoration. */
-.home-page .destination-seal{
-  isolation:isolate;
-}
-
-
-.home-page .destination-seal{
-  z-index:6;
-}
-
-
-/* Subtle hover lift for the wax seal itself. */
-.home-page .workshop-destination:hover .destination-seal{
-  transform:
-    translateX(-50%)
-    translateY(-3px)
-    rotate(-1deg);
-
-  box-shadow:
-    inset 0 3px 5px rgba(255,226,184,.32),
-    inset 0 -9px 12px rgba(29,8,22,.46),
-    inset 0 0 0 6px rgba(105,39,80,.34),
-    inset 0 0 0 8px rgba(222,178,93,.34),
-    0 10px 18px rgba(23,10,15,.38),
-    0 0 18px rgba(216,174,95,.12);
-}
-
-
-/* Mobile sizing */
-@media (max-width:720px){
-
-  .home-page .main-nav{
-    gap:
-      4px
-      18px;
-  }
-
-
-  .home-page .main-nav a{
-    font-size:.96rem;
-  }
-
-
-  .home-page .destination-seal{
-    width:68px;
-    height:68px;
-
-    font-size:1.28rem;
-  }
-
-}
-
-/* =========================================================
-   WROUGHT BY FAELENDRA
+WROUGHT BY FAELENDRA
    HOMEPAGE VERSION 1.0 — PRODUCTION LOCK
    Shorter plum header, balanced navigation, refined wax seals
 ========================================================= */
@@ -7196,113 +7063,8 @@ html{scroll-behavior:smooth;}
 
 
 /* ---------------------------------------------------------
-   REFINED PRESSED-WAX SEALS
---------------------------------------------------------- */
 
-.home-page .destination-seal{
-  top:-23px;
-  width:78px;
-  height:78px;
-
-  border:
-    2px solid rgba(232,192,110,.96);
-
-  border-radius:
-    49% 54% 47% 56% /
-    53% 48% 56% 45%;
-
-  background:
-    radial-gradient(
-      circle at 31% 24%,
-      rgba(205,116,168,.92) 0%,
-      rgba(148,61,110,.98) 24%,
-      rgba(101,32,74,1) 56%,
-      rgba(56,16,41,1) 100%
-    );
-
-  box-shadow:
-    inset 3px 4px 6px rgba(255,229,194,.26),
-    inset -4px -8px 12px rgba(27,7,20,.48),
-    inset 0 0 0 5px rgba(104,38,79,.30),
-    inset 0 0 0 8px rgba(225,181,93,.34),
-    0 8px 15px rgba(22,9,15,.36),
-    0 0 0 4px rgba(67,27,46,.22);
-
-  font-size:1.44rem;
-
-  transform:
-    translateX(-50%)
-    rotate(-1.2deg);
-
-  transition:
-    transform .24s ease,
-    box-shadow .24s ease,
-    filter .24s ease;
-}
-
-.home-page .workshop-destination:nth-child(even) .destination-seal{
-  border-radius:
-    55% 46% 53% 48% /
-    46% 56% 45% 54%;
-
-  transform:
-    translateX(-50%)
-    rotate(1.1deg);
-}
-
-.home-page .destination-seal::before{
-  inset:7px;
-
-  border:
-    2px solid rgba(239,201,119,.74);
-
-  border-radius:
-    52% 48% 55% 45%;
-
-  box-shadow:
-    inset 0 2px 3px rgba(255,235,194,.18),
-    inset 0 -3px 4px rgba(37,10,28,.40);
-}
-
-.home-page .destination-seal::after{
-  inset:15px;
-
-  border:
-    1px solid rgba(244,211,134,.56);
-
-  border-radius:
-    48% 53% 46% 55%;
-}
-
-.home-page .workshop-destination:hover .destination-seal{
-  transform:
-    translateX(-50%)
-    translateY(-3px)
-    rotate(-.3deg);
-
-  filter:
-    saturate(1.05)
-    brightness(1.03);
-
-  box-shadow:
-    inset 3px 4px 6px rgba(255,229,194,.30),
-    inset -4px -8px 12px rgba(27,7,20,.48),
-    inset 0 0 0 5px rgba(104,38,79,.30),
-    inset 0 0 0 8px rgba(225,181,93,.38),
-    0 12px 20px rgba(22,9,15,.40),
-    0 0 20px rgba(216,174,95,.14);
-}
-
-.home-page .workshop-destination:nth-child(even):hover .destination-seal{
-  transform:
-    translateX(-50%)
-    translateY(-3px)
-    rotate(.4deg);
-}
-
-
-/* ---------------------------------------------------------
-   FINAL RESPONSIVE BALANCE
+FINAL RESPONSIVE BALANCE
 --------------------------------------------------------- */
 
 @media (max-width:1020px){
@@ -7368,14 +7130,6 @@ html{scroll-behavior:smooth;}
   .home-page .header-invitation{
     display:none;
   }
-
-  .home-page .destination-seal{
-    width:69px;
-    height:69px;
-    top:-20px;
-    font-size:1.26rem;
-  }
-
 }
 
 @media (max-width:480px){
@@ -7394,426 +7148,186 @@ html{scroll-behavior:smooth;}
 }
 
 /* =========================================================
-   HOMEPAGE V1 — REGRESSION CORRECTIONS
-   Restore wax seals and smaller destination artwork.
+   WROUGHT BY FAELENDRA
+   HOMEPAGE DIRECTIONALS — CLEAN FINAL RULESET
+   2026-08-07
+   One authoritative seal/artwork section only.
 ========================================================= */
 
-.home-page .destination-art{
-  width:86%;
-  margin:18px auto 0;
-}
-
-.home-page .destination-art img{
-  width:100%;
-  height:205px;
-  object-fit:contain;
-  object-position:center bottom;
-  mix-blend-mode:multiply;
-  filter:saturate(.86) sepia(.10) contrast(1.02);
-}
-
+/* Directional cards */
 .home-page .workshop-destination{
-  padding-bottom:28px;
+  position:relative;
+  min-height:520px;
+  padding:82px 20px 24px;
+  overflow:visible;
 }
 
+/* Real transparent wax-seal PNGs */
 .home-page .destination-seal{
-  top:-25px;
-  width:82px;
-  height:82px;
-  border:2px solid rgba(230,190,105,.92);
-  border-radius:58% 42% 54% 46% / 47% 56% 44% 53%;
-  background:
-    radial-gradient(circle at 30% 24%,rgba(206,118,168,.95) 0%,rgba(155,62,112,.98) 24%,rgba(108,34,79,1) 58%,rgba(57,16,42,1) 100%);
-  box-shadow:
-    inset 4px 5px 7px rgba(255,228,191,.28),
-    inset -5px -9px 13px rgba(29,7,22,.48),
-    inset 0 0 0 5px rgba(89,28,68,.28),
-    inset 0 0 0 9px rgba(225,181,93,.30),
-    0 9px 16px rgba(22,9,15,.38),
-    0 0 0 4px rgba(63,25,44,.22);
-  transform:translateX(-50%) rotate(-2deg);
-  font-size:1.46rem;
-}
-
-.home-page .workshop-destination:nth-child(2) .destination-seal{
-  border-radius:44% 56% 48% 52% / 55% 45% 58% 42%;
-  transform:translateX(-50%) rotate(1.5deg);
-}
-
-.home-page .workshop-destination:nth-child(3) .destination-seal{
-  border-radius:55% 45% 59% 41% / 46% 54% 43% 57%;
-  transform:translateX(-50%) rotate(-1deg);
-}
-
-.home-page .workshop-destination:nth-child(4) .destination-seal{
-  border-radius:47% 53% 43% 57% / 58% 42% 55% 45%;
-  transform:translateX(-50%) rotate(2deg);
-}
-
-.home-page .destination-seal::before{
-  inset:8px;
-  border:2px solid rgba(240,203,121,.72);
-  border-radius:50%;
-  box-shadow:
-    inset 0 2px 3px rgba(255,234,192,.18),
-    inset 0 -3px 4px rgba(38,10,29,.38);
-}
-
-.home-page .destination-seal::after{
-  inset:16px;
-  border:1px dotted rgba(243,210,132,.50);
-  border-radius:50%;
-}
-
-.home-page .workshop-destination:hover .destination-seal{
-  transform:translateX(-50%) translateY(-3px) rotate(-.5deg);
-  box-shadow:
-    inset 4px 5px 7px rgba(255,228,191,.32),
-    inset -5px -9px 13px rgba(29,7,22,.48),
-    inset 0 0 0 5px rgba(89,28,68,.28),
-    inset 0 0 0 9px rgba(225,181,93,.34),
-    0 12px 20px rgba(22,9,15,.42),
-    0 0 18px rgba(216,174,95,.12);
-}
-
-@media (max-width:1020px){
-  .home-page .destination-art{width:84%;}
-  .home-page .destination-art img{height:195px;}
-}
-
-@media (max-width:720px){
-  .home-page .destination-art{width:82%;}
-  .home-page .destination-art img{height:180px;}
-  .home-page .destination-seal{
-    width:72px;
-    height:72px;
-    top:-21px;
-    font-size:1.28rem;
-  }
-}
-
-/* =========================================================
-   FINAL DIRECTIONAL TILE + WAX-SEAL OVERRIDE
-========================================================= */
-
-.home-page .workshop-destination{
-  min-height:520px !important;
-  padding:92px 20px 24px !important;
-}
-
-.home-page .destination-seal{
-  position:absolute !important;
-  top:-64px !important;
-  left:50% !important;
-  z-index:12 !important;
-  width:152px !important;
-  height:152px !important;
-  display:block !important;
-  border:0 !important;
-  border-radius:0 !important;
-  background-color:transparent !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
-  background-size:contain !important;
-  box-shadow:none !important;
-  color:transparent !important;
-  font-size:0 !important;
-  line-height:0 !important;
-  text-shadow:none !important;
-  transform:translateX(-50%) !important;
-  filter:drop-shadow(0 12px 8px rgba(24,8,16,.42)) !important;
-}
-
-.home-page .workshop-destination:nth-child(1) .destination-seal{
-  background-image:url("images/wax-seal-I.png") !important;
-}
-.home-page .workshop-destination:nth-child(2) .destination-seal{
-  background-image:url("images/wax-seal-II.png") !important;
-}
-.home-page .workshop-destination:nth-child(3) .destination-seal{
-  background-image:url("images/wax-seal-III.png") !important;
-}
-.home-page .workshop-destination:nth-child(4) .destination-seal{
-  background-image:url("images/wax-seal-IV.png") !important;
-}
-
-.home-page .destination-seal::before,
-.home-page .destination-seal::after{
-  content:none !important;
-  display:none !important;
-}
-
-.home-page .destination-title{
-  margin-top:8px !important;
-}
-
-.home-page .destination-art{
-  width:100% !important;
-  height:238px !important;
-  margin:auto auto 0 !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:flex-end !important;
-  justify-content:center !important;
-}
-
-.home-page .destination-art img{
-  display:block !important;
-  width:auto !important;
-  height:auto !important;
-  max-width:92% !important;
-  max-height:228px !important;
-  object-fit:contain !important;
-  object-position:center bottom !important;
-  border-radius:8px !important;
-  mix-blend-mode:multiply !important;
-}
-
-.home-page .destination-workshop .destination-art img{
-  width:92% !important;
-  max-width:92% !important;
-  max-height:220px !important;
-}
-
-.home-page .destination-story .destination-art img,
-.home-page .destination-gallery .destination-art img,
-.home-page .destination-ledger .destination-art img{
-  max-width:96% !important;
-  max-height:226px !important;
-}
-
-.home-page .workshop-destination:hover .destination-seal{
-  transform:translateX(-50%) translateY(-5px) !important;
-  filter:drop-shadow(0 16px 10px rgba(24,8,16,.46)) brightness(1.04) !important;
-}
-
-@media (max-width:1020px){
-  .home-page .workshop-destination{padding-top:84px !important;}
-  .home-page .destination-seal{
-    top:-56px !important;
-    width:136px !important;
-    height:136px !important;
-  }
-  .home-page .destination-art{height:220px !important;}
-  .home-page .destination-art img{max-height:210px !important;}
-}
-
-@media (max-width:720px){
-  .home-page .workshop-destination{
-    min-height:490px !important;
-    padding-top:78px !important;
-  }
-  .home-page .destination-seal{
-    top:-49px !important;
-    width:122px !important;
-    height:122px !important;
-  }
-  .home-page .destination-art{height:210px !important;}
-  .home-page .destination-art img{max-height:200px !important;}
-}
-
-
-/* =========================================================
-   FINAL WAX SEALS - AUG 6 2026
-========================================================= */
-
-.destination-seal{
   position:absolute;
-  top:-44px;
+  top:-46px;
   left:50%;
-  transform:translateX(-50%);
+  z-index:20;
+
   width:128px;
   height:128px;
-  background-repeat:no-repeat;
+
+  display:block;
+
+  border:0;
+  border-radius:0;
+
+  background-color:transparent;
   background-position:center;
+  background-repeat:no-repeat;
   background-size:contain;
-  border:none;
+
   box-shadow:none;
+
   color:transparent;
   font-size:0;
+  line-height:0;
   text-indent:-9999px;
-  overflow:hidden;
-  z-index:20;
-}
-.destination-workshop .destination-seal{background-image:url("images/wax-seal-I.png");}
-.destination-story .destination-seal{background-image:url("images/wax-seal-II.png");}
-.destination-gallery .destination-seal{background-image:url("images/wax-seal-III.png");}
-.destination-ledger .destination-seal{background-image:url("images/wax-seal-IV.png");}
-/* =========================================================
-   WAX SEAL FIX — PIECE 1
-   Remove all earlier CSS-built seal effects
-========================================================= */
 
-.home-page .destination-seal{
-  position:absolute !important;
-  left:50% !important;
-  top:-52px !important;
-  z-index:20 !important;
+  overflow:visible;
 
-  width:138px !important;
-  height:138px !important;
+  transform:translateX(-50%);
 
-  display:block !important;
+  filter:drop-shadow(0 10px 8px rgba(28,10,20,.42));
 
-  border:0 !important;
-  border-radius:0 !important;
-
-  background-color:transparent !important;
-  background-position:center !important;
-  background-repeat:no-repeat !important;
-  background-size:contain !important;
-
-  box-shadow:none !important;
-
-  color:transparent !important;
-  font-size:0 !important;
-  line-height:0 !important;
-  text-indent:-9999px !important;
-
-  overflow:visible !important;
-
-  transform:translateX(-50%) !important;
-
-  filter:
-    drop-shadow(0 10px 8px rgba(28,10,20,.42)) !important;
+  transition:
+    transform .24s ease,
+    filter .24s ease;
 }
 
 .home-page .destination-seal::before,
 .home-page .destination-seal::after{
-  content:none !important;
-  display:none !important;
-  border:0 !important;
-  background:none !important;
-  box-shadow:none !important;
+  content:none;
+  display:none;
 }
-/* =========================================================
-   WAX SEAL FIX — PIECE 2
-   Connect each directional card to its seal image
-========================================================= */
 
+/* Assign one seal image to each doorway */
 .home-page .destination-workshop .destination-seal{
-  background-image:url("images/wax-seal-I.png") !important;
+  background-image:url("images/wax-seal-I.png");
 }
 
 .home-page .destination-story .destination-seal{
-  background-image:url("images/wax-seal-II.png") !important;
+  background-image:url("images/wax-seal-II.png");
 }
 
 .home-page .destination-gallery .destination-seal{
-  background-image:url("images/wax-seal-III.png") !important;
+  background-image:url("images/wax-seal-III.png");
 }
 
 .home-page .destination-ledger .destination-seal{
-  background-image:url("images/wax-seal-IV.png") !important;
+  background-image:url("images/wax-seal-IV.png");
 }
 
 .home-page .workshop-destination:hover .destination-seal{
   transform:
     translateX(-50%)
-    translateY(-4px) !important;
+    translateY(-4px);
 
   filter:
-    drop-shadow(0 14px 10px rgba(28,10,20,.48))
-    brightness(1.04) !important;
-}
-/* =========================================================
-   WAX SEAL FIX — PIECE 3
-   Card spacing and proportional directional artwork
-========================================================= */
-
-.home-page .workshop-destination{
-  min-height:520px !important;
-
-  padding:
-    82px
-    20px
-    24px !important;
-
-  overflow:visible !important;
+    drop-shadow(0 14px 10px rgba(28,10,20,.46))
+    brightness(1.035);
 }
 
+/* Card title clearance beneath the seal */
 .home-page .destination-title{
-  margin-top:4px !important;
+  margin-top:4px;
 }
 
+/* Proportional card artwork */
 .home-page .destination-art{
-  width:100% !important;
-  height:230px !important;
+  width:100%;
+  height:230px;
 
-  margin:
-    auto
-    auto
-    0 !important;
+  margin:auto auto 0;
+  padding:0;
 
-  padding:0 !important;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
 
-  display:flex !important;
-  align-items:flex-end !important;
-  justify-content:center !important;
-
-  overflow:visible !important;
+  overflow:visible;
 }
 
 .home-page .destination-art img{
-  display:block !important;
+  display:block;
 
-  width:auto !important;
-  height:auto !important;
+  width:auto;
+  height:auto;
 
-  max-width:94% !important;
-  max-height:218px !important;
+  max-width:94%;
+  max-height:218px;
 
-  object-fit:contain !important;
-  object-position:center bottom !important;
+  object-fit:contain;
+  object-position:center bottom;
 
-  mix-blend-mode:multiply !important;
+  background:transparent;
+  border:0;
+  border-radius:8px;
+
+  mix-blend-mode:multiply;
 }
 
 .home-page .destination-workshop .destination-art img{
-  width:92% !important;
-  max-width:92% !important;
-  max-height:210px !important;
+  width:92%;
+  max-width:92%;
+  max-height:210px;
 }
 
+.home-page .destination-story .destination-art img,
+.home-page .destination-gallery .destination-art img,
+.home-page .destination-ledger .destination-art img{
+  max-width:96%;
+  max-height:218px;
+}
+
+/* Tablet */
 @media (max-width:1020px){
 
   .home-page .workshop-destination{
-    padding-top:76px !important;
+    padding-top:76px;
   }
 
   .home-page .destination-seal{
-    top:-46px !important;
-    width:126px !important;
-    height:126px !important;
+    top:-42px;
+    width:120px;
+    height:120px;
   }
 
   .home-page .destination-art{
-    height:215px !important;
+    height:215px;
   }
 
   .home-page .destination-art img{
-    max-height:205px !important;
+    max-height:205px;
   }
+
 }
 
+/* Phone */
 @media (max-width:720px){
 
   .home-page .workshop-destination{
-    min-height:480px !important;
-    padding-top:70px !important;
+    min-height:480px;
+    padding-top:70px;
   }
 
   .home-page .destination-seal{
-    top:-40px !important;
-    width:112px !important;
-    height:112px !important;
+    top:-38px;
+    width:108px;
+    height:108px;
   }
 
   .home-page .destination-art{
-    height:200px !important;
+    height:200px;
   }
 
   .home-page .destination-art img{
-    max-height:190px !important;
+    max-height:190px;
   }
+
 }
