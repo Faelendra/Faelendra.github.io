@@ -8381,3 +8381,7 @@ body.story-page{
     background-size:contain !important;
     background-position:center bottom !important;
 }
+/* STORY OWL — FINAL NUDGE */
+.story-page .story-candle{
+    right:-75px !important;
+}
