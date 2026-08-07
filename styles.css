@@ -8325,3 +8325,44 @@ body.story-page{
 
     z-index:-1 !important;
 }
+/* =========================================================
+   THE STORY — LOCKED OWL
+========================================================= */
+
+.story-page .story-corven + .story-candle{
+    /* no changes — safeguard only */
+}
+
+.story-page .story-curios{
+    display:none !important;
+}
+
+/* Use the existing story-candle element as the owl artwork holder */
+.story-page .story-candle{
+    position:absolute !important;
+    z-index:7 !important;
+
+    right:-175px !important;
+    bottom:55px !important;
+
+    width:390px !important;
+    height:500px !important;
+
+    background-image:url("images/story-owl.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center bottom !important;
+    background-size:contain !important;
+
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    pointer-events:none !important;
+    filter:drop-shadow(0 14px 14px rgba(0,0,0,.35));
+}
+
+/* Remove the temporary CSS candle pieces */
+.story-page .story-candle::before,
+.story-page .story-candle::after{
+    content:none !important;
+    display:none !important;
+}
