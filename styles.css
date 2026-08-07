@@ -7331,3 +7331,918 @@ FINAL RESPONSIVE BALANCE
   }
 
 }
+/* =========================================================
+   WROUGHT BY FAELENDRA
+   THE STORY — ABOUT PAGE
+   2026-08-07
+
+   STORY PAGE ONLY.
+   Everything is scoped beneath body.story-page so the
+   locked homepage directionals and wax seals are untouched.
+========================================================= */
+
+body.story-page{
+  margin:0;
+  color:#2b170f;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(239,226,200,.14), transparent 34%),
+    linear-gradient(rgba(18,12,8,.20), rgba(18,12,8,.38)),
+    #120c08;
+}
+
+.story-page .story-main{
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+/* ---------- STORY ROOM ---------- */
+
+.story-page .story-scene{
+  position:relative;
+  min-height:1120px;
+  padding:54px 28px 110px;
+  overflow:hidden;
+
+  background:
+    radial-gradient(ellipse at center,
+      rgba(239,226,200,.94) 0%,
+      rgba(226,202,158,.90) 40%,
+      rgba(101,66,38,.70) 72%,
+      rgba(18,12,8,.96) 100%);
+}
+
+/* Dark woodland/apothecary edge */
+.story-page .story-scene::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-5;
+  pointer-events:none;
+
+  background:
+    linear-gradient(90deg,
+      rgba(18,12,8,.96) 0%,
+      rgba(18,12,8,.58) 10%,
+      transparent 24%,
+      transparent 76%,
+      rgba(18,12,8,.58) 90%,
+      rgba(18,12,8,.96) 100%),
+    linear-gradient(180deg,
+      rgba(18,12,8,.62) 0%,
+      transparent 20%,
+      transparent 78%,
+      rgba(18,12,8,.80) 100%);
+}
+
+/* Fine parchment grain */
+.story-page .story-scene::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:8;
+  pointer-events:none;
+  opacity:.18;
+  mix-blend-mode:multiply;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(65,39,20,.10) 0,
+      rgba(65,39,20,.10) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+/* ---------- LOCKED FRAMING TREES ---------- */
+
+.story-page .story-tree{
+  position:absolute;
+  top:-30px;
+  bottom:-30px;
+  width:36%;
+  z-index:-1;
+  pointer-events:none;
+  opacity:.94;
+  filter:sepia(.18) contrast(1.10);
+}
+
+.story-page .story-tree::before,
+.story-page .story-tree::after{
+  content:"";
+  position:absolute;
+  background:#2a180e;
+  box-shadow:
+    0 0 0 2px rgba(12,7,4,.10),
+    0 10px 28px rgba(0,0,0,.30);
+}
+
+/* Trunks */
+.story-page .story-tree::before{
+  width:92px;
+  height:125%;
+  top:-8%;
+  border-radius:48% 52% 44% 56%;
+}
+
+.story-page .story-tree-left{
+  left:-34px;
+  transform:rotate(-4deg);
+}
+
+.story-page .story-tree-left::before{
+  left:76px;
+}
+
+.story-page .story-tree-right{
+  right:-34px;
+  transform:scaleX(-1) rotate(-4deg);
+}
+
+.story-page .story-tree-right::before{
+  left:76px;
+}
+
+/* Branch canopy */
+.story-page .story-tree::after{
+  width:560px;
+  height:54px;
+  top:82px;
+  left:88px;
+  border-radius:80% 20% 65% 35%;
+  transform:rotate(-15deg);
+  transform-origin:left center;
+
+  box-shadow:
+    72px 54px 0 -15px #2a180e,
+    145px -18px 0 -20px #2a180e,
+    214px 37px 0 -24px #2a180e,
+    282px -31px 0 -28px #2a180e,
+    345px 23px 0 -31px #2a180e,
+    0 18px 38px rgba(0,0,0,.24);
+}
+
+/* ---------- MAIN COMPOSITION ---------- */
+
+.story-page .story-shell{
+  position:relative;
+  width:min(1120px, 82vw);
+  min-height:980px;
+  margin:0 auto;
+  z-index:2;
+}
+
+/* ---------- CENTRAL PARCHMENT ---------- */
+
+.story-page .story-parchment{
+  position:relative;
+  z-index:3;
+
+  width:min(720px, 67%);
+  min-height:920px;
+  margin:0 auto;
+  padding:58px 72px 64px;
+
+  color:#2b170f;
+
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255,248,225,.62), transparent 30%),
+    radial-gradient(circle at 78% 70%, rgba(167,116,62,.10), transparent 35%),
+    linear-gradient(100deg,
+      rgba(117,72,36,.10),
+      transparent 8%,
+      transparent 92%,
+      rgba(117,72,36,.12)),
+    #ead5ad;
+
+  border:1px solid rgba(107,68,35,.32);
+  border-radius:48% 52% 50% 50% / 2% 2% 2% 2%;
+
+  box-shadow:
+    0 24px 55px rgba(18,12,8,.42),
+    inset 0 0 65px rgba(115,70,34,.16),
+    inset 0 0 0 7px rgba(255,246,220,.16);
+}
+
+.story-page .story-parchment::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  pointer-events:none;
+  border:1px solid rgba(121,76,39,.16);
+  border-radius:12px;
+}
+
+.story-page .story-parchment::after{
+  content:"";
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:-9px;
+  height:22px;
+  z-index:-1;
+
+  background:#c7a574;
+  border-radius:50%;
+  filter:blur(7px);
+  opacity:.50;
+}
+
+/* ---------- HEADING ---------- */
+
+.story-page .story-heading{
+  position:relative;
+  text-align:center;
+  margin:0 0 42px;
+}
+
+.story-page .story-kicker{
+  margin:0 0 8px;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:.86rem;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8a643a;
+}
+
+.story-page .story-heading h1{
+  margin:0;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:clamp(3.2rem, 5vw, 5rem);
+  line-height:.95;
+  font-weight:600;
+  color:#5b2a50;
+  text-shadow:0 1px 0 rgba(255,245,219,.60);
+}
+
+.story-page .story-heading-flourish,
+.story-page .story-signature-flourish{
+  position:relative;
+  width:220px;
+  height:20px;
+  margin:18px auto 0;
+}
+
+.story-page .story-heading-flourish::before,
+.story-page .story-heading-flourish::after,
+.story-page .story-signature-flourish::before,
+.story-page .story-signature-flourish::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:88px;
+  height:1px;
+  background:#b18449;
+}
+
+.story-page .story-heading-flourish::before,
+.story-page .story-signature-flourish::before{
+  left:0;
+}
+
+.story-page .story-heading-flourish::after,
+.story-page .story-signature-flourish::after{
+  right:0;
+}
+
+.story-page .story-heading-flourish span,
+.story-page .story-signature-flourish span{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:10px;
+  height:10px;
+  background:#c99a5b;
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+/* ---------- STORY SECTIONS ---------- */
+
+.story-page .story-section{
+  position:relative;
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+  margin:0;
+}
+
+.story-page .story-copy h2{
+  margin:0 0 10px;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:2.25rem;
+  line-height:1;
+  font-weight:600;
+  color:#5b2a50;
+}
+
+.story-page .story-copy p{
+  margin:0 0 12px;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:1.14rem;
+  line-height:1.46;
+  font-weight:500;
+}
+
+.story-page .story-copy .story-lead{
+  font-size:1.24rem;
+}
+
+.story-page .story-copy .story-emphasis{
+  color:#5b2a50;
+  font-weight:600;
+}
+
+/* Botanical ink sketches made in CSS until final art assets are installed */
+.story-page .story-botanical{
+  position:relative;
+  width:72px;
+  height:128px;
+  margin:2px auto 0;
+  opacity:.72;
+}
+
+.story-page .story-botanical::before{
+  content:"";
+  position:absolute;
+  left:35px;
+  bottom:4px;
+  width:2px;
+  height:116px;
+  background:#5b4026;
+  transform:rotate(4deg);
+  transform-origin:bottom;
+}
+
+.story-page .story-botanical::after{
+  content:"";
+  position:absolute;
+  inset:10px 6px 8px;
+
+  background:
+    radial-gradient(ellipse at 26% 24%, #5b4026 0 5px, transparent 6px),
+    radial-gradient(ellipse at 69% 34%, #5b4026 0 6px, transparent 7px),
+    radial-gradient(ellipse at 27% 48%, #5b4026 0 7px, transparent 8px),
+    radial-gradient(ellipse at 72% 58%, #5b4026 0 7px, transparent 8px),
+    radial-gradient(ellipse at 31% 72%, #5b4026 0 8px, transparent 9px),
+    radial-gradient(ellipse at 68% 82%, #5b4026 0 7px, transparent 8px);
+  transform:rotate(-5deg);
+}
+
+.story-page .story-botanical-making{
+  transform:scale(1.06) rotate(3deg);
+}
+
+.story-page .story-botanical-why{
+  transform:scale(.92) rotate(-4deg);
+}
+
+/* ---------- DIVIDERS ---------- */
+
+.story-page .story-divider{
+  position:relative;
+  height:32px;
+  margin:10px 0 14px 116px;
+}
+
+.story-page .story-divider::before,
+.story-page .story-divider::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:42%;
+  height:1px;
+  background:rgba(177,132,73,.72);
+}
+
+.story-page .story-divider::before{
+  left:0;
+}
+
+.story-page .story-divider::after{
+  right:0;
+}
+
+.story-page .story-divider span{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:8px;
+  height:8px;
+  background:#c99a5b;
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+/* ---------- SIGNATURE ---------- */
+
+.story-page .story-signature{
+  margin:34px 0 0;
+  text-align:center;
+}
+
+.story-page .story-signature-flourish{
+  margin-bottom:12px;
+}
+
+.story-page .story-signature-name{
+  margin:0;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:1.25rem;
+  font-weight:600;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:#5b2a50;
+}
+
+.story-page .story-signature-tag{
+  margin:3px 0 0;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:1.08rem;
+  font-style:italic;
+  color:#795b37;
+}
+
+/* ---------- FAELENDRA F EMBLEM ---------- */
+
+.story-page .story-f-seal{
+  position:absolute;
+  top:22px;
+  left:-132px;
+  z-index:7;
+
+  width:116px;
+  height:116px;
+
+  display:grid;
+  place-items:center;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:4.4rem;
+  font-weight:600;
+  line-height:1;
+  color:#d8ad62;
+
+  border:2px solid #c99a5b;
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle at 38% 30%, #713055 0%, #4d173f 48%, #220c1d 100%);
+
+  box-shadow:
+    0 0 0 5px rgba(38,12,30,.95),
+    0 0 0 7px #a7793c,
+    0 0 0 12px rgba(31,15,13,.88),
+    0 12px 24px rgba(0,0,0,.42),
+    inset 0 0 18px rgba(255,211,119,.16);
+}
+
+.story-page .story-f-seal::before,
+.story-page .story-f-seal::after{
+  content:"✦";
+  position:absolute;
+  top:50%;
+  color:#c99a5b;
+  font-size:.72rem;
+  transform:translateY(-50%);
+}
+
+.story-page .story-f-seal::before{
+  left:11px;
+}
+
+.story-page .story-f-seal::after{
+  right:11px;
+}
+
+/* ---------- WORKSHOP NOTE ---------- */
+
+.story-page .story-note{
+  position:absolute;
+  z-index:6;
+  top:260px;
+  right:-150px;
+
+  width:260px;
+  min-height:360px;
+  padding:84px 34px 36px;
+
+  transform:rotate(1.8deg);
+
+  color:#5b2a50;
+
+  background:
+    linear-gradient(100deg, rgba(108,69,34,.12), transparent 15%, transparent 85%, rgba(108,69,34,.12)),
+    #dcc194;
+
+  border:1px solid rgba(95,57,31,.40);
+
+  box-shadow:
+    0 18px 35px rgba(18,12,8,.42),
+    inset 0 0 38px rgba(106,67,34,.17);
+}
+
+.story-page .story-note::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border:1px solid rgba(104,67,34,.14);
+  pointer-events:none;
+}
+
+.story-page .story-note p{
+  margin:0 0 22px;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:1.72rem;
+  line-height:1.05;
+  font-style:italic;
+  font-weight:600;
+  text-align:center;
+}
+
+.story-page .story-note .story-note-final{
+  margin-bottom:0;
+}
+
+.story-page .story-note-seal{
+  position:absolute;
+  top:-42px;
+  left:50%;
+
+  width:88px;
+  height:88px;
+
+  display:grid;
+  place-items:center;
+
+  transform:translateX(-50%) rotate(-2deg);
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:2.9rem;
+  font-weight:600;
+  color:#d9ad62;
+
+  border:2px solid #c99a5b;
+  border-radius:48% 52% 46% 54%;
+
+  background:
+    radial-gradient(circle at 35% 30%, #7b315d, #4b173e 58%, #260b20);
+
+  box-shadow:
+    0 0 0 7px #49143b,
+    0 0 0 10px rgba(108,39,78,.82),
+    0 10px 15px rgba(30,12,18,.36);
+}
+
+/* ---------- BOTANICAL BOOK ---------- */
+
+.story-page .story-book{
+  position:absolute;
+  z-index:5;
+  left:-176px;
+  bottom:20px;
+
+  width:360px;
+  height:245px;
+
+  transform:rotate(-4deg);
+
+  border:2px solid #5a351f;
+  border-radius:18px 18px 24px 24px;
+
+  background:
+    linear-gradient(90deg,
+      #c7aa7b 0 47%,
+      #6b4028 47.5% 49.5%,
+      #d6bc8c 50% 100%);
+
+  box-shadow:
+    0 20px 32px rgba(0,0,0,.46),
+    inset 0 0 36px rgba(89,51,26,.26);
+}
+
+.story-page .story-book::before,
+.story-page .story-book::after{
+  content:"";
+  position:absolute;
+  top:35px;
+  width:118px;
+  height:150px;
+  opacity:.76;
+
+  background:
+    linear-gradient(82deg, transparent 48%, #574127 49% 51%, transparent 52%),
+    radial-gradient(ellipse at 28% 22%, #574127 0 6px, transparent 7px),
+    radial-gradient(ellipse at 70% 35%, #574127 0 8px, transparent 9px),
+    radial-gradient(ellipse at 32% 53%, #574127 0 9px, transparent 10px),
+    radial-gradient(ellipse at 68% 70%, #574127 0 10px, transparent 11px);
+}
+
+.story-page .story-book::before{
+  left:38px;
+  transform:rotate(-5deg);
+}
+
+.story-page .story-book::after{
+  right:38px;
+  transform:scaleX(-1) rotate(-5deg);
+}
+
+/* ---------- CORVEN ---------- */
+
+.story-page .story-corven{
+  position:absolute;
+  z-index:7;
+  right:-238px;
+  top:80px;
+
+  width:230px;
+  height:430px;
+
+  pointer-events:none;
+  filter:drop-shadow(0 16px 16px rgba(0,0,0,.44));
+}
+
+/* Temporary silhouette until the locked Corven artwork is installed */
+.story-page .story-corven::before{
+  content:"";
+  position:absolute;
+  left:38px;
+  top:46px;
+
+  width:158px;
+  height:300px;
+
+  border-radius:48% 52% 44% 56% / 34% 34% 66% 66%;
+
+  background:
+    radial-gradient(circle at 34% 20%, #d2a74e 0 6px, #130d08 7px 12px, transparent 13px),
+    radial-gradient(circle at 66% 20%, #d2a74e 0 6px, #130d08 7px 12px, transparent 13px),
+    radial-gradient(ellipse at center, #8b6840 0%, #49331f 42%, #1a120d 82%);
+
+  clip-path:polygon(
+    14% 11%, 28% 0%, 42% 10%, 58% 10%, 72% 0%, 86% 11%,
+    100% 34%, 91% 72%, 70% 100%, 50% 91%, 30% 100%, 9% 72%, 0 34%
+  );
+}
+
+.story-page .story-corven::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:35px;
+  height:26px;
+
+  background:#3a2517;
+  border-radius:50%;
+  box-shadow:
+    0 12px 0 #23160f,
+    0 20px 24px rgba(0,0,0,.38);
+}
+
+/* ---------- CANDLE + CURIOS ---------- */
+
+.story-page .story-candle{
+  position:absolute;
+  z-index:6;
+  right:-126px;
+  bottom:96px;
+
+  width:58px;
+  height:142px;
+
+  border-radius:12px 12px 6px 6px;
+
+  background:
+    linear-gradient(90deg,
+      #b99052,
+      #f0d79b 32%,
+      #d7b66e 70%,
+      #9d7440);
+
+  box-shadow:
+    0 16px 24px rgba(0,0,0,.34),
+    0 0 36px rgba(255,191,81,.24);
+}
+
+.story-page .story-candle::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:-48px;
+
+  width:22px;
+  height:52px;
+
+  transform:translateX(-50%);
+
+  border-radius:50% 50% 45% 45%;
+
+  background:
+    radial-gradient(ellipse at 50% 70%, #fff3b0 0 18%, #f5b843 35%, #bd6320 58%, transparent 62%);
+
+  filter:drop-shadow(0 0 14px rgba(255,184,70,.72));
+}
+
+.story-page .story-candle::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-16px;
+
+  width:104px;
+  height:20px;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+  background:#4b301d;
+  box-shadow:0 7px 0 #25170f;
+}
+
+.story-page .story-curios{
+  position:absolute;
+  z-index:5;
+  right:-220px;
+  bottom:12px;
+
+  width:230px;
+  height:112px;
+
+  background:
+    radial-gradient(ellipse at 20% 66%, #281811 0 18px, #0f0a07 19px 24px, transparent 25px),
+    radial-gradient(ellipse at 47% 52%, #372218 0 22px, #130d09 23px 29px, transparent 30px),
+    radial-gradient(ellipse at 76% 63%, #281811 0 25px, #0f0a07 26px 33px, transparent 34px);
+  opacity:.92;
+}
+
+/* ---------- SITE FOOTER ON STORY PAGE ---------- */
+
+.story-page .site-footer{
+  position:relative;
+  z-index:10;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:1280px){
+
+  .story-page .story-shell{
+    width:min(980px, 88vw);
+  }
+
+  .story-page .story-parchment{
+    width:72%;
+  }
+
+  .story-page .story-f-seal{
+    left:-86px;
+    width:96px;
+    height:96px;
+    font-size:3.7rem;
+  }
+
+  .story-page .story-note{
+    right:-100px;
+    width:225px;
+  }
+
+  .story-page .story-corven{
+    right:-170px;
+    transform:scale(.86);
+    transform-origin:top center;
+  }
+
+  .story-page .story-book{
+    left:-110px;
+    transform:rotate(-4deg) scale(.88);
+    transform-origin:bottom left;
+  }
+
+  .story-page .story-candle{
+    right:-74px;
+  }
+
+  .story-page .story-curios{
+    right:-145px;
+  }
+}
+
+@media (max-width:980px){
+
+  .story-page .story-scene{
+    min-height:auto;
+    padding:44px 18px 80px;
+  }
+
+  .story-page .story-shell{
+    width:min(760px, 94vw);
+    min-height:auto;
+  }
+
+  .story-page .story-parchment{
+    width:100%;
+    min-height:auto;
+    padding:50px 54px 58px;
+  }
+
+  .story-page .story-f-seal{
+    top:-20px;
+    left:16px;
+    width:82px;
+    height:82px;
+    font-size:3rem;
+  }
+
+  .story-page .story-note{
+    position:relative;
+    top:auto;
+    right:auto;
+    width:min(390px, 82%);
+    min-height:auto;
+    margin:62px auto 0;
+    padding:70px 32px 32px;
+  }
+
+  .story-page .story-book,
+  .story-page .story-corven,
+  .story-page .story-candle,
+  .story-page .story-curios{
+    display:none;
+  }
+
+  .story-page .story-tree{
+    width:28%;
+    opacity:.55;
+  }
+}
+
+@media (max-width:640px){
+
+  .story-page .story-scene{
+    padding:30px 10px 60px;
+  }
+
+  .story-page .story-parchment{
+    padding:46px 24px 44px;
+  }
+
+  .story-page .story-heading{
+    margin-bottom:34px;
+  }
+
+  .story-page .story-kicker{
+    font-size:.74rem;
+  }
+
+  .story-page .story-section{
+    display:block;
+  }
+
+  .story-page .story-botanical{
+    width:54px;
+    height:80px;
+    margin:0 0 10px;
+  }
+
+  .story-page .story-botanical::before{
+    left:26px;
+    height:74px;
+  }
+
+  .story-page .story-copy h2{
+    font-size:2rem;
+  }
+
+  .story-page .story-copy p{
+    font-size:1.06rem;
+  }
+
+  .story-page .story-divider{
+    margin-left:0;
+  }
+
+  .story-page .story-f-seal{
+    width:68px;
+    height:68px;
+    font-size:2.5rem;
+  }
+
+  .story-page .story-note{
+    width:90%;
+  }
+
+  .story-page .story-tree{
+    opacity:.28;
+  }
+}
