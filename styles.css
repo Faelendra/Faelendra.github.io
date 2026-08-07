@@ -8291,3 +8291,37 @@ body.story-page{
     background-size:contain !important;
     background-position:center !important;
 }
+/* =========================================================
+   THE STORY — LOCKED TREE FRAME
+   Real artwork replaces temporary CSS trees
+========================================================= */
+
+.story-page .story-scene{
+    position:relative;
+}
+
+/* Remove the temporary CSS trees */
+.story-page .story-tree{
+    display:none !important;
+}
+
+/* Install the real locked tree artwork */
+.story-page .story-scene::before{
+    content:"" !important;
+
+    position:absolute !important;
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    background-image:url("images/story-trees.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center top !important;
+    background-size:100% auto !important;
+
+    opacity:1 !important;
+    pointer-events:none !important;
+
+    z-index:-1 !important;
+}
