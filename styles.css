@@ -7238,16 +7238,16 @@ FINAL RESPONSIVE BALANCE
   margin-top:4px;
 }
 
-/* Proportional card artwork */
+/* Proportional card artwork — tightened spacing */
 .home-page .destination-art{
   width:100%;
-  height:230px;
+  height:210px;
 
-  margin:auto auto 0;
+  margin:18px auto 0;
   padding:0;
 
   display:flex;
-  align-items:flex-end;
+  align-items:flex-start;
   justify-content:center;
 
   overflow:visible;
@@ -7263,7 +7263,7 @@ FINAL RESPONSIVE BALANCE
   max-height:218px;
 
   object-fit:contain;
-  object-position:center bottom;
+  object-position:center top;
 
   background:transparent;
   border:0;
@@ -7330,21 +7330,4 @@ FINAL RESPONSIVE BALANCE
     max-height:190px;
   }
 
-}
-/* FORCE NEW SEAL I — CACHE TEST */
-.home-page .destination-workshop .destination-seal{
-    background-image:url("images/wax-seal-I.png?v=20260807-1") !important;
-}
-/* FORCE NEW WAX SEALS — CACHE FIX */
-
-.home-page .destination-story .destination-seal{
-    background-image:url("images/wax-seal-II.png?v=20260807-1") !important;
-}
-
-.home-page .destination-gallery .destination-seal{
-    background-image:url("images/wax-seal-III.png?v=20260807-1") !important;
-}
-
-.home-page .destination-ledger .destination-seal{
-    background-image:url("images/wax-seal-IV.png?v=20260807-1") !important;
 }
