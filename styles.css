@@ -8405,3 +8405,25 @@ body.story-page{
     border: 0 !important;
     box-shadow: none !important;
 }
+/* =========================================================
+   THE STORY — BOTANICAL BOOK FINAL PLACEMENT TEST
+   ========================================================= */
+
+.story-page .story-book{
+    left:-185px !important;
+    bottom:-105px !important;
+
+    width:650px !important;
+    height:520px !important;
+
+    transform:rotate(-7deg) !important;
+    transform-origin:center center !important;
+
+    background-image:url("images/story-book.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:contain !important;
+
+    border:0 !important;
+    box-shadow:none !important;
+}
