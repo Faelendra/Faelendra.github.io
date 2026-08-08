@@ -8385,3 +8385,23 @@ body.story-page{
 .story-page .story-candle{
     right:-75px !important;
 }
+/* =========================================================
+   THE STORY — BOTANICAL BOOK
+   Replaces the original plain book artwork
+========================================================= */
+
+.story-page .story-book{
+    background-image: url("images/story-book.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+
+    width: 520px !important;
+    height: 430px !important;
+
+    left: -45px !important;
+    bottom: 80px !important;
+
+    border: 0 !important;
+    box-shadow: none !important;
+}
