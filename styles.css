@@ -8429,19 +8429,18 @@ body.story-page{
 }
 /* =========================================================
    THE STORY — VICTORIAN WORKBENCH
-   First placement test
-   Asset: story-workbench.png
+   Placement test 2
    ========================================================= */
 
 .story-page .story-workbench{
     position:absolute !important;
     z-index:6 !important;
 
-    left:140px !important;
-    bottom:-155px !important;
+    left:-40px !important;
+    bottom:-245px !important;
 
-    width:1050px !important;
-    height:560px !important;
+    width:1450px !important;
+    height:700px !important;
 
     background-image:url("images/story-workbench.png") !important;
     background-repeat:no-repeat !important;
