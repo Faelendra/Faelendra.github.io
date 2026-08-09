@@ -9000,3 +9000,161 @@ body.story-page{
         padding-left:14px !important;
     }
 }
+/* =========================================================
+   THE WORKSHOP — MATCH LOCKED STORY HEADER
+   ========================================================= */
+
+.home-page .site-header{
+    position:sticky !important;
+    top:0 !important;
+    z-index:100 !important;
+
+    background:
+        radial-gradient(
+            circle at 26% 20%,
+            rgba(105,39,80,.24),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #17090f 0%,
+            #28101f 52%,
+            #14080d 100%
+        ) !important;
+
+    border-top:1px solid rgba(201,154,91,.40) !important;
+    border-bottom:1px solid #c99a5b !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,220,145,.08),
+        0 7px 22px rgba(0,0,0,.38) !important;
+}
+
+
+/* Same approved ornate Faelendra seal */
+.home-page .site-header::before{
+    content:"" !important;
+
+    position:absolute !important;
+    left:28px !important;
+    top:50% !important;
+
+    width:100px !important;
+    height:118px !important;
+
+    transform:translateY(-50%) !important;
+
+    background-image:url("images/faelendra-seal.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:contain !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    pointer-events:none !important;
+}
+
+
+/* Match Story header proportions */
+.home-page .site-header-inner{
+    width:min(1420px,96%) !important;
+
+    padding:
+        12px
+        18px
+        13px
+        112px !important;
+
+    gap:32px !important;
+    align-items:center !important;
+}
+
+
+/* Brand sizing */
+.home-page .brand-lockup{
+    min-width:330px !important;
+    transform:none !important;
+}
+
+.home-page .brand-small{
+    color:#d1a95f !important;
+}
+
+.home-page .brand-large{
+    color:#d8a94f !important;
+    font-size:1.78rem !important;
+
+    text-shadow:
+        0 1px 0 rgba(255,224,156,.16),
+        0 2px 7px rgba(0,0,0,.42) !important;
+}
+
+.home-page .brand-tag{
+    color:#d7bc86 !important;
+}
+
+
+/* Match live navigation */
+.home-page .main-nav{
+    flex:1 !important;
+    justify-content:center !important;
+
+    gap:
+        8px
+        30px !important;
+
+    padding-bottom:0 !important;
+}
+
+.home-page .main-nav a{
+    color:#d4ad68 !important;
+
+    font-size:1.02rem !important;
+    font-weight:600 !important;
+    letter-spacing:.055em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.38) !important;
+}
+
+.home-page .main-nav a:hover{
+    color:#f0cb77 !important;
+}
+
+.home-page .main-nav a.active{
+    color:#f0cb77 !important;
+}
+
+
+/* Remove doorway phrase so it matches Story */
+.home-page .header-invitation{
+    display:none !important;
+}
+
+
+/* Mobile/tablet safeguard */
+@media (max-width:1020px){
+
+    .home-page .site-header::before{
+        display:none !important;
+    }
+
+    .home-page .site-header-inner{
+        padding:
+            12px
+            14px
+            14px !important;
+    }
+
+    .home-page .brand-lockup{
+        width:100% !important;
+        min-width:0 !important;
+    }
+
+    .home-page .main-nav{
+        width:100% !important;
+        justify-content:center !important;
+    }
+}
