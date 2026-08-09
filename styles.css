@@ -8581,3 +8581,53 @@ body.story-page{
     position:relative !important;
     z-index:8 !important;
 }
+/* =========================================================
+   THE STORY — FINAL SINGLE ARTWORK MODE
+   Live header + one cohesive Story illustration
+   ========================================================= */
+
+.story-page .story-scene{
+    position:relative !important;
+
+    min-height:0 !important;
+    height:auto !important;
+
+    /* Master is 1536x1024;
+       roughly 108px of its top is the baked-in header */
+    aspect-ratio:1536 / 916 !important;
+
+    padding:0 !important;
+    overflow:hidden !important;
+
+    background:#1b100b !important;
+}
+
+/* ONE cohesive Story artwork */
+.story-page .story-scene::before{
+    content:"" !important;
+
+    position:absolute !important;
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    background-image:url("images/story-master.png") !important;
+    background-repeat:no-repeat !important;
+
+    /* Fill the width and crop away the header baked into the artwork */
+    background-size:100% auto !important;
+    background-position:center -7vw !important;
+
+    opacity:1 !important;
+    pointer-events:none !important;
+
+    z-index:1 !important;
+}
+
+/* Retire the old assembled Story page completely */
+.story-page .story-shell,
+.story-page .story-tree,
+.story-page .story-f-seal{
+    display:none !important;
+}
