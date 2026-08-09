@@ -8594,7 +8594,7 @@ body.story-page{
 
     /* Master is 1536x1024;
        roughly 108px of its top is the baked-in header */
-    aspect-ratio:1536 / 916 !important;
+    aspect-ratio:1536 / 840 !important;
 
     padding:0 !important;
     overflow:hidden !important;
