@@ -8924,3 +8924,34 @@ body.story-page{
 
     pointer-events:none !important;
 }
+/* =========================================================
+   THE STORY — FOOTER POLISH
+   ========================================================= */
+
+.story-page .site-footer{
+    padding:24px 18px 28px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #241018 0%,
+            #160a0f 100%
+        ) !important;
+
+    color:#d7c29a !important;
+
+    border-top:1px solid rgba(201,154,91,.48) !important;
+}
+
+.story-page .site-footer p{
+    color:#d7c29a !important;
+    margin-bottom:4px !important;
+}
+
+.story-page .footer-motto{
+    color:#d9a8c5 !important;
+}
+
+.story-page .footer-botanical{
+    margin-bottom:10px !important;
+}
