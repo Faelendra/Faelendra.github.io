@@ -8897,3 +8897,30 @@ body.story-page{
         justify-content:center !important;
     }
 }
+/* =========================================================
+   THE STORY — APPROVED FAELENDRA SEAL
+   ========================================================= */
+
+.story-page .site-header::before{
+    content:"" !important;
+
+    position:absolute !important;
+    left:18px !important;
+    top:50% !important;
+
+    width:100px !important;
+    height:118px !important;
+
+    transform:translateY(-50%) !important;
+
+    background-image:url("images/faelendra-seal.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:contain !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    pointer-events:none !important;
+}
