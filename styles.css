@@ -8536,3 +8536,48 @@ body.story-page{
 
     mix-blend-mode:multiply;
 }
+/* =========================================================
+   THE STORY — MASTER ENVIRONMENT
+   Asset: story-master.png
+   ========================================================= */
+
+/* Use the locked master artwork as the full Story environment */
+.story-page .story-scene::before{
+    content:"" !important;
+
+    position:absolute !important;
+    inset:0 !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    background-image:url("images/story-master.png") !important;
+    background-repeat:no-repeat !important;
+
+    /* Crop away the baked-in header from the master image */
+    background-position:center -105px !important;
+    background-size:100% auto !important;
+
+    opacity:1 !important;
+    pointer-events:none !important;
+
+    z-index:-1 !important;
+}
+
+/* Retire all of the separate decorative pieces */
+.story-page .story-tree,
+.story-page .story-book,
+.story-page .story-workbench,
+.story-page .story-corven,
+.story-page .story-candle,
+.story-page .story-curios,
+.story-page .story-f-seal,
+.story-page .story-note{
+    display:none !important;
+}
+
+/* Keep the live parchment and real text above the master artwork */
+.story-page .story-parchment{
+    position:relative !important;
+    z-index:8 !important;
+}
