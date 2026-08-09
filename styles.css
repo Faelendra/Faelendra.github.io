@@ -8955,3 +8955,48 @@ body.story-page{
 .story-page .footer-botanical{
     margin-bottom:10px !important;
 }
+/* =========================================================
+   THE WORKSHOP — APPROVED FAELENDRA SEAL
+   ========================================================= */
+
+.home-page .site-header::before{
+    content:"" !important;
+
+    position:absolute !important;
+    left:28px !important;
+    top:50% !important;
+
+    width:94px !important;
+    height:110px !important;
+
+    transform:translateY(-50%) !important;
+
+    background-image:url("images/faelendra-seal.png") !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:contain !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    pointer-events:none !important;
+    z-index:101 !important;
+}
+
+/* Make room for the seal */
+.home-page .site-header-inner{
+    padding-left:128px !important;
+}
+
+/* Keep smaller screens clean */
+@media (max-width:1020px){
+
+    .home-page .site-header::before{
+        display:none !important;
+    }
+
+    .home-page .site-header-inner{
+        padding-left:14px !important;
+    }
+}
