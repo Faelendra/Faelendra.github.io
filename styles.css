@@ -8451,3 +8451,88 @@ body.story-page{
 
     filter:drop-shadow(0 14px 16px rgba(0,0,0,.30));
 }
+/* =========================================================
+   THE STORY — COMPOSITION PASS
+   Integrates book + workbench + owl into one foreground scene
+   ========================================================= */
+
+/* Keep the parchment as the crisp focal point */
+.story-page .story-parchment{
+    z-index:8 !important;
+}
+
+/* Book becomes foreground-left */
+.story-page .story-book{
+    z-index:7 !important;
+
+    left:-245px !important;
+    bottom:-175px !important;
+
+    width:650px !important;
+    height:520px !important;
+
+    transform:rotate(-7deg) !important;
+
+    filter:
+        drop-shadow(0 16px 18px rgba(0,0,0,.28))
+        saturate(.94)
+        contrast(.97);
+}
+
+/* Workbench sits behind the book and owl */
+.story-page .story-workbench{
+    z-index:5 !important;
+
+    left:-10px !important;
+    bottom:-290px !important;
+
+    width:1450px !important;
+    height:700px !important;
+
+    opacity:.92 !important;
+
+    filter:
+        drop-shadow(0 12px 14px rgba(0,0,0,.22))
+        saturate(.90)
+        contrast(.95);
+}
+
+/* Owl stays foreground-right */
+.story-page .story-candle{
+    z-index:7 !important;
+
+    filter:
+        drop-shadow(0 14px 14px rgba(0,0,0,.30))
+        saturate(.94)
+        contrast(.98);
+}
+
+/* Workshop note stays behind the central parchment */
+.story-page .story-note{
+    z-index:6 !important;
+}
+
+/* Atmospheric fade across the lower foreground */
+.story-page .story-shell::after{
+    content:"";
+    position:absolute;
+    left:-18%;
+    right:-18%;
+    bottom:-35px;
+
+    height:330px;
+
+    z-index:6;
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(43,24,15,.03) 20%,
+            rgba(43,24,15,.14) 68%,
+            rgba(29,16,11,.34) 100%
+        );
+
+    mix-blend-mode:multiply;
+}
