@@ -2236,3 +2236,157 @@ body.gallery-page{
         0 18px 34px rgba(63,37,22,.15),
         inset 0 1px 0 rgba(255,255,255,.78) !important;
 }
+/* =========================================================
+   THE GALLERY — HOLIDAY SHELF
+   Warm seasonal variation
+   ========================================================= */
+
+.gallery-page #holiday-shelf .collection-heading{
+    position:relative;
+}
+
+.gallery-page #holiday-shelf .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:130px;
+    height:1px;
+
+    margin:18px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(184,132,70,.76),
+            transparent
+        );
+}
+
+
+/* Holiday cards */
+.gallery-page #holiday-shelf .piece-card{
+    border:
+        1px solid
+        rgba(177,123,66,.42) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8e8c9 0%,
+            #eacda1 100%
+        ) !important;
+
+    box-shadow:
+        0 13px 26px rgba(63,37,22,.12),
+        inset 0 1px 0 rgba(255,255,255,.76) !important;
+}
+
+
+/* Photograph area */
+.gallery-page #holiday-shelf .piece-photo{
+    background:
+        radial-gradient(
+            circle at 30% 22%,
+            rgba(255,244,211,.17),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #79614e 0%,
+            #523b32 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(201,154,91,.44) !important;
+}
+
+
+/* Inner photo frame */
+.gallery-page #holiday-shelf .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(239,210,154,.42) !important;
+
+    border-radius:12px !important;
+}
+
+
+/* Placeholder star */
+.gallery-page #holiday-shelf .piece-photo::after{
+    color:#ddb66e !important;
+    opacity:.88 !important;
+}
+
+
+/* Placeholder text */
+.gallery-page #holiday-shelf .piece-photo span{
+    color:#f0d9a8 !important;
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.30);
+}
+
+
+/* Copy area */
+.gallery-page #holiday-shelf .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,245,223,.96),
+            rgba(235,207,163,.97)
+        );
+}
+
+
+/* Titles */
+.gallery-page #holiday-shelf .piece-card h3{
+    color:#682554 !important;
+}
+
+
+/* Material */
+.gallery-page #holiday-shelf .piece-material{
+    color:#795847 !important;
+}
+
+
+/* Description */
+.gallery-page #holiday-shelf .piece-story{
+    color:#4e392e !important;
+}
+
+
+/* Status badges */
+.gallery-page #holiday-shelf .piece-status{
+    border:
+        1px solid
+        rgba(161,112,58,.40) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.48);
+}
+
+
+/* Gentle hover */
+.gallery-page #holiday-shelf .piece-card:hover{
+    transform:translateY(-4px) !important;
+
+    border-color:
+        rgba(201,154,91,.70) !important;
+
+    box-shadow:
+        0 18px 34px rgba(63,37,22,.16),
+        inset 0 1px 0 rgba(255,255,255,.80) !important;
+}
