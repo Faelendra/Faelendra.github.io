@@ -1550,13 +1550,16 @@ body.orders-page{
         0
         76px !important;
 
-    background:
+   background:
         linear-gradient(
-            180deg,
-            rgba(18,8,12,.12),
-            rgba(18,8,12,.42)
+            90deg,
+            rgba(20,8,13,.34) 0%,
+            rgba(20,8,13,.12) 24%,
+            rgba(20,8,13,.08) 50%,
+            rgba(20,8,13,.12) 76%,
+            rgba(20,8,13,.34) 100%
         ),
-        url("images/commission-ledger-hero.png")
+        url("images/commission-ledger-clean-background.png")
         center bottom / cover
         no-repeat !important;
 }
