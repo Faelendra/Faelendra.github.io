@@ -2879,3 +2879,193 @@ body.gallery-page{
         0 0 18px rgba(91,42,80,.05),
         inset 0 1px 0 rgba(255,255,255,.76) !important;
 }
+/* =========================================================
+   THE GALLERY — COMMISSION LEDGER
+   Formal parchment + plum ledger treatment
+   ========================================================= */
+
+.gallery-page #commission-ledger .collection-heading{
+    position:relative;
+}
+
+.gallery-page #commission-ledger .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:150px;
+    height:1px;
+
+    margin:18px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(91,42,80,.48),
+            rgba(201,154,91,.78),
+            rgba(91,42,80,.48),
+            transparent
+        );
+}
+
+
+/* Commission cards */
+.gallery-page #commission-ledger .piece-card{
+    border:
+        1px solid
+        rgba(126,77,94,.36) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f6e7ca 0%,
+            #e6cda6 100%
+        ) !important;
+
+    box-shadow:
+        0 14px 28px rgba(55,31,23,.13),
+        inset 0 1px 0 rgba(255,255,255,.74) !important;
+}
+
+
+/* Commission photograph fields */
+.gallery-page #commission-ledger .piece-photo{
+    background:
+        radial-gradient(
+            circle at 30% 24%,
+            rgba(120,67,95,.17),
+            transparent 28%
+        ),
+        linear-gradient(
+            145deg,
+            #6b574d 0%,
+            #49372f 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(201,154,91,.45) !important;
+}
+
+.gallery-page #commission-ledger .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(231,202,153,.38) !important;
+
+    border-radius:12px !important;
+}
+
+.gallery-page #commission-ledger .piece-photo::after{
+    color:#d5ad68 !important;
+    opacity:.86 !important;
+}
+
+.gallery-page #commission-ledger .piece-photo span{
+    color:#ecd6aa !important;
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.34);
+}
+
+
+/* Copy panels */
+.gallery-page #commission-ledger .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,246,226,.97),
+            rgba(230,204,165,.97)
+        );
+}
+
+.gallery-page #commission-ledger .piece-card h3{
+    color:#682554 !important;
+}
+
+.gallery-page #commission-ledger .piece-material{
+    color:#755447 !important;
+}
+
+.gallery-page #commission-ledger .piece-story{
+    color:#4d3930 !important;
+}
+
+
+/* Commission status */
+.gallery-page #commission-ledger .piece-status{
+    border:
+        1px solid
+        rgba(126,83,66,.36) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.46);
+}
+
+
+/* Invitation card */
+.gallery-page #commission-ledger .commission-invitation{
+    background:
+        radial-gradient(
+            circle at 50% 12%,
+            rgba(255,255,255,.44),
+            transparent 34%
+        ),
+        linear-gradient(
+            145deg,
+            #ead3ab 0%,
+            #ceb084 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(201,154,91,.52) !important;
+
+    box-shadow:
+        0 14px 28px rgba(55,31,23,.12),
+        inset 0 1px 0 rgba(255,255,255,.60) !important;
+}
+
+
+/* Invitation star */
+.gallery-page #commission-ledger .commission-mark{
+    color:#c99a5b !important;
+}
+
+
+/* Invitation button */
+.gallery-page #commission-ledger .commission-link{
+    background:
+        linear-gradient(
+            180deg,
+            #742752,
+            #521a3b
+        ) !important;
+
+    color:#f5dfae !important;
+
+    border:
+        1px solid
+        rgba(201,154,91,.72) !important;
+
+    box-shadow:
+        0 5px 12px rgba(60,24,43,.20),
+        inset 0 1px 0 rgba(255,255,255,.12) !important;
+}
+
+.gallery-page #commission-ledger .commission-link:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(60,24,43,.26),
+        inset 0 1px 0 rgba(255,255,255,.14) !important;
+}
