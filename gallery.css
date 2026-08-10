@@ -2553,3 +2553,166 @@ body.gallery-page{
         0 0 18px rgba(102,37,80,.05),
         inset 0 1px 0 rgba(255,255,255,.80) !important;
 }
+/* =========================================================
+   THE GALLERY — CABINET OF CURIOSITIES
+   Antique olive + brass + plum
+   ========================================================= */
+
+.gallery-page #curiosities .collection-heading{
+    position:relative;
+}
+
+.gallery-page #curiosities .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:140px;
+    height:1px;
+
+    margin:18px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(91,91,54,.50),
+            rgba(201,154,91,.78),
+            rgba(91,91,54,.50),
+            transparent
+        );
+}
+
+
+/* Curious object cards */
+.gallery-page #curiosities .piece-card{
+    border:
+        1px solid
+        rgba(112,91,57,.42) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f2e4c7 0%,
+            #dfc8a1 100%
+        ) !important;
+
+    box-shadow:
+        0 14px 28px rgba(50,35,22,.13),
+        inset 0 1px 0 rgba(255,255,255,.72) !important;
+}
+
+
+/* Photograph area */
+.gallery-page #curiosities .piece-photo{
+    background:
+        radial-gradient(
+            circle at 28% 22%,
+            rgba(111,103,64,.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 76% 72%,
+            rgba(103,39,78,.14),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #675c4d 0%,
+            #453b34 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(201,154,91,.45) !important;
+}
+
+
+/* Inner display frame */
+.gallery-page #curiosities .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(221,195,143,.40) !important;
+
+    border-radius:12px !important;
+}
+
+
+/* Curiosity star */
+.gallery-page #curiosities .piece-photo::after{
+    color:#d6b36d !important;
+    opacity:.88 !important;
+}
+
+
+/* Placeholder wording */
+.gallery-page #curiosities .piece-photo span{
+    color:#ead8ad !important;
+
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.34);
+}
+
+
+/* Copy panel */
+.gallery-page #curiosities .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(250,241,220,.96),
+            rgba(224,201,161,.97)
+        );
+}
+
+
+/* Titles */
+.gallery-page #curiosities .piece-card h3{
+    color:#682554 !important;
+}
+
+
+/* Materials */
+.gallery-page #curiosities .piece-material{
+    color:#6c6044 !important;
+}
+
+
+/* Description */
+.gallery-page #curiosities .piece-story{
+    color:#493d31 !important;
+}
+
+
+/* Status badges */
+.gallery-page #curiosities .piece-status{
+    border:
+        1px solid
+        rgba(106,100,60,.40) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+
+/* Gentle hover */
+.gallery-page #curiosities .piece-card:hover{
+    transform:translateY(-4px) !important;
+
+    border-color:
+        rgba(166,130,69,.68) !important;
+
+    box-shadow:
+        0 19px 36px rgba(50,35,22,.17),
+        0 0 18px rgba(91,42,80,.05),
+        inset 0 1px 0 rgba(255,255,255,.78) !important;
+}
