@@ -2077,3 +2077,162 @@ body.gallery-page{
             30px !important;
     }
 }
+/* =========================================================
+   THE GALLERY — TURNING BENCH CARD POLISH
+   TEST PATTERN FOR COLLECTION ROWS
+   ========================================================= */
+
+/* Turning Bench heading */
+.gallery-page #turning-bench .collection-heading{
+    position:relative;
+}
+
+.gallery-page #turning-bench .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:130px;
+    height:1px;
+
+    margin:
+        18px
+        auto
+        0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(201,154,91,.72),
+            transparent
+        );
+}
+
+
+/* Cards */
+.gallery-page #turning-bench .piece-card{
+    border:
+        1px solid
+        rgba(172,120,67,.38) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8ead0 0%,
+            #efd9b4 100%
+        ) !important;
+
+    box-shadow:
+        0 13px 26px rgba(63,37,22,.11),
+        inset 0 1px 0 rgba(255,255,255,.75) !important;
+}
+
+
+/* Photograph area */
+.gallery-page #turning-bench .piece-photo{
+    background:
+        radial-gradient(
+            circle at 28% 23%,
+            rgba(255,255,255,.18),
+            transparent 24%
+        ),
+        linear-gradient(
+            145deg,
+            #806b57 0%,
+            #5a4438 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(201,154,91,.40) !important;
+}
+
+
+/* Inner photograph frame */
+.gallery-page #turning-bench .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(236,213,170,.38) !important;
+
+    border-radius:12px !important;
+}
+
+
+/* Placeholder star */
+.gallery-page #turning-bench .piece-photo::after{
+    color:#ddc38d !important;
+    opacity:.80 !important;
+}
+
+
+/* Placeholder wording */
+.gallery-page #turning-bench .piece-photo span{
+    color:#f0dfba !important;
+
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.30);
+}
+
+
+/* Card copy area */
+.gallery-page #turning-bench .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,247,230,.95),
+            rgba(239,216,178,.96)
+        );
+}
+
+
+/* Piece titles */
+.gallery-page #turning-bench .piece-card h3{
+    color:#682554 !important;
+}
+
+
+/* Materials */
+.gallery-page #turning-bench .piece-material{
+    color:#775849 !important;
+}
+
+
+/* Description */
+.gallery-page #turning-bench .piece-story{
+    color:#4f3b30 !important;
+}
+
+
+/* Status badges */
+.gallery-page #turning-bench .piece-status{
+    border:
+        1px solid
+        rgba(151,109,61,.38) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+
+/* Gentle hover only */
+.gallery-page #turning-bench .piece-card:hover{
+    transform:translateY(-4px) !important;
+
+    border-color:
+        rgba(201,154,91,.65) !important;
+
+    box-shadow:
+        0 18px 34px rgba(63,37,22,.15),
+        inset 0 1px 0 rgba(255,255,255,.78) !important;
+}
