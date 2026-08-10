@@ -2390,3 +2390,166 @@ body.gallery-page{
         0 18px 34px rgba(63,37,22,.16),
         inset 0 1px 0 rgba(255,255,255,.80) !important;
 }
+/* =========================================================
+   THE GALLERY — THE PAINTER'S TABLE
+   Soft plum + parchment variation
+   ========================================================= */
+
+.gallery-page #painters-table .collection-heading{
+    position:relative;
+}
+
+.gallery-page #painters-table .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:130px;
+    height:1px;
+
+    margin:18px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(112,44,82,.44),
+            rgba(201,154,91,.72),
+            rgba(112,44,82,.44),
+            transparent
+        );
+}
+
+
+/* Painter cards */
+.gallery-page #painters-table .piece-card{
+    border:
+        1px solid
+        rgba(136,79,105,.34) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8ead5 0%,
+            #ead2b4 100%
+        ) !important;
+
+    box-shadow:
+        0 13px 26px rgba(63,37,22,.11),
+        inset 0 1px 0 rgba(255,255,255,.76) !important;
+}
+
+
+/* Photograph area */
+.gallery-page #painters-table .piece-photo{
+    background:
+        radial-gradient(
+            circle at 28% 22%,
+            rgba(128,61,97,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 74% 72%,
+            rgba(201,154,91,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #75605f 0%,
+            #513b45 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(184,132,92,.40) !important;
+}
+
+
+/* Inner photograph frame */
+.gallery-page #painters-table .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(235,208,178,.39) !important;
+
+    border-radius:12px !important;
+}
+
+
+/* Placeholder star */
+.gallery-page #painters-table .piece-photo::after{
+    color:#d9b57a !important;
+    opacity:.84 !important;
+}
+
+
+/* Placeholder wording */
+.gallery-page #painters-table .piece-photo span{
+    color:#eeddbd !important;
+
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.32);
+}
+
+
+/* Copy area */
+.gallery-page #painters-table .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,247,232,.96),
+            rgba(236,214,184,.97)
+        );
+}
+
+
+/* Titles */
+.gallery-page #painters-table .piece-card h3{
+    color:#682554 !important;
+}
+
+
+/* Material */
+.gallery-page #painters-table .piece-material{
+    color:#75564f !important;
+}
+
+
+/* Description */
+.gallery-page #painters-table .piece-story{
+    color:#4e3935 !important;
+}
+
+
+/* Status badges */
+.gallery-page #painters-table .piece-status{
+    border:
+        1px solid
+        rgba(126,72,99,.32) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.48);
+}
+
+
+/* Gentle hover */
+.gallery-page #painters-table .piece-card:hover{
+    transform:translateY(-4px) !important;
+
+    border-color:
+        rgba(137,69,104,.56) !important;
+
+    box-shadow:
+        0 18px 34px rgba(63,37,22,.15),
+        0 0 18px rgba(102,37,80,.05),
+        inset 0 1px 0 rgba(255,255,255,.80) !important;
+}
