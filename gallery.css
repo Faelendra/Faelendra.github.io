@@ -1685,3 +1685,112 @@ body.gallery-page{
 .gallery-page .gallery-intro{
     color:#4b3328 !important;
 }
+/* =========================================================
+   THE GALLERY — COLLECTION INDEX POLISH
+   ========================================================= */
+
+.gallery-page .gallery-shell{
+    position:relative !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,248,235,.98) 0%,
+            rgba(244,229,201,.98) 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(201,154,91,.34) !important;
+
+    box-shadow:
+        0 18px 38px rgba(62,34,20,.10),
+        inset 0 1px 0 rgba(255,255,255,.72) !important;
+}
+
+
+/* Quiet ornamental frame */
+.gallery-page .gallery-shell::before{
+    content:"" !important;
+
+    position:absolute !important;
+    inset:18px !important;
+
+    border:
+        1px solid
+        rgba(126,82,46,.16) !important;
+
+    border-radius:20px !important;
+
+    pointer-events:none !important;
+}
+
+
+/* Intro line */
+.gallery-page .gallery-notes{
+    position:relative !important;
+    z-index:2 !important;
+
+    max-width:760px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+.gallery-page .gallery-notes p{
+    color:#6b3b55 !important;
+
+    font-size:1.18rem !important;
+    letter-spacing:.015em !important;
+}
+
+
+/* Divider */
+.gallery-page .gallery-divider{
+    opacity:.92 !important;
+}
+
+
+/* Category navigation */
+.gallery-page .gallery-jump{
+    position:relative !important;
+    z-index:2 !important;
+
+    gap:10px 12px !important;
+}
+
+
+/* Individual cabinet tabs */
+.gallery-page .gallery-jump a{
+    color:#6b2b50 !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff9ed 0%,
+            #f1dfbd 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(186,135,73,.56) !important;
+
+    box-shadow:
+        0 4px 10px rgba(72,42,25,.08),
+        inset 0 1px 0 rgba(255,255,255,.78) !important;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease !important;
+}
+
+.gallery-page .gallery-jump a:hover{
+    transform:translateY(-2px) !important;
+
+    border-color:
+        rgba(201,154,91,.86) !important;
+
+    box-shadow:
+        0 7px 16px rgba(72,42,25,.13),
+        inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
