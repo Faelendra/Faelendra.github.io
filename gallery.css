@@ -2716,3 +2716,166 @@ body.gallery-page{
         0 0 18px rgba(91,42,80,.05),
         inset 0 1px 0 rgba(255,255,255,.78) !important;
 }
+/* =========================================================
+   THE GALLERY — CABINET OF CURIOSITIES
+   Darker, stranger, still elegant
+   ========================================================= */
+
+.gallery-page #curiosities .collection-heading{
+    position:relative;
+}
+
+.gallery-page #curiosities .collection-heading::after{
+    content:"";
+
+    display:block;
+    width:130px;
+    height:1px;
+
+    margin:18px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(96,50,71,.46),
+            rgba(201,154,91,.70),
+            rgba(96,50,71,.46),
+            transparent
+        );
+}
+
+
+/* Curiosity cards */
+.gallery-page #curiosities .piece-card{
+    border:
+        1px solid
+        rgba(108,72,59,.40) !important;
+
+    border-radius:20px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f3e3c6 0%,
+            #dfc59f 100%
+        ) !important;
+
+    box-shadow:
+        0 14px 28px rgba(48,30,22,.14),
+        inset 0 1px 0 rgba(255,255,255,.72) !important;
+}
+
+
+/* Darker exhibit area */
+.gallery-page #curiosities .piece-photo{
+    background:
+        radial-gradient(
+            circle at 28% 22%,
+            rgba(125,74,91,.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 75% 76%,
+            rgba(201,154,91,.09),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #62554a 0%,
+            #44382f 100%
+        ) !important;
+
+    border-bottom:
+        1px solid
+        rgba(201,154,91,.42) !important;
+}
+
+
+/* Inner photograph frame */
+.gallery-page #curiosities .piece-photo::before{
+    inset:12px !important;
+
+    border:
+        1px solid
+        rgba(221,191,142,.34) !important;
+
+    border-radius:12px !important;
+}
+
+
+/* Placeholder star */
+.gallery-page #curiosities .piece-photo::after{
+    color:#d3aa63 !important;
+    opacity:.88 !important;
+}
+
+
+/* Placeholder wording */
+.gallery-page #curiosities .piece-photo span{
+    color:#ead4a6 !important;
+
+    letter-spacing:.13em !important;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,.34);
+}
+
+
+/* Copy area */
+.gallery-page #curiosities .piece-copy{
+    padding:
+        27px
+        24px
+        29px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(250,238,216,.96),
+            rgba(225,199,158,.97)
+        );
+}
+
+
+/* Titles */
+.gallery-page #curiosities .piece-card h3{
+    color:#682554 !important;
+}
+
+
+/* Material */
+.gallery-page #curiosities .piece-material{
+    color:#705445 !important;
+}
+
+
+/* Description */
+.gallery-page #curiosities .piece-story{
+    color:#49372f !important;
+}
+
+
+/* Status badges */
+.gallery-page #curiosities .piece-status{
+    border:
+        1px solid
+        rgba(111,75,60,.36) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.44);
+}
+
+
+/* Gentle hover */
+.gallery-page #curiosities .piece-card:hover{
+    transform:translateY(-4px) !important;
+
+    border-color:
+        rgba(133,86,69,.60) !important;
+
+    box-shadow:
+        0 19px 36px rgba(48,30,22,.17),
+        0 0 18px rgba(91,42,80,.05),
+        inset 0 1px 0 rgba(255,255,255,.76) !important;
+}
