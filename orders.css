@@ -1533,3 +1533,174 @@ body.orders-page{
         center center / cover
         no-repeat !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — WITCHY WORKTABLE PANEL
+   ========================================================= */
+
+.orders-page .orders-shell{
+    width:100% !important;
+
+    margin:
+        -36px
+        auto
+        0 !important;
+
+    padding:
+        0
+        0
+        76px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,8,12,.12),
+            rgba(18,8,12,.42)
+        ),
+        url("images/commission-ledger-hero.png")
+        center bottom / cover
+        no-repeat !important;
+}
+
+
+/* Main worktable / ledger area */
+.orders-page .orders-panel{
+    width:
+        min(1320px,92%) !important;
+
+    margin:
+        0 auto !important;
+
+    padding:
+        54px
+        44px
+        70px !important;
+
+    border-radius:
+        18px !important;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(113,51,84,.16),
+            transparent 36%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(45,24,29,.97),
+            rgba(24,13,17,.98)
+        ) !important;
+
+    border:
+        1px solid
+        rgba(201,154,91,.62) !important;
+
+    box-shadow:
+        0 26px 55px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,223,158,.08),
+        inset 0 0 0 9px rgba(201,154,91,.035) !important;
+}
+
+
+/* Antique inner frame */
+.orders-page .orders-panel::before{
+    content:"";
+
+    position:absolute;
+
+    inset:14px;
+
+    border:
+        1px solid
+        rgba(201,154,91,.24);
+
+    border-radius:
+        11px;
+
+    pointer-events:none;
+}
+
+
+/* Quote area */
+.orders-page .orders-notes{
+    position:relative;
+
+    z-index:2;
+
+    max-width:
+        900px !important;
+
+    margin:
+        0
+        auto
+        27px !important;
+
+    padding:
+        24px
+        34px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(233,211,173,.97),
+            rgba(209,178,133,.96)
+        ) !important;
+
+    border:
+        1px solid
+        rgba(201,154,91,.60);
+
+    border-radius:
+        8px;
+
+    box-shadow:
+        0 12px 26px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+
+/* Quote wording */
+.orders-page .orders-notes p{
+    color:
+        #4a3027 !important;
+
+    font-size:
+        1.28rem !important;
+
+    line-height:
+        1.65 !important;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.38);
+}
+
+
+/* Divider beneath quote */
+.orders-page .orders-divider{
+    position:relative;
+
+    z-index:2;
+
+    margin:
+        0
+        auto
+        42px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #7c3a60,
+            #c99a5b,
+            #7c3a60,
+            transparent
+        ) !important;
+}
+
+
+.orders-page .orders-divider::after{
+    background:
+        #251318 !important;
+
+    color:
+        #d7ad64 !important;
+}
