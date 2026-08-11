@@ -1757,3 +1757,10 @@ body.orders-page{
 .orders-page .orders-hero-content::before{
     display:none !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — REVEAL PHOTOGRAPHIC PARCHMENT
+   ========================================================= */
+
+.orders-page .orders-hero-content{
+    display:none !important;
+}
