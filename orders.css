@@ -1741,3 +1741,19 @@ body.orders-page{
     box-shadow:
         inset 0 18px 36px rgba(0,0,0,.22) !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — REMOVE LIGHT HERO CARD
+   Let the parchment artwork show through
+   ========================================================= */
+
+.orders-page .orders-hero-content{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+}
+
+/* Remove the light card's inner border */
+.orders-page .orders-hero-content::before{
+    display:none !important;
+}
