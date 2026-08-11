@@ -1764,3 +1764,33 @@ body.orders-page{
 .orders-page .orders-hero-content{
     display:none !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — CLEAN PHOTOGRAPHIC BACKGROUND
+   ========================================================= */
+
+.orders-page .orders-hero{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,8,13,.34) 0%,
+            rgba(20,8,13,.12) 24%,
+            rgba(20,8,13,.08) 50%,
+            rgba(20,8,13,.12) 76%,
+            rgba(20,8,13,.34) 100%
+        ),
+        url("images/commission-ledger-clean-background.png")
+        center center / cover
+        no-repeat !important;
+}
+
+.orders-page .orders-shell{
+    background:
+        linear-gradient(
+            180deg,
+            rgba(18,8,12,.12),
+            rgba(18,8,12,.42)
+        ),
+        url("images/commission-ledger-clean-background.png")
+        center bottom / cover
+        no-repeat !important;
+}
