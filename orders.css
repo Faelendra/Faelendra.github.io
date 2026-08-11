@@ -1794,3 +1794,178 @@ body.orders-page{
         center bottom / cover
         no-repeat !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — ANTIQUE LEDGER CARDS
+   ========================================================= */
+
+.orders-page .orders-card{
+    border:
+        1px solid rgba(201,154,91,.58) !important;
+
+    border-radius:
+        12px !important;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,.32),
+            transparent 32%
+        ),
+        linear-gradient(
+            145deg,
+            #ead8b7 0%,
+            #d9bc8f 100%
+        ) !important;
+
+    box-shadow:
+        0 16px 32px rgba(0,0,0,.26),
+        inset 0 1px 0 rgba(255,255,255,.48) !important;
+}
+
+
+/* Fine inner ledger frame */
+.orders-page .orders-card::before{
+    inset:
+        9px !important;
+
+    border:
+        1px solid rgba(91,42,80,.22) !important;
+
+    border-radius:
+        7px !important;
+}
+
+
+/* Photograph areas */
+.orders-page .orders-art{
+    height:
+        205px !important;
+
+    border-bottom:
+        1px solid rgba(201,154,91,.58) !important;
+
+    background-image:
+        linear-gradient(
+            rgba(20,8,13,.32),
+            rgba(20,8,13,.44)
+        ),
+        url("images/commission-ledger-clean-background.png") !important;
+
+    background-size:
+        cover !important;
+
+    background-repeat:
+        no-repeat !important;
+}
+
+
+/* Give each future photo slot a different crop */
+.orders-page .wood-art{
+    background-position:
+        left center !important;
+}
+
+.orders-page .collection-art{
+    background-position:
+        center center !important;
+}
+
+.orders-page .ink-art{
+    background-position:
+        right center !important;
+}
+
+
+/* Antique photo frame */
+.orders-page .orders-art::before{
+    content:"";
+
+    position:absolute;
+
+    inset:
+        11px !important;
+
+    border:
+        1px solid rgba(225,184,109,.48);
+
+    border-radius:
+        5px;
+
+    background:none !important;
+
+    pointer-events:none;
+}
+
+
+/* Small gold marker */
+.orders-page .orders-art::after{
+    content:"✦" !important;
+
+    color:
+        #d4aa61 !important;
+
+    font-size:
+        1.65rem !important;
+
+    opacity:
+        .82 !important;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45) !important;
+}
+
+
+/* Card copy */
+.orders-page .orders-copy{
+    padding:
+        29px
+        28px
+        32px !important;
+}
+
+
+.orders-page .orders-copy h2{
+    color:
+        #682554 !important;
+
+    text-shadow:
+        0 1px 0 rgba(255,247,225,.62);
+
+    margin-bottom:
+        13px !important;
+}
+
+
+.orders-page .orders-copy p,
+.orders-page .orders-steps,
+.orders-page .orders-list{
+    color:
+        #49352b !important;
+}
+
+
+/* List markers */
+.orders-page .orders-steps li::marker{
+    color:
+        #682554 !important;
+}
+
+.orders-page .orders-list li::marker{
+    color:
+        #9a713c !important;
+}
+
+
+/* Hover stays subtle and old-world */
+.orders-page .orders-card:hover{
+    transform:
+        translateY(-4px) !important;
+
+    border-color:
+        rgba(218,174,98,.78) !important;
+
+    box-shadow:
+        0 20px 38px rgba(0,0,0,.32),
+        0 0 18px rgba(91,42,80,.08),
+        inset 0 1px 0 rgba(255,255,255,.50) !important;
+}
