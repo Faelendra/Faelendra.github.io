@@ -2206,3 +2206,47 @@ body.orders-page{
 .orders-page .orders-hero-content::before{
     display:none !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — RESTORE HERO PARCHMENT CARD
+   ========================================================= */
+
+.orders-page .orders-hero-content{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+
+    position:relative !important;
+    z-index:5 !important;
+
+    width:min(940px,88%) !important;
+    min-height:340px !important;
+
+    margin:0 auto !important;
+
+    padding:64px 78px 68px !important;
+
+    background-image:
+        url("images/commission-ledger-parchment-1.png") !important;
+
+    background-position:
+        center !important;
+
+    background-size:
+        100% 100% !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    background-color:
+        transparent !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+
+    box-shadow:
+        0 24px 48px rgba(0,0,0,.38) !important;
+}
+
+.orders-page .orders-hero-content::before{
+    display:none !important;
+}
