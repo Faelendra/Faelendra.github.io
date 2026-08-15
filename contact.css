@@ -1209,3 +1209,25 @@ body.contact-page{
 .contact-page .contact-hero-content{
     display:none !important;
 }
+/* =========================================================
+   CHAT WITH ME — HERO CROP FIX
+   Show the approved artwork properly
+   ========================================================= */
+
+.contact-page .contact-hero{
+    min-height:0 !important;
+
+    aspect-ratio:4 / 3 !important;
+
+    background-size:
+        contain !important;
+
+    background-position:
+        center top !important;
+
+    background-repeat:
+        no-repeat !important;
+
+    background-color:
+        #160a0f !important;
+}
