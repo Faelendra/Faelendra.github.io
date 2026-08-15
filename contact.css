@@ -1171,3 +1171,41 @@ body.contact-page{
   }
 
 }
+/* =========================================================
+   CHAT WITH ME — APPROVED CORVEN HERO
+   ========================================================= */
+
+.contact-page .contact-hero{
+    min-height:650px !important;
+    padding:0 !important;
+
+    background:
+        url("images/chat-with-faelendra-hero.png")
+        center center / cover
+        no-repeat !important;
+
+    border-bottom:
+        1px solid rgba(201,154,91,.55) !important;
+
+    box-shadow:
+        inset 0 -22px 38px rgba(20,8,13,.18) !important;
+}
+
+
+/* Remove old decorative circles */
+.contact-page .contact-hero::before,
+.contact-page .contact-hero::after{
+    display:none !important;
+}
+
+
+/* Remove old texture overlay */
+.contact-page .contact-hero-overlay{
+    display:none !important;
+}
+
+
+/* The approved artwork already contains the hero wording */
+.contact-page .contact-hero-content{
+    display:none !important;
+}
