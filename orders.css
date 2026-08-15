@@ -2250,3 +2250,31 @@ body.orders-page{
 .orders-page .orders-hero-content::before{
     display:none !important;
 }
+/* =========================================================
+   COMMISSION LEDGER — TREE SEAL ONLY
+   ========================================================= */
+
+.orders-page .orders-hero-content::after{
+    content:"";
+    position:absolute;
+
+    left:50%;
+    bottom:-48px;
+
+    width:104px;
+    height:104px;
+
+    transform:translateX(-50%);
+
+    background:
+        url("images/commission-tree-seal.png")
+        center / contain
+        no-repeat;
+
+    z-index:5;
+
+    pointer-events:none;
+
+    filter:
+        drop-shadow(0 8px 8px rgba(0,0,0,.32));
+}
