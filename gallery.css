@@ -3132,3 +3132,59 @@ body.gallery-page{
 
     border-color:#c99a5b !important;
 }
+/* =========================================================
+   THE GALLERY — FINAL MATCHING FOOTER
+   ========================================================= */
+
+.gallery-page .site-footer{
+    padding:
+        24px
+        18px
+        28px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #241018 0%,
+            #160a0f 100%
+        ) !important;
+
+    color:#d7c29a !important;
+
+    border-top:
+        1px solid rgba(201,154,91,.48) !important;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,220,145,.05) !important;
+}
+
+.gallery-page .site-footer p{
+    margin:
+        0
+        0
+        4px !important;
+
+    color:#d7c29a !important;
+}
+
+.gallery-page .footer-motto{
+    color:#d9a8c5 !important;
+}
+
+.gallery-page .footer-botanical{
+    margin-bottom:10px !important;
+}
+
+.gallery-page .footer-botanical::before,
+.gallery-page .footer-botanical::after{
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c99a5b
+        ) !important;
+}
+
+.gallery-page .footer-botanical span{
+    background:#7b2b5b !important;
+}
