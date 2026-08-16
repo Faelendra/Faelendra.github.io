@@ -3188,3 +3188,23 @@ body.gallery-page{
 .gallery-page .footer-botanical span{
     background:#7b2b5b !important;
 }
+/* =========================================================
+   HOLIDAY SHELF — CHRISTMAS BOX
+   ========================================================= */
+
+.gallery-page #holiday-shelf .piece-card:first-child .piece-photo{
+    background:
+        url("images/christmas-box-front.jpg")
+        center center / cover
+        no-repeat !important;
+}
+
+/* Hide placeholder wording */
+.gallery-page #holiday-shelf .piece-card:first-child .piece-photo span{
+    display:none !important;
+}
+
+/* Remove placeholder star */
+.gallery-page #holiday-shelf .piece-card:first-child .piece-photo::after{
+    display:none !important;
+}
