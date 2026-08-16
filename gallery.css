@@ -3209,3 +3209,22 @@ body.gallery-page{
 .gallery-page #holiday-shelf .piece-card:first-child .piece-photo::after{
     display:none !important;
 }
+/* =========================================================
+   CURIOSITIES — GNOME HOME NO. I
+   ========================================================= */
+
+.gallery-page #curiosities .piece-card:first-child .piece-photo{
+    background:
+        #171418
+        url("images/gnome-home-01.jpg")
+        center center / contain
+        no-repeat !important;
+}
+
+.gallery-page #curiosities .piece-card:first-child .piece-photo span{
+    display:none !important;
+}
+
+.gallery-page #curiosities .piece-card:first-child .piece-photo::after{
+    display:none !important;
+}
