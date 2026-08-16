@@ -3247,3 +3247,22 @@ body.gallery-page{
 .gallery-page #holiday-shelf .piece-card:nth-child(2) .piece-photo::after{
     display:none !important;
 }
+/* =========================================================
+   HOLIDAY SHELF — OLD-WORLD CHRISTMAS ORNAMENT NO. II
+   ========================================================= */
+
+.gallery-page #holiday-shelf .piece-card:nth-child(3) .piece-photo{
+    background:
+        #171418
+        url("images/old-world-christmas-ornament-02.jpg")
+        center center / contain
+        no-repeat !important;
+}
+
+.gallery-page #holiday-shelf .piece-card:nth-child(3) .piece-photo span{
+    display:none !important;
+}
+
+.gallery-page #holiday-shelf .piece-card:nth-child(3) .piece-photo::after{
+    display:none !important;
+}
