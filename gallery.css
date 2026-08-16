@@ -3195,7 +3195,8 @@ body.gallery-page{
 .gallery-page #holiday-shelf .piece-card:first-child .piece-photo{
     background:
         url("images/christmas-box-front.jpg")
-        center center / cover
+        #171418
+        center center / contain
         no-repeat !important;
 }
 
